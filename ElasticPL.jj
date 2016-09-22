@@ -85,7 +85,7 @@ void CompilationUnit() :
 void Expression()      :
 {}
 {
-  LOOKAHEAD( PrimaryExpression() "=" )
+  LOOKAHEAD( Id() "=" )
   Assignment()
 |
   ConditionalOrExpression()
@@ -798,97 +798,97 @@ void MultiplicativeExpression()       :
           }
 /*@egen*/             
    |
-    "^"/*@bgen(jjtree) #BitwiseXorNode( 2) */
-        {
-          ASTBitwiseXorNode jjtn008 = new ASTBitwiseXorNode(JJTBITWISEXORNODE);
-          boolean jjtc008 = true;
-          jjtree.openNodeScope(jjtn008);
-          jjtn008.jjtSetFirstToken(getToken(1));
-        }
-        try {
+    "xor"/*@bgen(jjtree) #BitwiseXorNode( 2) */
+          {
+            ASTBitwiseXorNode jjtn008 = new ASTBitwiseXorNode(JJTBITWISEXORNODE);
+            boolean jjtc008 = true;
+            jjtree.openNodeScope(jjtn008);
+            jjtn008.jjtSetFirstToken(getToken(1));
+          }
+          try {
 /*@egen*/ UnaryExpression()/*@bgen(jjtree)*/
-        } catch (Throwable jjte008) {
-          if (jjtc008) {
-            jjtree.clearNodeScope(jjtn008);
-            jjtc008 = false;
-          } else {
-            jjtree.popNode();
+          } catch (Throwable jjte008) {
+            if (jjtc008) {
+              jjtree.clearNodeScope(jjtn008);
+              jjtc008 = false;
+            } else {
+              jjtree.popNode();
+            }
+            if (jjte008 instanceof RuntimeException) {
+              throw (RuntimeException)jjte008;
+            }
+            if (jjte008 instanceof ParseException) {
+              throw (ParseException)jjte008;
+            }
+            throw (Error)jjte008;
+          } finally {
+            if (jjtc008) {
+              jjtree.closeNodeScope(jjtn008,  2);
+              jjtn008.jjtSetLastToken(getToken(0));
+            }
           }
-          if (jjte008 instanceof RuntimeException) {
-            throw (RuntimeException)jjte008;
-          }
-          if (jjte008 instanceof ParseException) {
-            throw (ParseException)jjte008;
-          }
-          throw (Error)jjte008;
-        } finally {
-          if (jjtc008) {
-            jjtree.closeNodeScope(jjtn008,  2);
-            jjtn008.jjtSetLastToken(getToken(0));
-          }
-        }
 /*@egen*/                   
    |
-    "&"/*@bgen(jjtree) #BitwiseAndNode( 2) */
-        {
-          ASTBitwiseAndNode jjtn009 = new ASTBitwiseAndNode(JJTBITWISEANDNODE);
-          boolean jjtc009 = true;
-          jjtree.openNodeScope(jjtn009);
-          jjtn009.jjtSetFirstToken(getToken(1));
-        }
-        try {
+    "and"/*@bgen(jjtree) #BitwiseAndNode( 2) */
+          {
+            ASTBitwiseAndNode jjtn009 = new ASTBitwiseAndNode(JJTBITWISEANDNODE);
+            boolean jjtc009 = true;
+            jjtree.openNodeScope(jjtn009);
+            jjtn009.jjtSetFirstToken(getToken(1));
+          }
+          try {
 /*@egen*/ UnaryExpression()/*@bgen(jjtree)*/
-        } catch (Throwable jjte009) {
-          if (jjtc009) {
-            jjtree.clearNodeScope(jjtn009);
-            jjtc009 = false;
-          } else {
-            jjtree.popNode();
+          } catch (Throwable jjte009) {
+            if (jjtc009) {
+              jjtree.clearNodeScope(jjtn009);
+              jjtc009 = false;
+            } else {
+              jjtree.popNode();
+            }
+            if (jjte009 instanceof RuntimeException) {
+              throw (RuntimeException)jjte009;
+            }
+            if (jjte009 instanceof ParseException) {
+              throw (ParseException)jjte009;
+            }
+            throw (Error)jjte009;
+          } finally {
+            if (jjtc009) {
+              jjtree.closeNodeScope(jjtn009,  2);
+              jjtn009.jjtSetLastToken(getToken(0));
+            }
           }
-          if (jjte009 instanceof RuntimeException) {
-            throw (RuntimeException)jjte009;
-          }
-          if (jjte009 instanceof ParseException) {
-            throw (ParseException)jjte009;
-          }
-          throw (Error)jjte009;
-        } finally {
-          if (jjtc009) {
-            jjtree.closeNodeScope(jjtn009,  2);
-            jjtn009.jjtSetLastToken(getToken(0));
-          }
-        }
 /*@egen*/                   
    |
-    "|"/*@bgen(jjtree) #BitwiseOrNode( 2) */
-        {
-          ASTBitwiseOrNode jjtn010 = new ASTBitwiseOrNode(JJTBITWISEORNODE);
-          boolean jjtc010 = true;
-          jjtree.openNodeScope(jjtn010);
-          jjtn010.jjtSetFirstToken(getToken(1));
-        }
-        try {
+    "or"/*@bgen(jjtree) #BitwiseOrNode( 2) */
+         {
+           ASTBitwiseOrNode jjtn010 = new ASTBitwiseOrNode(JJTBITWISEORNODE);
+           boolean jjtc010 = true;
+           jjtree.openNodeScope(jjtn010);
+           jjtn010.jjtSetFirstToken(getToken(1));
+         }
+         try {
 /*@egen*/ UnaryExpression()/*@bgen(jjtree)*/
-        } catch (Throwable jjte010) {
-          if (jjtc010) {
-            jjtree.clearNodeScope(jjtn010);
-            jjtc010 = false;
-          } else {
-            jjtree.popNode();
-          }
-          if (jjte010 instanceof RuntimeException) {
-            throw (RuntimeException)jjte010;
-          }
-          if (jjte010 instanceof ParseException) {
-            throw (ParseException)jjte010;
-          }
-          throw (Error)jjte010;
-        } finally {
-          if (jjtc010) {
-            jjtree.closeNodeScope(jjtn010,  2);
-            jjtn010.jjtSetLastToken(getToken(0));
-          }
-        }
+         } catch (Throwable jjte010) {
+           if (jjtc010) {
+             jjtree.clearNodeScope(jjtn010);
+             jjtc010 = false;
+           } else {
+             jjtree.popNode();
+           }
+           if (jjte010 instanceof RuntimeException) {
+             throw (RuntimeException)jjte010;
+           }
+           if (jjte010 instanceof ParseException) {
+             throw (ParseException)jjte010;
+           }
+           throw (Error)jjte010;
+         } finally {
+           if (jjtc010) {
+             jjtree.closeNodeScope(jjtn010,  2);
+             jjtn010.jjtSetLastToken(getToken(0));
+           }
+         }
 /*@egen*/                  
   )*
 }

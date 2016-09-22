@@ -11,15 +11,15 @@ public interface ElasticPLParserConstants {
   /** RegularExpression Id. */
   int INTEGER_LITERAL = 6;
   /** RegularExpression Id. */
-  int IDENTIFIER = 51;
+  int IDENTIFIER = 54;
   /** RegularExpression Id. */
-  int LETTER = 52;
+  int LETTER = 55;
   /** RegularExpression Id. */
-  int DIGIT = 53;
+  int DIGIT = 56;
   /** RegularExpression Id. */
-  int DIGIT_FROM_ONE = 54;
+  int DIGIT_FROM_ONE = 57;
   /** RegularExpression Id. */
-  int DIGIT_ONE_TO_SIX = 55;
+  int DIGIT_ONE_TO_SIX = 58;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -54,6 +54,9 @@ public interface ElasticPLParserConstants {
     "\">>\"",
     "\">>>\"",
     "\"<<<\"",
+    "\"xor\"",
+    "\"and\"",
+    "\"or\"",
     "\"~\"",
     "\"!\"",
     "\"(\"",

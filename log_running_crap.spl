@@ -1,6 +1,6 @@
 input 8;
    if(1==1) {
-     repeat(1000) {
+     repeat(20000) {
        SHA256 3 3;
      };
    } else {};

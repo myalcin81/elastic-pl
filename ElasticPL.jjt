@@ -161,6 +161,8 @@ void MultiplicativeExpression() #void :
     "^" UnaryExpression() #BitwiseXorNode(2)
    |
     "&" UnaryExpression() #BitwiseAndNode(2)
+   |
+    "|" UnaryExpression() #BitwiseOrNode(2)
   )*
 }
 

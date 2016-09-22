@@ -159,6 +159,8 @@ void MultiplicativeExpression() #void :
     "<<<" UnaryExpression() #LRotNode(2)
    |
     "^" UnaryExpression() #BitwiseXorNode(2)
+   |
+    "&" UnaryExpression() #BitwiseAndNode(2)
   )*
 }
 

@@ -828,6 +828,37 @@ void MultiplicativeExpression()       :
           }
         }
 /*@egen*/                   
+   |
+    "&"/*@bgen(jjtree) #BitwiseAndNode( 2) */
+        {
+          ASTBitwiseAndNode jjtn009 = new ASTBitwiseAndNode(JJTBITWISEANDNODE);
+          boolean jjtc009 = true;
+          jjtree.openNodeScope(jjtn009);
+          jjtn009.jjtSetFirstToken(getToken(1));
+        }
+        try {
+/*@egen*/ UnaryExpression()/*@bgen(jjtree)*/
+        } catch (Throwable jjte009) {
+          if (jjtc009) {
+            jjtree.clearNodeScope(jjtn009);
+            jjtc009 = false;
+          } else {
+            jjtree.popNode();
+          }
+          if (jjte009 instanceof RuntimeException) {
+            throw (RuntimeException)jjte009;
+          }
+          if (jjte009 instanceof ParseException) {
+            throw (ParseException)jjte009;
+          }
+          throw (Error)jjte009;
+        } finally {
+          if (jjtc009) {
+            jjtree.closeNodeScope(jjtn009,  2);
+            jjtn009.jjtSetLastToken(getToken(0));
+          }
+        }
+/*@egen*/                   
   )*
 }
 

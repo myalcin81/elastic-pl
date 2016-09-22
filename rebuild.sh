@@ -9,7 +9,7 @@ elif [[ ! -d $dir ]]; then
 fi
 
 bin/jjtree ElasticPL.jjt; bin/javacc ElasticPL.jj
-javac -d dist/ *.java
+javac -cp "lib/*" -d dist/ *.java
 cd dist
 jar cvfm test_compiler.jar ../Manifest *.class
 cd ..

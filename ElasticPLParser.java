@@ -628,6 +628,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     label_10:
     while (true) {
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+      case 10:
       case 11:
       case 12:
       case 21:
@@ -902,6 +903,35 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
           if (jjtc009) {
             jjtree.closeNodeScope(jjtn009,  2);
             jjtn009.jjtSetLastToken(getToken(0));
+          }
+        }
+        break;
+      case 10:
+        jj_consume_token(10);
+          ASTBitwiseOrNode jjtn010 = new ASTBitwiseOrNode(JJTBITWISEORNODE);
+          boolean jjtc010 = true;
+          jjtree.openNodeScope(jjtn010);
+          jjtn010.jjtSetFirstToken(getToken(1));
+        try {
+          UnaryExpression();
+        } catch (Throwable jjte010) {
+          if (jjtc010) {
+            jjtree.clearNodeScope(jjtn010);
+            jjtc010 = false;
+          } else {
+            jjtree.popNode();
+          }
+          if (jjte010 instanceof RuntimeException) {
+            {if (true) throw (RuntimeException)jjte010;}
+          }
+          if (jjte010 instanceof ParseException) {
+            {if (true) throw (ParseException)jjte010;}
+          }
+          {if (true) throw (Error)jjte010;}
+        } finally {
+          if (jjtc010) {
+            jjtree.closeNodeScope(jjtn010,  2);
+            jjtn010.jjtSetLastToken(getToken(0));
           }
         }
         break;
@@ -1604,31 +1634,14 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     finally { jj_save(0, xla); }
   }
 
-  private boolean jj_3R_15() {
-    if (jj_scan_token(30)) return true;
-    if (jj_3R_18()) return true;
-    if (jj_scan_token(31)) return true;
-    return false;
-  }
-
-  private boolean jj_3R_47() {
-    if (jj_scan_token(10)) return true;
-    if (jj_3R_46()) return true;
-    return false;
-  }
-
   private boolean jj_3R_14() {
     if (jj_3R_17()) return true;
     return false;
   }
 
-  private boolean jj_3R_44() {
-    if (jj_3R_46()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_47()) { jj_scanpos = xsp; break; }
-    }
+  private boolean jj_3R_48() {
+    if (jj_scan_token(10)) return true;
+    if (jj_3R_47()) return true;
     return false;
   }
 
@@ -1651,18 +1664,18 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   }
 
   private boolean jj_3R_45() {
-    if (jj_scan_token(9)) return true;
-    if (jj_3R_44()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_30() {
-    if (jj_3R_44()) return true;
+    if (jj_3R_47()) return true;
     Token xsp;
     while (true) {
       xsp = jj_scanpos;
-      if (jj_3R_45()) { jj_scanpos = xsp; break; }
+      if (jj_3R_48()) { jj_scanpos = xsp; break; }
     }
+    return false;
+  }
+
+  private boolean jj_3R_46() {
+    if (jj_scan_token(9)) return true;
+    if (jj_3R_45()) return true;
     return false;
   }
 
@@ -1671,15 +1684,19 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     return false;
   }
 
-  private boolean jj_3R_33() {
-    if (jj_scan_token(29)) return true;
-    if (jj_3R_26()) return true;
+  private boolean jj_3R_30() {
+    if (jj_3R_45()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_46()) { jj_scanpos = xsp; break; }
+    }
     return false;
   }
 
-  private boolean jj_3R_31() {
-    if (jj_scan_token(8)) return true;
-    if (jj_3R_30()) return true;
+  private boolean jj_3R_33() {
+    if (jj_scan_token(29)) return true;
+    if (jj_3R_26()) return true;
     return false;
   }
 
@@ -1702,6 +1719,12 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     return false;
   }
 
+  private boolean jj_3R_31() {
+    if (jj_scan_token(8)) return true;
+    if (jj_3R_30()) return true;
+    return false;
+  }
+
   private boolean jj_3R_25() {
     if (jj_3R_30()) return true;
     Token xsp;
@@ -1709,6 +1732,12 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       xsp = jj_scanpos;
       if (jj_3R_31()) { jj_scanpos = xsp; break; }
     }
+    return false;
+  }
+
+  private boolean jj_3R_44() {
+    if (jj_scan_token(10)) return true;
+    if (jj_3R_26()) return true;
     return false;
   }
 
@@ -1812,7 +1841,10 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     jj_scanpos = xsp;
     if (jj_3R_42()) {
     jj_scanpos = xsp;
-    if (jj_3R_43()) return true;
+    if (jj_3R_43()) {
+    jj_scanpos = xsp;
+    if (jj_3R_44()) return true;
+    }
     }
     }
     }
@@ -1872,48 +1904,80 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     return false;
   }
 
-  private boolean jj_3R_60() {
+  private boolean jj_3R_61() {
     if (jj_scan_token(18)) return true;
     if (jj_3R_19()) return true;
     return false;
   }
 
-  private boolean jj_3R_59() {
+  private boolean jj_3R_60() {
     if (jj_scan_token(17)) return true;
     if (jj_3R_19()) return true;
     return false;
   }
 
-  private boolean jj_3R_58() {
+  private boolean jj_3R_59() {
     if (jj_scan_token(16)) return true;
     if (jj_3R_19()) return true;
     return false;
   }
 
-  private boolean jj_3R_57() {
+  private boolean jj_3R_58() {
     if (jj_scan_token(15)) return true;
     if (jj_3R_19()) return true;
+    return false;
+  }
+
+  private boolean jj_3R_55() {
+    Token xsp;
+    xsp = jj_scanpos;
+    if (jj_3R_58()) {
+    jj_scanpos = xsp;
+    if (jj_3R_59()) {
+    jj_scanpos = xsp;
+    if (jj_3R_60()) {
+    jj_scanpos = xsp;
+    if (jj_3R_61()) return true;
+    }
+    }
+    }
+    return false;
+  }
+
+  private boolean jj_3R_53() {
+    if (jj_3R_19()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_55()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+
+  private boolean jj_3R_57() {
+    if (jj_scan_token(14)) return true;
+    if (jj_3R_53()) return true;
+    return false;
+  }
+
+  private boolean jj_3R_56() {
+    if (jj_scan_token(13)) return true;
+    if (jj_3R_53()) return true;
     return false;
   }
 
   private boolean jj_3R_54() {
     Token xsp;
     xsp = jj_scanpos;
-    if (jj_3R_57()) {
+    if (jj_3R_56()) {
     jj_scanpos = xsp;
-    if (jj_3R_58()) {
-    jj_scanpos = xsp;
-    if (jj_3R_59()) {
-    jj_scanpos = xsp;
-    if (jj_3R_60()) return true;
-    }
-    }
+    if (jj_3R_57()) return true;
     }
     return false;
   }
 
-  private boolean jj_3R_52() {
-    if (jj_3R_19()) return true;
+  private boolean jj_3R_51() {
+    if (jj_3R_53()) return true;
     Token xsp;
     while (true) {
       xsp = jj_scanpos;
@@ -1922,62 +1986,24 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     return false;
   }
 
-  private boolean jj_3R_56() {
-    if (jj_scan_token(14)) return true;
-    if (jj_3R_52()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_55() {
-    if (jj_scan_token(13)) return true;
-    if (jj_3R_52()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_53() {
-    Token xsp;
-    xsp = jj_scanpos;
-    if (jj_3R_55()) {
-    jj_scanpos = xsp;
-    if (jj_3R_56()) return true;
-    }
-    return false;
-  }
-
-  private boolean jj_3R_50() {
-    if (jj_3R_52()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_53()) { jj_scanpos = xsp; break; }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_51() {
-    if (jj_scan_token(12)) return true;
-    if (jj_3R_50()) return true;
-    return false;
-  }
-
   private boolean jj_3R_16() {
     if (jj_scan_token(INTEGER_LITERAL)) return true;
     return false;
   }
 
-  private boolean jj_3R_48() {
-    if (jj_3R_50()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_51()) { jj_scanpos = xsp; break; }
-    }
+  private boolean jj_3R_52() {
+    if (jj_scan_token(12)) return true;
+    if (jj_3R_51()) return true;
     return false;
   }
 
   private boolean jj_3R_49() {
-    if (jj_scan_token(11)) return true;
-    if (jj_3R_48()) return true;
+    if (jj_3R_51()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_52()) { jj_scanpos = xsp; break; }
+    }
     return false;
   }
 
@@ -1988,13 +2014,26 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     return false;
   }
 
-  private boolean jj_3R_46() {
-    if (jj_3R_48()) return true;
+  private boolean jj_3R_50() {
+    if (jj_scan_token(11)) return true;
+    if (jj_3R_49()) return true;
+    return false;
+  }
+
+  private boolean jj_3R_47() {
+    if (jj_3R_49()) return true;
     Token xsp;
     while (true) {
       xsp = jj_scanpos;
-      if (jj_3R_49()) { jj_scanpos = xsp; break; }
+      if (jj_3R_50()) { jj_scanpos = xsp; break; }
     }
+    return false;
+  }
+
+  private boolean jj_3R_15() {
+    if (jj_scan_token(30)) return true;
+    if (jj_3R_18()) return true;
+    if (jj_scan_token(31)) return true;
     return false;
   }
 
@@ -2017,7 +2056,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       jj_la1_init_1();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0x0,0x70000040,0x100,0x200,0x400,0x800,0x1000,0x6000,0x6000,0x78000,0x78000,0x180000,0x180000,0xfe01800,0xfe01800,0x70000040,0x40000040,0x0,0x0,0x0,0x0,};
+      jj_la1_0 = new int[] {0x0,0x70000040,0x100,0x200,0x400,0x800,0x1000,0x6000,0x6000,0x78000,0x78000,0x180000,0x180000,0xfe01c00,0xfe01c00,0x70000040,0x40000040,0x0,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_1() {
       jj_la1_1 = new int[] {0x3fab1,0x1,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x1,0xc,0x3fab1,0x3fab1,0x100,};

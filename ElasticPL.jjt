@@ -232,6 +232,8 @@ void Statement() #void :
   RIPEMD160()
 | 
   SHA512()
+| 
+  Tiger()
 }
 
 
@@ -279,6 +281,11 @@ void MD5() #MD5(2):
 {}
 {
   "MD5" Literal() Literal() ";"
+}
+void Tiger() #Tiger(2):
+{}
+{
+  "Tiger" Literal() Literal() ";"
 }
 void RIPEMD160() #RIPEMD160(2):
 {}

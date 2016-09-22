@@ -256,6 +256,8 @@ void Statement() #void :
   IfStatement()
 |
   RepeatStatement()
+|
+  SHA256()
 }
 
 
@@ -287,6 +289,12 @@ void InputSpecificationStatement() #InputSpecificationStatement(1):
 {}
 {
   "input" Literal() ";"
+}
+
+void SHA256() #SHA256(2):
+{}
+{
+  "SHA256" Literal() Literal() ";"
 }
 
 void VerifyStatement() :

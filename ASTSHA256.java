@@ -2,8 +2,7 @@
 /* JavaCCOptions:MULTI=true,NODE_USES_PARSER=false,VISITOR=false,TRACK_TOKENS=true,NODE_PREFIX=AST,NODE_EXTENDS=MyNode,NODE_FACTORY=,SUPPORT_CLASS_VISIBILITY_PUBLIC=true */
 
 public class ASTSHA256 extends SimpleNode {
-	int position_to_start;
-	int byte_length;
+
 
 	private static final int[] k = { 0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4,
 			0xab1c5ed5, 0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174,
@@ -210,18 +209,21 @@ public class ASTSHA256 extends SimpleNode {
 	public void interpret() {
 
 		// check when to do nothing
-
+		Integer position_to_start = new Integer(((ASTIntConstNode)jjtGetChild(0)).val);
+		Integer byte_length = new Integer(((ASTIntConstNode)jjtGetChild(1)).val);
+		System.out.println("SHA " + position_to_start + ", " + byte_length);
 		int max_bytes_state = 64000 * 4; // 256 integers with 4 bytes each
 		int hash_length_bytes = 32;
 		int hash_length_full_int = (int) Math.ceil(((double) hash_length_bytes) / 4.0);
 		int bytes_length_full_int = (int) Math.ceil(((double) byte_length) / 4.0);
 
-		if (this.position_to_start >= (max_bytes_state - hash_length_full_int)) {
+
+		if (position_to_start >= (max_bytes_state - hash_length_full_int)) {
 			// Do nothing, invalid arguments ( memory beginning at position
 			// cannot hold resulting hash)
 			return;
 		}
-		if (this.position_to_start + bytes_length_full_int >= max_bytes_state) {
+		if (position_to_start + bytes_length_full_int >= max_bytes_state) {
 			// Do nothing, invalid arguments (cannot scan requested byte range
 			// as it would go beyond the end of the state)
 			return;
@@ -231,9 +233,13 @@ public class ASTSHA256 extends SimpleNode {
 		resetContext();
 
 		// do hash
-		byte[] result = this.computeSHA256(this.StateIntToBytes(this.position_to_start, this.byte_length));
-		bytesBackToState(result, this.position_to_start);
+		byte[] result = this.computeSHA256(this.StateIntToBytes(position_to_start, byte_length));
+		bytesBackToState(result, position_to_start);
 	}
+
+	public long weight(){
+    	return 100L;
+  	}
 
 }
 /*

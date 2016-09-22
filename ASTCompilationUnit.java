@@ -93,11 +93,7 @@ public class ASTCompilationUnit extends SimpleNode {
 				System.out.println(name + ": " + symtab.get(name) );
 		}
 
-		for (j = 0; j < 64000; ++j) {
-			name = "b[" + String.valueOf(j) + "]";
-			if(symtab.get(name) != null && Boolean.valueOf(symtab.get(name).toString())!=false)
-				System.out.println(name + ": " + symtab.get(name) );
-		}
+		
 
 	}
 
@@ -110,10 +106,7 @@ public class ASTCompilationUnit extends SimpleNode {
 			name = "m[" + String.valueOf(j) + "]";
 			symtab.put(name, new Integer(0));
 		}
-		for (j = 0; j < 64000; ++j) {
-			name = "b[" + String.valueOf(j) + "]";
-			symtab.put(name, new Boolean(false));
-		}
+		
 
 		// Also remove input and verify from symtab
 		symtab.remove("verify");
@@ -215,14 +208,6 @@ public class ASTCompilationUnit extends SimpleNode {
 		}
 		return outstate;
 	}
-	private boolean[] getOutStateBoolean() {
-		boolean outstate[] = new boolean[64000];
-		for (int j = 0; j < 64000; ++j) {
-			String name = "b[" + String.valueOf(j) + "]";
-			Boolean r = (Boolean) symtab.get(name);
-			outstate[j] = r;
-		}
-		return outstate;
-	}
+
 
 }

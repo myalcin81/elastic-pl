@@ -1,0 +1,310 @@
+/* Copyright (c) 2006, Sun Microsystems, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *     * Redistributions of source code must retain the above copyright notice,
+ *       this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above copyright
+ *       notice, this list of conditions and the following disclaimer in the
+ *       documentation and/or other materials provided with the distribution.
+ *     * Neither the name of the Sun Microsystems, Inc. nor the names of its
+ *       contributors may be used to endorse or promote products derived from
+ *       this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+ * THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+options {
+    MULTI=true;
+    STATIC=false;
+    NODE_EXTENDS="MyNode";
+    TRACK_TOKENS=true;
+}
+
+PARSER_BEGIN(ElasticPLParser)
+
+/** Stupid Programming Language parser. */
+public class ElasticPLParser {
+
+  /**
+   * Returns the root node of the AST.  
+   * It only makes sense to call this after a successful parse. 
+   * @return the root node
+   */
+  public Node rootNode() {
+    return jjtree.rootNode();
+  }  
+
+}
+
+PARSER_END(ElasticPLParser)
+
+
+SKIP : /* WHITE SPACE */
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+| "\f"
+}
+
+TOKEN : /* LITERALS */
+{
+  < INTEGER_LITERAL: (<DIGIT>)+ >
+}
+
+
+void CompilationUnit() :
+{
+   String name;
+}
+{
+   InputSpecificationStatement()
+   (
+       Statement()
+   )*
+   VerifyStatement()
+   <EOF>
+}
+
+
+
+void Expression() #void:
+{}
+{
+  LOOKAHEAD( PrimaryExpression() "=" )
+  Assignment()
+|
+  ConditionalOrExpression()
+}
+
+
+
+void Assignment():
+{ Token t; }
+{
+   Id() "=" AdditiveExpression()
+}
+
+void ConditionalOrExpression() #void :
+{}
+{
+  ConditionalAndExpression()
+  ( "||" ConditionalAndExpression() #OrNode(2) )*
+}
+
+void ConditionalAndExpression() #void :
+{}
+{
+  InclusiveOrExpression()
+  ( "&&" InclusiveOrExpression() #AndNode(2) )*
+}
+
+void InclusiveOrExpression() #void :
+{}
+{
+  ExclusiveOrExpression()
+  ( "|" ExclusiveOrExpression() #BitwiseOrNode(2) )*
+}
+
+void ExclusiveOrExpression() #void :
+{}
+{
+  AndExpression()
+  ( "^" AndExpression() #BitwiseXorNode(2) )*
+}
+
+void AndExpression() #void :
+{}
+{
+  EqualityExpression()
+  ( "&" EqualityExpression() #BitwiseAndNode(2) )*
+}
+
+void EqualityExpression() #void :
+{}
+{
+  RelationalExpression()
+  (
+     "==" RelationalExpression() #EQNode(2)
+   |
+     "!=" RelationalExpression() #NENode(2)
+  )*
+}
+
+void RelationalExpression() #void :
+{}
+{
+  AdditiveExpression()
+  (
+    "<" AdditiveExpression() #LTNode(2)
+   |
+    ">" AdditiveExpression() #GTNode(2)
+   |
+    "<=" AdditiveExpression() #LENode(2)
+   |
+    ">=" AdditiveExpression() #GENode(2)
+  )*
+}
+
+void AdditiveExpression() #void :
+{}
+{
+  MultiplicativeExpression()
+  (
+    "+" MultiplicativeExpression() #AddNode(2)
+   |
+    "-" MultiplicativeExpression() #SubtractNode(2)
+  )*
+}
+
+void MultiplicativeExpression() #void :
+{}
+{
+  UnaryExpression()
+  (
+    "*" UnaryExpression() #MulNode(2)
+   |
+    "/" UnaryExpression() #DivNode(2)
+   |
+    "%" UnaryExpression() #ModNode(2)
+   |
+    "<<" UnaryExpression() #LShiftNode(2)
+   |
+    ">>" UnaryExpression() #RShiftNode(2)
+   |
+    ">>>" UnaryExpression() #RRotNode(2)
+   |
+    "<<<" UnaryExpression() #LRotNode(2)
+   |
+    "^" UnaryExpression() #BitwiseXorNode(2)
+  )*
+}
+
+void UnaryExpression() #void :
+{}
+{
+  "~" UnaryExpression() #BitwiseComplNode(1)
+|
+  "!" UnaryExpression() #NotNode(1)
+|
+  PrimaryExpression()
+}
+
+void PrimaryExpression() #void :
+{
+   String name;
+}
+{
+  Literal()
+|
+  Id() 
+|
+  "(" Expression() ")"
+}
+
+void Id():
+{}
+{
+  "m[" AdditiveExpression() "]"
+}
+
+void Literal() #void :
+{
+   Token t;
+}
+{
+ (
+  t=<INTEGER_LITERAL>
+    {
+       jjtThis.val = Integer.parseInt(t.image);
+    }
+ )#IntConstNode
+}
+
+
+void BooleanLiteral() #void :
+{}
+{
+  "true" #TrueNode
+|
+  "false" #FalseNode
+}
+
+void Statement() #void :
+{}
+{
+  ";"
+|
+  Block()
+|
+  StatementExpression()
+|
+  IfStatement()
+|
+  RepeatStatement()
+}
+
+
+void Block() :
+{}
+{
+  "{" ( Statement() )* "}"
+}
+
+void StatementExpression() :
+{}
+{
+  Assignment() ";"
+}
+
+void IfStatement() :
+{}
+{
+  "if" "(" Expression() ")" Statement() [ LOOKAHEAD(1) "else" Statement() ]
+}
+
+void RepeatStatement() #RepeatStatement(2):
+{}
+{
+  "repeat" "(" Literal() ")" Statement()
+}
+
+void InputSpecificationStatement() #InputSpecificationStatement(1):
+{}
+{
+  "input" Literal() ";"
+}
+
+void VerifyStatement() :
+{}
+{
+  "verify" ConditionalOrExpression() ";"
+}
+
+
+TOKEN : /* IDENTIFIERS */
+{
+  < IDENTIFIER: <LETTER> (<LETTER>|<DIGIT>)* >
+|
+  < #LETTER: [ "a"-"z", "A"-"Z" ] >
+|
+  < #DIGIT: [ "0"-"9"] >
+|
+  < #DIGIT_FROM_ONE: [ "1"-"9"] >
+|
+  < #DIGIT_ONE_TO_SIX: [ "1"-"6"] > 
+}

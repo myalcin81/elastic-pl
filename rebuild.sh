@@ -8,7 +8,7 @@ elif [[ ! -d $dir ]]; then
     echo "$dir already exists but is not a directory" 1>&2
 fi
 
-../../bin/jjtree ElasticPL.jjt; ../../bin/javacc ElasticPL.jj
+bin/jjtree ElasticPL.jjt; bin/javacc ElasticPL.jj
 javac -d dist/ *.java
 cd dist
 jar cvfm test_compiler.jar ../Manifest *.class

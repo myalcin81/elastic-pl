@@ -54,7 +54,6 @@ public class ASTNotNode extends SimpleNode {
      else if(stack[top] instanceof Boolean)
       int1 = (((Boolean)stack[top]) == true) ? 1 : 0;
       
-    System.out.println("PRESTATE " + int1);
 
      if(first_was_boolean)
        stack[top] = new Boolean((int1 == 1)?false:true);
@@ -62,7 +61,6 @@ public class ASTNotNode extends SimpleNode {
        stack[top] = new Integer(int1^0xFFFFFFFF);
 
 
-         System.out.println("AFTERSTATE " + stack[top]);
 
   }
 

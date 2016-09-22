@@ -55,7 +55,8 @@ public class ASTRepeatStatement extends SimpleNode {
     int repeat_times = ((ASTIntConstNode)jjtGetChild(0)).val;
     if(repeat_times > 0){
       for(int i=0;i<repeat_times;++i){ 
-          jjtGetChild(0).interpret();
+
+          jjtGetChild(1).interpret();
       }
     }  
   }

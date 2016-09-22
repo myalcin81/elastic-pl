@@ -45,7 +45,7 @@ public class MyNode
   protected static java.util.Hashtable symtab = new java.util.Hashtable();
 
   /** Stack for calculations. */
-  protected static Object[] stack = new Object[60000];
+  protected static Object[] stack = new Object[64000];
   protected static int top = -1;
 
   private int int_marker_indicator = 0;

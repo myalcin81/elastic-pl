@@ -208,13 +208,11 @@ public class ASTSHA256 extends SimpleNode {
 
 	public void interpret() {
 
-System.out.println("ii");
 		// check when to do nothing
 		Integer position_to_start = new Integer(((ASTIntConstNode)jjtGetChild(0)).val);
 		Integer byte_length = new Integer(((ASTIntConstNode)jjtGetChild(1)).val);
 
 		// Remove that from the stack! No need to keep
-		System.out.println("STACK POINTER: " + top);
 
 		int max_bytes_state = 64000 * 4; // 256 integers with 4 bytes each
 		int hash_length_bytes = 32;

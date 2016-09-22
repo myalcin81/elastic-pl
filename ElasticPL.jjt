@@ -258,6 +258,8 @@ void Statement() #void :
   RepeatStatement()
 |
   SHA256()
+| 
+  MD5()
 }
 
 
@@ -295,6 +297,12 @@ void SHA256() #SHA256(2):
 {}
 {
   "SHA256" Literal() Literal() ";"
+}
+
+void MD5() #MD5(2):
+{}
+{
+  "MD5" Literal() Literal() ";"
 }
 
 void VerifyStatement() :

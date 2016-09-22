@@ -211,7 +211,7 @@ public class ASTSHA256 extends SimpleNode {
 		// check when to do nothing
 		Integer position_to_start = new Integer(((ASTIntConstNode)jjtGetChild(0)).val);
 		Integer byte_length = new Integer(((ASTIntConstNode)jjtGetChild(1)).val);
-		System.out.println("SHA " + position_to_start + ", " + byte_length);
+
 		int max_bytes_state = 64000 * 4; // 256 integers with 4 bytes each
 		int hash_length_bytes = 32;
 		int hash_length_full_int = (int) Math.ceil(((double) hash_length_bytes) / 4.0);

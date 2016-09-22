@@ -2,8 +2,6 @@
 /* JavaCCOptions:MULTI=true,NODE_USES_PARSER=false,VISITOR=false,TRACK_TOKENS=true,NODE_PREFIX=AST,NODE_EXTENDS=MyNode,NODE_FACTORY=,SUPPORT_CLASS_VISIBILITY_PUBLIC=true */
 
 public class ASTMD5 extends SimpleNode {
-	int position_to_start;
-	int byte_length;
 
 	private static final int INIT_A = 0x67452301;
 	private static final int INIT_B = (int) 0xEFCDAB89L;
@@ -127,27 +125,31 @@ public class ASTMD5 extends SimpleNode {
 	public void interpret() {
 
 		// check when to do nothing
+		Integer position_to_start = new Integer(((ASTIntConstNode)jjtGetChild(0)).val);
+		Integer byte_length = new Integer(((ASTIntConstNode)jjtGetChild(1)).val);
 
 		int max_bytes_state = 256 * 4; // 256 integers with 4 bytes each
 		int hash_length_bytes = 16;
 		int hash_length_full_int = (int) Math.ceil(((double) hash_length_bytes) / 4.0);
 		int bytes_length_full_int = (int) Math.ceil(((double) byte_length) / 4.0);
 
-		if (this.position_to_start >= (max_bytes_state - hash_length_full_int)) {
+		if (position_to_start >= (max_bytes_state - hash_length_full_int)) {
 			// Do nothing, invalid arguments ( memory beginning at position
 			// cannot hold resulting hash)
 			return;
 		}
-		if (this.position_to_start + bytes_length_full_int >= max_bytes_state) {
+		if (position_to_start + bytes_length_full_int >= max_bytes_state) {
 			// Do nothing, invalid arguments (cannot scan requested byte range
 			// as it would go beyond the end of the state)
 			return;
 		}
 
-		byte[] result = this.computeMD5(this.StateIntToBytes(this.position_to_start, this.byte_length));
-		bytesBackToState(result, this.position_to_start);
+		byte[] result = this.computeMD5(this.StateIntToBytes(position_to_start, byte_length));
+		bytesBackToState(result, position_to_start);
 	}
-
+	public long weight(){
+    	return 80L;
+  	}
 }
 /*
  * JavaCC - OriginalChecksum=834e6b392c29bdde9f97d7660804c8fb (do not edit this

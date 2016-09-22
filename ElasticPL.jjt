@@ -230,6 +230,8 @@ void Statement() #void :
   MD5()
 | 
   RIPEMD160()
+| 
+  SHA512()
 }
 
 
@@ -268,7 +270,11 @@ void SHA256() #SHA256(2):
 {
   "SHA256" Literal() Literal() ";"
 }
-
+void SHA512() #SHA512(2):
+{}
+{
+  "SHA512" Literal() Literal() ";"
+}
 void MD5() #MD5(2):
 {}
 {

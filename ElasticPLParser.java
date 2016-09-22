@@ -25,6 +25,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         case 43:
         case 44:
         case 45:
+        case 46:
           ;
           break;
         default:
@@ -1081,11 +1082,14 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     case 43:
       SHA256();
       break;
-    case 44:
+    case 45:
       MD5();
       break;
-    case 45:
+    case 46:
       RIPEMD160();
+      break;
+    case 44:
+      SHA512();
       break;
     default:
       jj_la1[18] = jj_gen;
@@ -1113,6 +1117,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         case 43:
         case 44:
         case 45:
+        case 46:
           ;
           break;
         default:
@@ -1317,6 +1322,39 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     }
   }
 
+  final public void SHA512() throws ParseException {
+ /*@bgen(jjtree) #SHA512( 2) */
+  ASTSHA512 jjtn000 = new ASTSHA512(JJTSHA512);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(44);
+      Literal();
+      Literal();
+      jj_consume_token(36);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
   final public void MD5() throws ParseException {
  /*@bgen(jjtree) #MD5( 2) */
   ASTMD5 jjtn000 = new ASTMD5(JJTMD5);
@@ -1324,7 +1362,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(44);
+      jj_consume_token(45);
       Literal();
       Literal();
       jj_consume_token(36);
@@ -1357,7 +1395,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(45);
+      jj_consume_token(46);
       Literal();
       Literal();
       jj_consume_token(36);
@@ -1390,7 +1428,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(46);
+      jj_consume_token(47);
       ConditionalOrExpression();
       jj_consume_token(36);
     } catch (Throwable jjte000) {
@@ -1829,7 +1867,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       jj_la1_0 = new int[] {0x0,0x70000040,0x100,0x200,0x400,0x800,0x1000,0x6000,0x6000,0x78000,0x78000,0x180000,0x180000,0xfe00800,0xfe00800,0x70000040,0x40000040,0x0,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0x3ab1,0x1,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x1,0xc,0x3ab1,0x3ab1,0x100,};
+      jj_la1_1 = new int[] {0x7ab1,0x1,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x1,0xc,0x7ab1,0x7ab1,0x100,};
    }
   final private JJCalls[] jj_2_rtns = new JJCalls[1];
   private boolean jj_rescan = false;
@@ -2018,7 +2056,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   /** Generate ParseException. */
   public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[52];
+    boolean[] la1tokens = new boolean[53];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -2035,7 +2073,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         }
       }
     }
-    for (int i = 0; i < 52; i++) {
+    for (int i = 0; i < 53; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;

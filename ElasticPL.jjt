@@ -236,6 +236,8 @@ void Statement() #void :
   SHA512()
 | 
   Tiger()
+| 
+  Whirlpool()
 }
 
 
@@ -278,6 +280,11 @@ void SHA512() #SHA512(2):
 {}
 {
   "SHA512" Literal() Literal() ";"
+}
+void Whirlpool() #Whirlpool(2):
+{}
+{
+  "Whirlpool" Literal() Literal() ";"
 }
 void MD5() #MD5(2):
 {}

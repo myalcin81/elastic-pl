@@ -40,7 +40,8 @@ public interface ElasticPLParserTreeConstants
   public int JJTMD5 = 36;
   public int JJTTIGER = 37;
   public int JJTRIPEMD160 = 38;
-  public int JJTVERIFYSTATEMENT = 39;
+  public int JJTRIPEMD128 = 39;
+  public int JJTVERIFYSTATEMENT = 40;
 
 
   public String[] jjtNodeName = {
@@ -83,7 +84,8 @@ public interface ElasticPLParserTreeConstants
     "MD5",
     "Tiger",
     "RIPEMD160",
+    "RIPEMD128",
     "VerifyStatement",
   };
 }
-/* JavaCC - OriginalChecksum=bc6662c8c9e6f54892b235e194643dc4 (do not edit this line) */
+/* JavaCC - OriginalChecksum=208b71a9ab142ae98ede08dad6dacbf5 (do not edit this line) */

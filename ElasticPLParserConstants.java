@@ -11,15 +11,15 @@ public interface ElasticPLParserConstants {
   /** RegularExpression Id. */
   int INTEGER_LITERAL = 6;
   /** RegularExpression Id. */
-  int IDENTIFIER = 49;
+  int IDENTIFIER = 50;
   /** RegularExpression Id. */
-  int LETTER = 50;
+  int LETTER = 51;
   /** RegularExpression Id. */
-  int DIGIT = 51;
+  int DIGIT = 52;
   /** RegularExpression Id. */
-  int DIGIT_FROM_ONE = 52;
+  int DIGIT_FROM_ONE = 53;
   /** RegularExpression Id. */
-  int DIGIT_ONE_TO_SIX = 53;
+  int DIGIT_ONE_TO_SIX = 54;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -74,6 +74,7 @@ public interface ElasticPLParserConstants {
     "\"MD5\"",
     "\"Tiger\"",
     "\"RIPEMD160\"",
+    "\"RIPEMD128\"",
     "\"verify\"",
     "<IDENTIFIER>",
     "<LETTER>",

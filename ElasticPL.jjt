@@ -231,6 +231,8 @@ void Statement() #void :
 | 
   RIPEMD160()
 | 
+  RIPEMD128()
+| 
   SHA512()
 | 
   Tiger()
@@ -291,6 +293,11 @@ void RIPEMD160() #RIPEMD160(2):
 {}
 {
   "RIPEMD160" Literal() Literal() ";"
+}
+void RIPEMD128() #RIPEMD128(2):
+{}
+{
+  "RIPEMD128" Literal() Literal() ";"
 }
 
 void VerifyStatement() :

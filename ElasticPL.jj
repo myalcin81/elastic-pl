@@ -1037,6 +1037,8 @@ void Statement()       :
 | 
   RIPEMD160()
 | 
+  RIPEMD128()
+| 
   SHA512()
 | 
   Tiger()
@@ -1356,6 +1358,39 @@ void RIPEMD160()              :
   try {
 /*@egen*/
   "RIPEMD160" Literal() Literal() ";"/*@bgen(jjtree)*/
+  } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      throw (RuntimeException)jjte000;
+    }
+    if (jjte000 instanceof ParseException) {
+      throw (ParseException)jjte000;
+    }
+    throw (Error)jjte000;
+  } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+  }
+/*@egen*/
+}
+void RIPEMD128()              :
+{/*@bgen(jjtree) #RIPEMD128( 2) */
+  ASTRIPEMD128 jjtn000 = new ASTRIPEMD128(JJTRIPEMD128);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+/*@egen*/}
+{/*@bgen(jjtree) #RIPEMD128( 2) */
+  try {
+/*@egen*/
+  "RIPEMD128" Literal() Literal() ";"/*@bgen(jjtree)*/
   } catch (Throwable jjte000) {
     if (jjtc000) {
       jjtree.clearNodeScope(jjtn000);

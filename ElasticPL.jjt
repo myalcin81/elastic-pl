@@ -244,6 +244,8 @@ void Statement() #void :
   Whirlpool()
 |
   SECP256K1PrivToPub()
+|
+  SECP256K1PointAdd()
 }
 
 
@@ -302,6 +304,12 @@ void SECP256K1PrivToPub() #SECP256K1PrivToPub(2):
 {}
 {
   "SECP256K1PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void SECP256K1PointAdd() #SECP256K1PointAdd(5):
+{}
+{
+  "SECP256K1PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
 }
 
 void Tiger() #Tiger(2):

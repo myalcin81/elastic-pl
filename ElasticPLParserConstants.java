@@ -11,15 +11,15 @@ public interface ElasticPLParserConstants {
   /** RegularExpression Id. */
   int INTEGER_LITERAL = 6;
   /** RegularExpression Id. */
-  int IDENTIFIER = 55;
+  int IDENTIFIER = 56;
   /** RegularExpression Id. */
-  int LETTER = 56;
+  int LETTER = 57;
   /** RegularExpression Id. */
-  int DIGIT = 57;
+  int DIGIT = 58;
   /** RegularExpression Id. */
-  int DIGIT_FROM_ONE = 58;
+  int DIGIT_FROM_ONE = 59;
   /** RegularExpression Id. */
-  int DIGIT_ONE_TO_SIX = 59;
+  int DIGIT_ONE_TO_SIX = 60;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -77,6 +77,7 @@ public interface ElasticPLParserConstants {
     "\"Whirlpool\"",
     "\"MD5\"",
     "\"SECP256K1PrivToPub\"",
+    "\"SECP256K1PointAdd\"",
     "\"Tiger\"",
     "\"RIPEMD160\"",
     "\"RIPEMD128\"",

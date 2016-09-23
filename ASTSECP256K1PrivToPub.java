@@ -25,7 +25,6 @@ public class ASTSECP256K1PrivToPub extends SimpleNode {
 
 		    return pointQ.getEncoded(compressed);
 		  } catch (Exception e) {
-		  	e.printStackTrace();
 		    return new byte[0];
 		  }
 	}
@@ -40,11 +39,9 @@ public class ASTSECP256K1PrivToPub extends SimpleNode {
 		int input_length_bytes = 32;
 		int hash_length_bytes = 65;
 		if(compressed)
-		 hash_length_bytes = 32;
+		 hash_length_bytes = 33;
 
 		int hash_length_full_int = (int) Math.ceil(((double) hash_length_bytes) / 4.0);
-		int bytes_length_full_int = (int) Math.ceil(((double) hash_length_bytes) / 4.0);
-
 
 		if (position_to_start >= (max_bytes_state - hash_length_full_int)) {
 			// Do nothing, invalid arguments ( memory beginning at position
@@ -59,7 +56,7 @@ public class ASTSECP256K1PrivToPub extends SimpleNode {
 
 	
 		// do hash
-		byte[] result = this.computePt(this.StateIntToBytes(position_to_start, hash_length_bytes), compressed);
+		byte[] result = this.computePt(this.StateIntToBytes(position_to_start, input_length_bytes), compressed);
 		bytesBackToState(result, position_to_start);
 	}
 

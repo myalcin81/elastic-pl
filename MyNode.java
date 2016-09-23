@@ -52,9 +52,20 @@ public class MyNode
   private int int_marker_indicator = 0;
   private MarkerType my_marker_type = MarkerType.NO_MARKER;
 
+final protected static char[] hexArray = "0123456789ABCDEF".toCharArray();
+public static String bytesToHex(byte[] bytes) {
+    char[] hexChars = new char[bytes.length * 2];
+    for ( int j = 0; j < bytes.length; j++ ) {
+        int v = bytes[j] & 0xFF;
+        hexChars[j * 2] = hexArray[v >>> 4];
+        hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+    }
+    return new String(hexChars);
+}
 
   byte[] StateIntToBytes(int starting_value, int numbytes) {
     byte[] bytes = new byte[numbytes];
+
     for (int i = 0; i < numbytes; ++i) {
       int num_int = starting_value + i / 4;
       int nth = 3 - (i % 4);
@@ -72,6 +83,7 @@ public class MyNode
       return 0;
   }
   public void bytesBackToState(byte[] barr, int starting_value) {
+
     int size = (barr.length / 4) + ((barr.length % 4 == 0) ? 0 : 1);
     for (int i = 0; i < size; ++i) {
       int int_converted = ((safeGet(barr, i * 4) & 0Xff) << 24) | ((safeGet(barr, (i * 4) + 1) & 0Xff) << 16)

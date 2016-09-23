@@ -127,8 +127,13 @@ public class RuntimeEstimator {
     }
     Long sum=0L;
     for (Map.Entry<Integer, Long> entry : partial_weights.entrySet())
-    {
-        sum+=entry.getValue();
+    {   if(sum+entry.getValue()<sum){
+           // overflow, lets just give MAXLONG as the WCET (will be rejected anyways)
+           sum = Long.MAX_VALUE;
+           break;
+        }else{
+           sum+=entry.getValue();
+        }
     }
     return sum;
   }

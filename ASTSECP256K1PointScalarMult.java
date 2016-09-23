@@ -25,7 +25,6 @@ public class ASTSECP256K1PointScalarMult extends SimpleNode {
 		    ECPoint pointQ = d.multiply(scalar);
 		    return pointQ.getEncoded(compressed);
 		  } catch (Exception e) {
-		  	e.printStackTrace();
 		    return new byte[0];
 		  }
 	}

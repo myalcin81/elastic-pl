@@ -29,7 +29,6 @@ public class ASTSECP256K1PointSub extends SimpleNode {
 
 		    return pointQ.getEncoded(compressed);
 		  } catch (Exception e) {
-		  	e.printStackTrace();
 		    return new byte[0];
 		  }
 	}

@@ -75,9 +75,11 @@ m[14] = 0;
 m[15] = 0;
 m[16] = 0;
 m[17] = 1;
+m[999] = 4;
 SECP256K1PrivToPub 0 true;
 SECP256K1PrivToPub 10 true;
-SECP256K1PointAdd 0 true 10 true false;
+SECP256K1PointAdd 0 true 10 true true;
+SECP256K1PointScalarMult 10 true 999 4 true;
 if((2 | 6) == 1){
 	m[10004]=112;
 }

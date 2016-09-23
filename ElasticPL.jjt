@@ -246,6 +246,9 @@ void Statement() #void :
   SECP256K1PrivToPub()
 |
   SECP256K1PointAdd()
+|
+  SECP256K1PointSub()
+
 }
 
 
@@ -310,6 +313,12 @@ void SECP256K1PointAdd() #SECP256K1PointAdd(5):
 {}
 {
   "SECP256K1PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void SECP256K1PointSub() #SECP256K1PointSub(5):
+{}
+{
+  "SECP256K1PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
 }
 
 void Tiger() #Tiger(2):

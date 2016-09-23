@@ -22,7 +22,7 @@ public class ASTSECP256K1PointScalarMult extends SimpleNode {
 		  try {
 		    ECNamedCurveParameterSpec spec = ECNamedCurveTable.getParameterSpec("secp256k1");
 		    ECPoint d = spec.getCurve().decodePoint(pt1);
-		    ECPoint pointQ = d.mul(scalar);
+		    ECPoint pointQ = d.multiply(scalar);
 		    return pointQ.getEncoded(compressed);
 		  } catch (Exception e) {
 		  	e.printStackTrace();

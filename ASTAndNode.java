@@ -39,17 +39,23 @@ public class ASTAndNode extends SimpleNode {
 
   public void interpret()
   {
-     jjtGetChild(0).interpret();
-
-     if (!((Boolean)stack[top]).booleanValue())
-     {
-        stack[top] = new Boolean(false);
-        return;
-     }
-
+      jjtGetChild(0).interpret();
      jjtGetChild(1).interpret();
-     stack[--top] = new Boolean(((Boolean)stack[top]).booleanValue() &&
-                                ((Boolean)stack[top + 1]).booleanValue());
+
+     top=top-1;
+
+     Integer int1 = 0;
+     Integer int2 = 0;
+     if(stack[top] instanceof Integer)
+      int1 = ((Integer)stack[top]).intValue();
+     else if(stack[top] instanceof Boolean)
+      int1 = (((Boolean)stack[top]) == true) ? 1 : 0;
+     if(stack[top+1] instanceof Integer)
+      int2 = ((Integer)stack[top+1]).intValue();
+     else if(stack[top+1] instanceof Boolean)
+      int2 = (((Boolean)stack[top+1]) == true) ? 1 : 0;
+
+     stack[top] = new Boolean((int1>0) && (int2>0));
   }
 
 }

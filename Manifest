@@ -1,4 +1,3 @@
 Manifest-Version: 1.0
 Main-Class: TestCompiler
-Class-Path: lib/gnu-crypto.jar  lib/javax-crypto.jar  lib/javax-security.jar
-
+Class-Path: lib/gnu-crypto.jar   lib/javax-security.jar  lib/bcprov-ext-jdk15on-155.jar

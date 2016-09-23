@@ -29,6 +29,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         case 50:
         case 51:
         case 52:
+        case 53:
           ;
           break;
         default:
@@ -1148,20 +1149,23 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     case 49:
       MD5();
       break;
-    case 51:
+    case 52:
       RIPEMD160();
       break;
-    case 52:
+    case 53:
       RIPEMD128();
       break;
     case 47:
       SHA512();
       break;
-    case 50:
+    case 51:
       Tiger();
       break;
     case 48:
       Whirlpool();
+      break;
+    case 50:
+      SECP256K1PrivToPub();
       break;
     default:
       jj_la1[18] = jj_gen;
@@ -1193,6 +1197,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         case 50:
         case 51:
         case 52:
+        case 53:
           ;
           break;
         default:
@@ -1496,6 +1501,39 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     }
   }
 
+  final public void SECP256K1PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #SECP256K1PrivToPub( 2) */
+  ASTSECP256K1PrivToPub jjtn000 = new ASTSECP256K1PrivToPub(JJTSECP256K1PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(50);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
   final public void Tiger() throws ParseException {
  /*@bgen(jjtree) #Tiger( 2) */
   ASTTiger jjtn000 = new ASTTiger(JJTTIGER);
@@ -1503,7 +1541,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(50);
+      jj_consume_token(51);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -1536,7 +1574,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(51);
+      jj_consume_token(52);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -1569,7 +1607,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(52);
+      jj_consume_token(53);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -1602,7 +1640,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(53);
+      jj_consume_token(54);
       ConditionalOrExpression();
       jj_consume_token(39);
     } catch (Throwable jjte000) {
@@ -2059,7 +2097,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       jj_la1_0 = new int[] {0x0,0x80000040,0x100,0x200,0x400,0x800,0x1000,0x6000,0x6000,0x78000,0x78000,0x180000,0x180000,0x7fe00000,0x7fe00000,0x80000040,0x40,0x0,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0x1fd588,0xb,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xb,0xa,0x60,0x1fd588,0x1fd588,0x800,};
+      jj_la1_1 = new int[] {0x3fd588,0xb,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xb,0xa,0x60,0x3fd588,0x3fd588,0x800,};
    }
   final private JJCalls[] jj_2_rtns = new JJCalls[1];
   private boolean jj_rescan = false;
@@ -2248,7 +2286,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   /** Generate ParseException. */
   public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[59];
+    boolean[] la1tokens = new boolean[60];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -2265,7 +2303,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         }
       }
     }
-    for (int i = 0; i < 59; i++) {
+    for (int i = 0; i < 60; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;

@@ -13,26 +13,7 @@ public class ASTRIPEMD128 extends SimpleNode {
 		super(p, id);
 	}
 
-	byte[] StateIntToBytes(int starting_value, int numbytes) {
-		byte[] bytes = new byte[numbytes];
-		for (int i = 0; i < numbytes; ++i) {
-			int num_int = starting_value + i / 4;
-			int nth = 3 - (i % 4);
-			int rawval = (int) symtab.get("m[" + num_int + "]");
-			byte rel = (byte) ((rawval >> (nth * 8)) & 0xff);
-			bytes[i] = rel;
-		}
-		return bytes;
-	}
-
-	public void bytesBackToState(byte[] barr, int starting_value) {
-		int size = (barr.length / 4) + ((barr.length % 4 == 0) ? 0 : 1);
-		for (int i = 0; i < size; ++i) {
-			int int_converted = ((barr[(i * 4)] & 0Xff) << 24) | ((barr[(i * 4) + 1] & 0Xff) << 16)
-					| ((barr[(i * 4) + 2] & 0Xff) << 8) | ((barr[(i * 4) + 3] & 0Xff));
-			symtab.put("m[" + String.valueOf(starting_value + i) + "]", int_converted);
-		}
-	}
+	
 
 	public byte[] computeRIPEMD128(byte[] message) {
 		IMessageDigest md = HashFactory.getInstance("RIPEMD-160");

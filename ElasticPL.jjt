@@ -242,6 +242,8 @@ void Statement() #void :
   Tiger()
 | 
   Whirlpool()
+|
+  SECP256K1PrivToPub()
 }
 
 
@@ -295,6 +297,13 @@ void MD5() #MD5(2):
 {
   "MD5" Literal() Literal() ";"
 }
+
+void SECP256K1PrivToPub() #SECP256K1PrivToPub(2):
+{}
+{
+  "SECP256K1PrivToPub" Literal() BooleanLiteral() ";"
+}
+
 void Tiger() #Tiger(2):
 {}
 {

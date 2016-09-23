@@ -39,10 +39,11 @@ public interface ElasticPLParserTreeConstants
   public int JJTSHA512 = 35;
   public int JJTWHIRLPOOL = 36;
   public int JJTMD5 = 37;
-  public int JJTTIGER = 38;
-  public int JJTRIPEMD160 = 39;
-  public int JJTRIPEMD128 = 40;
-  public int JJTVERIFYSTATEMENT = 41;
+  public int JJTSECP256K1PRIVTOPUB = 38;
+  public int JJTTIGER = 39;
+  public int JJTRIPEMD160 = 40;
+  public int JJTRIPEMD128 = 41;
+  public int JJTVERIFYSTATEMENT = 42;
 
 
   public String[] jjtNodeName = {
@@ -84,10 +85,11 @@ public interface ElasticPLParserTreeConstants
     "SHA512",
     "Whirlpool",
     "MD5",
+    "SECP256K1PrivToPub",
     "Tiger",
     "RIPEMD160",
     "RIPEMD128",
     "VerifyStatement",
   };
 }
-/* JavaCC - OriginalChecksum=835d57fa79036f032898b8b1f8d797fe (do not edit this line) */
+/* JavaCC - OriginalChecksum=88cf14023808cb6cebcf409919b97e39 (do not edit this line) */

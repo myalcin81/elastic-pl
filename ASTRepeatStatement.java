@@ -53,10 +53,8 @@ public class ASTRepeatStatement extends SimpleNode {
   public void interpret()
   {
     int repeat_times = ((ASTIntConstNode)jjtGetChild(0)).val;
-    System.out.println("Repeating " + repeat_times);
     if(repeat_times > 0){
       for(int i=0;i<repeat_times;++i){ 
-
           jjtGetChild(1).interpret();
       }
     }  

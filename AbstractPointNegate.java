@@ -4,7 +4,7 @@ import org.bouncycastle.math.ec.*;
 import org.bouncycastle.jce.spec.ECNamedCurveParameterSpec;
 import org.bouncycastle.jce.ECNamedCurveTable;
 import java.math.BigInteger;
-public class AbstractPointNegate extends SimpleNode {
+public abstract class AbstractPointNegate extends SimpleNode {
 
 	public abstract String getCurve();
 	public abstract int getCompressedSize();

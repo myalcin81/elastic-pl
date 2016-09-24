@@ -11,15 +11,15 @@ public interface ElasticPLParserConstants {
   /** RegularExpression Id. */
   int INTEGER_LITERAL = 6;
   /** RegularExpression Id. */
-  int IDENTIFIER = 58;
+  int IDENTIFIER = 59;
   /** RegularExpression Id. */
-  int LETTER = 59;
+  int LETTER = 60;
   /** RegularExpression Id. */
-  int DIGIT = 60;
+  int DIGIT = 61;
   /** RegularExpression Id. */
-  int DIGIT_FROM_ONE = 61;
+  int DIGIT_FROM_ONE = 62;
   /** RegularExpression Id. */
-  int DIGIT_ONE_TO_SIX = 62;
+  int DIGIT_ONE_TO_SIX = 63;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -80,6 +80,7 @@ public interface ElasticPLParserConstants {
     "\"SECP256K1PointAdd\"",
     "\"SECP256K1PointSub\"",
     "\"SECP256K1PointScalarMult\"",
+    "\"SECP256K1PointNegate\"",
     "\"Tiger\"",
     "\"RIPEMD160\"",
     "\"RIPEMD128\"",

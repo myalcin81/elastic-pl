@@ -1114,6 +1114,8 @@ void Statement()       :
   SECP256K1PointSub()
 |
   SECP256K1PointScalarMult()
+| 
+  SECP256K1PointNegate()
 }
 
 
@@ -1555,6 +1557,39 @@ void SECP256K1PointScalarMult()                             :
 /*@egen*/
 }
 
+void SECP256K1PointNegate()                         :
+{/*@bgen(jjtree) #SECP256K1PointNegate( 3) */
+  ASTSECP256K1PointNegate jjtn000 = new ASTSECP256K1PointNegate(JJTSECP256K1POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+/*@egen*/}
+{/*@bgen(jjtree) #SECP256K1PointNegate( 3) */
+  try {
+/*@egen*/
+  "SECP256K1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"/*@bgen(jjtree)*/
+  } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      throw (RuntimeException)jjte000;
+    }
+    if (jjte000 instanceof ParseException) {
+      throw (ParseException)jjte000;
+    }
+    throw (Error)jjte000;
+  } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+  }
+/*@egen*/
+}
 
 void Tiger()          :
 {/*@bgen(jjtree) #Tiger( 2) */

@@ -250,6 +250,8 @@ void Statement() #void :
   SECP256K1PointSub()
 |
   SECP256K1PointScalarMult()
+| 
+  SECP256K1PointNegate()
 }
 
 
@@ -327,6 +329,11 @@ void SECP256K1PointScalarMult() #SECP256K1PointScalarMult(5):
   "SECP256K1PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
 }
 
+void SECP256K1PointNegate() #SECP256K1PointNegate(3):
+{}
+{
+  "SECP256K1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
 
 void Tiger() #Tiger(2):
 {}

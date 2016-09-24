@@ -43,10 +43,11 @@ public interface ElasticPLParserTreeConstants
   public int JJTSECP256K1POINTADD = 39;
   public int JJTSECP256K1POINTSUB = 40;
   public int JJTSECP256K1POINTSCALARMULT = 41;
-  public int JJTTIGER = 42;
-  public int JJTRIPEMD160 = 43;
-  public int JJTRIPEMD128 = 44;
-  public int JJTVERIFYSTATEMENT = 45;
+  public int JJTSECP256K1POINTNEGATE = 42;
+  public int JJTTIGER = 43;
+  public int JJTRIPEMD160 = 44;
+  public int JJTRIPEMD128 = 45;
+  public int JJTVERIFYSTATEMENT = 46;
 
 
   public String[] jjtNodeName = {
@@ -92,10 +93,11 @@ public interface ElasticPLParserTreeConstants
     "SECP256K1PointAdd",
     "SECP256K1PointSub",
     "SECP256K1PointScalarMult",
+    "SECP256K1PointNegate",
     "Tiger",
     "RIPEMD160",
     "RIPEMD128",
     "VerifyStatement",
   };
 }
-/* JavaCC - OriginalChecksum=cb2653b3e668310089bc6bb03a2fc7b1 (do not edit this line) */
+/* JavaCC - OriginalChecksum=10e8601d32678a0994950c727213e0e1 (do not edit this line) */

@@ -22,9 +22,7 @@ public class TestCompiler {
       ((ASTCompilationUnit)parser.jjtree.rootNode()).fillRandomIntNumber();
       long WCET = RuntimeEstimator.worstWeight((SimpleNode)parser.jjtree.rootNode());
       System.out.println("[!] Worst case execution time: " + WCET);
-      int input = ((ASTCompilationUnit)parser.jjtree.rootNode()).getRandomIntNumber();
-      System.out.println("[!] Random integers specified: " + input);
-      parser.jjtree.rootNode().interpret();
+       parser.jjtree.rootNode().interpret();
     } catch (ParseException e) {
       System.out.println("Elastic Programming Language Interpreter Version 0.1:  Encountered errors during parse.");
       e.printStackTrace();

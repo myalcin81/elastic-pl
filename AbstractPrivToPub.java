@@ -4,15 +4,19 @@ import org.bouncycastle.math.ec.*;
 import org.bouncycastle.jce.spec.ECNamedCurveParameterSpec;
 import org.bouncycastle.jce.ECNamedCurveTable;
 import java.math.BigInteger;
-public class ASTSECP256K1PrivToPub extends SimpleNode {
+public class AbstractPrivToPub extends SimpleNode {
 
+	public abstract String getCurve();
+	public abstract int getCompressedSize();
+	public abstract int getUncompressedSize();
+	public abstract int getPrivkeyInputSize();
 
-	public ASTSECP256K1PrivToPub(int id) {
+	public AbstractPrivToPub(int id) {
 
 		super(id);
 	}
 
-	public ASTSECP256K1PrivToPub(ElasticPLParser p, int id) {
+	public AbstractPrivToPub(ElasticPLParser p, int id) {
 		super(p, id);
 	}
 
@@ -20,7 +24,7 @@ public class ASTSECP256K1PrivToPub extends SimpleNode {
 
 	public byte[] computePt(byte[] message, boolean compressed) {
 		  try {
-		    ECNamedCurveParameterSpec spec = ECNamedCurveTable.getParameterSpec("secp256k1");
+		    ECNamedCurveParameterSpec spec = ECNamedCurveTable.getParameterSpec(getCurve());
 		    ECPoint pointQ = spec.getG().multiply(new BigInteger(1, message));
 
 		    return pointQ.getEncoded(compressed);
@@ -36,10 +40,10 @@ public class ASTSECP256K1PrivToPub extends SimpleNode {
 		Boolean compressed = (jjtGetChild(1) instanceof ASTTrueNode) ? true : false;
 
 		int max_bytes_state = 64000 * 4; // 256 integers with 4 bytes each
-		int input_length_bytes = 32;
-		int hash_length_bytes = 65;
+		int input_length_bytes = getPrivkeyInputSize();
+		int hash_length_bytes = getUncompressedSize();
 		if(compressed)
-		 hash_length_bytes = 33;
+		 hash_length_bytes = getCompressedSize();
 
 		int hash_length_full_int = (int) Math.ceil(((double) hash_length_bytes) / 4.0);
 

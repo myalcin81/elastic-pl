@@ -4,29 +4,29 @@ import org.bouncycastle.math.ec.*;
 import org.bouncycastle.jce.spec.ECNamedCurveParameterSpec;
 import org.bouncycastle.jce.ECNamedCurveTable;
 import java.math.BigInteger;
-public class ASTSECP256K1PointAdd extends SimpleNode {
+public class AbstractPointNegate extends SimpleNode {
 
+	public abstract String getCurve();
+	public abstract int getCompressedSize();
+	public abstract int getUncompressedSize();
+	public abstract int getPrivkeyInputSize();
 
-	public ASTSECP256K1PointAdd(int id) {
+	public AbstractPointNegate(int id) {
 
 		super(id);
 	}
 
-	public ASTSECP256K1PointAdd(ElasticPLParser p, int id) {
+	public AbstractPointNegate(ElasticPLParser p, int id) {
 		super(p, id);
 	}
 
 	
 
-	public byte[] computePt(byte[] pt1, byte[] pt2, boolean compressed) {
+	public byte[] computePt(byte[] pt1, boolean compressed) {
 		  try {
-		    ECNamedCurveParameterSpec spec = ECNamedCurveTable.getParameterSpec("secp256k1");
-		    ECPoint d = spec.getCurve().decodePoint(pt1);
-		    ECPoint f = spec.getCurve().decodePoint(pt2);
-
-		   
-		    ECPoint pointQ = d.add(f);
-
+		    ECNamedCurveParameterSpec spec = ECNamedCurveTable.getParameterSpec(getCurve());
+		    ECPoint d = spec.getCurve().decodePoint(pt1);		   
+		    ECPoint pointQ = d.negate();
 		    return pointQ.getEncoded(compressed);
 		  } catch (Exception e) {
 		    return new byte[0];
@@ -38,23 +38,17 @@ public class ASTSECP256K1PointAdd extends SimpleNode {
 		// check when to do nothing
 		Integer position_to_start1 = new Integer(((ASTIntConstNode)jjtGetChild(0)).val);
 		Boolean compressed1 = (jjtGetChild(1) instanceof ASTTrueNode) ? true : false;
-		Integer position_to_start2 = new Integer(((ASTIntConstNode)jjtGetChild(2)).val);
-		Boolean compressed2 = (jjtGetChild(3) instanceof ASTTrueNode) ? true : false;
-		Boolean compressed = (jjtGetChild(4) instanceof ASTTrueNode) ? true : false;
+		Boolean compressed = (jjtGetChild(2) instanceof ASTTrueNode) ? true : false;
 
 		int max_bytes_state = 64000 * 4; // 256 integers with 4 bytes each
 
-		int input_length_bytes1 = 65;
+		int input_length_bytes1 = getUncompressedSize();
 		if(compressed1)
-			input_length_bytes1 = 33;
+			input_length_bytes1 = getCompressedSize();
 
-		int input_length_bytes2 = 65;
-		if(compressed2)
-			input_length_bytes2 = 33;
-
-		int hash_length_bytes = 65;
+		int hash_length_bytes = getUncompressedSize();
 		if(compressed)
-		 hash_length_bytes = 33;
+		 hash_length_bytes = getCompressedSize();
 
 
 
@@ -71,14 +65,10 @@ public class ASTSECP256K1PointAdd extends SimpleNode {
 			// as it would go beyond the end of the state)
 			return;
 		}
-		if (position_to_start2 + input_length_bytes2 >= max_bytes_state) {
-			// Do nothing, invalid arguments (cannot scan requested byte range
-			// as it would go beyond the end of the state)
-			return;
-		}
+		
 	
 		// do hash
-		byte[] result = this.computePt(this.StateIntToBytes(position_to_start1, input_length_bytes1), this.StateIntToBytes(position_to_start2, input_length_bytes2), compressed);
+		byte[] result = this.computePt(this.StateIntToBytes(position_to_start1, input_length_bytes1), compressed);
 		bytesBackToState(result, position_to_start1);
 	}
 

@@ -40,7 +40,6 @@ void CompilationUnit() :
    String name;
 }
 {
-   InputSpecificationStatement()
    (
        Statement()
    )*
@@ -377,12 +376,6 @@ void RepeatStatement() #RepeatStatement(2):
 {}
 {
   "repeat" "(" Literal() ")" Block()
-}
-
-void InputSpecificationStatement() #InputSpecificationStatement(1):
-{}
-{
-  "input" Literal() ";"
 }
 
 void SHA256() #SHA256(2):

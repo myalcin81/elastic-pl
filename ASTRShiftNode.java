@@ -39,7 +39,7 @@ public class ASTRShiftNode extends SimpleNode {
 
   public void interpret()
   {
-    jjtGetChild(0).interpret();
+     jjtGetChild(0).interpret();
      jjtGetChild(1).interpret();
 
      top=top-1;

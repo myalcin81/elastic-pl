@@ -13,7 +13,6 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
    jjtree.openNodeScope(jjtn000);
    jjtn000.jjtSetFirstToken(getToken(1));String name;
     try {
-      InputSpecificationStatement();
       label_1:
       while (true) {
         switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
@@ -22,6 +21,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         case 40:
         case 42:
         case 44:
+        case 45:
         case 46:
         case 47:
         case 48:
@@ -83,7 +83,6 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         case 104:
         case 105:
         case 106:
-        case 107:
           ;
           break;
         default:
@@ -1197,190 +1196,190 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     case 44:
       RepeatStatement();
       break;
-    case 46:
+    case 45:
       SHA256();
       break;
-    case 49:
+    case 48:
       MD5();
       break;
-    case 106:
+    case 105:
       RIPEMD160();
       break;
-    case 107:
+    case 106:
       RIPEMD128();
       break;
-    case 47:
+    case 46:
       SHA512();
       break;
-    case 105:
+    case 104:
       Tiger();
       break;
-    case 48:
+    case 47:
       Whirlpool();
       break;
-    case 50:
+    case 49:
       SECP192K1PrivToPub();
       break;
-    case 51:
+    case 50:
       SECP192K1PointAdd();
       break;
-    case 52:
+    case 51:
       SECP192K1PointSub();
       break;
-    case 53:
+    case 52:
       SECP192K1PointScalarMult();
       break;
-    case 54:
+    case 53:
       SECP192K1PointNegate();
       break;
-    case 55:
+    case 54:
       SECP192R1PrivToPub();
       break;
-    case 56:
+    case 55:
       SECP192R1PointAdd();
       break;
-    case 57:
+    case 56:
       SECP192R1PointSub();
       break;
-    case 58:
+    case 57:
       SECP192R1PointScalarMult();
       break;
-    case 59:
+    case 58:
       SECP192R1PointNegate();
       break;
-    case 60:
+    case 59:
       SECP224K1PrivToPub();
       break;
-    case 61:
+    case 60:
       SECP224K1PointAdd();
       break;
-    case 62:
+    case 61:
       SECP224K1PointSub();
       break;
-    case 63:
+    case 62:
       SECP224K1PointScalarMult();
       break;
-    case 64:
+    case 63:
       SECP224K1PointNegate();
       break;
-    case 65:
+    case 64:
       SECP224R1PrivToPub();
       break;
-    case 66:
+    case 65:
       SECP224R1PointAdd();
       break;
-    case 67:
+    case 66:
       SECP224R1PointSub();
       break;
-    case 68:
+    case 67:
       SECP224R1PointScalarMult();
       break;
-    case 69:
+    case 68:
       SECP224R1PointNegate();
       break;
-    case 70:
+    case 69:
       SECP256K1PrivToPub();
       break;
-    case 71:
+    case 70:
       SECP256K1PointAdd();
       break;
-    case 72:
+    case 71:
       SECP256K1PointSub();
       break;
-    case 73:
+    case 72:
       SECP256K1PointScalarMult();
       break;
-    case 74:
+    case 73:
       SECP256K1PointNegate();
       break;
-    case 75:
+    case 74:
       SECP256R1PrivToPub();
       break;
-    case 76:
+    case 75:
       SECP256R1PointAdd();
       break;
-    case 77:
+    case 76:
       SECP256R1PointSub();
       break;
-    case 78:
+    case 77:
       SECP256R1PointScalarMult();
       break;
-    case 79:
+    case 78:
       SECP256R1PointNegate();
       break;
-    case 80:
+    case 79:
       SECP384R1PrivToPub();
       break;
-    case 81:
+    case 80:
       SECP384R1PointAdd();
       break;
-    case 82:
+    case 81:
       SECP384R1PointSub();
       break;
-    case 83:
+    case 82:
       SECP384R1PointScalarMult();
       break;
-    case 84:
+    case 83:
       SECP384R1PointNegate();
       break;
-    case 85:
+    case 84:
       PRIME192V1PrivToPub();
       break;
-    case 86:
+    case 85:
       PRIME192V1PointAdd();
       break;
-    case 87:
+    case 86:
       PRIME192V1PointSub();
       break;
-    case 88:
+    case 87:
       PRIME192V1PointScalarMult();
       break;
-    case 89:
+    case 88:
       PRIME192V1PointNegate();
       break;
-    case 90:
+    case 89:
       PRIME192V2PrivToPub();
       break;
-    case 91:
+    case 90:
       PRIME192V2PointAdd();
       break;
-    case 92:
+    case 91:
       PRIME192V2PointSub();
       break;
-    case 93:
+    case 92:
       PRIME192V2PointScalarMult();
       break;
-    case 94:
+    case 93:
       PRIME192V2PointNegate();
       break;
-    case 95:
+    case 94:
       PRIME192V3PrivToPub();
       break;
-    case 96:
+    case 95:
       PRIME192V3PointAdd();
       break;
-    case 97:
+    case 96:
       PRIME192V3PointSub();
       break;
-    case 98:
+    case 97:
       PRIME192V3PointScalarMult();
       break;
-    case 99:
+    case 98:
       PRIME192V3PointNegate();
       break;
-    case 100:
+    case 99:
       PRIME256V1PrivToPub();
       break;
-    case 101:
+    case 100:
       PRIME256V1PointAdd();
       break;
-    case 102:
+    case 101:
       PRIME256V1PointSub();
       break;
-    case 103:
+    case 102:
       PRIME256V1PointScalarMult();
       break;
-    case 104:
+    case 103:
       PRIME256V1PointNegate();
       break;
     default:
@@ -1406,6 +1405,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         case 40:
         case 42:
         case 44:
+        case 45:
         case 46:
         case 47:
         case 48:
@@ -1467,7 +1467,6 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         case 104:
         case 105:
         case 106:
-        case 107:
           ;
           break;
         default:
@@ -1607,38 +1606,6 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     }
   }
 
-  final public void InputSpecificationStatement() throws ParseException {
- /*@bgen(jjtree) #InputSpecificationStatement( 1) */
-  ASTInputSpecificationStatement jjtn000 = new ASTInputSpecificationStatement(JJTINPUTSPECIFICATIONSTATEMENT);
-  boolean jjtc000 = true;
-  jjtree.openNodeScope(jjtn000);
-  jjtn000.jjtSetFirstToken(getToken(1));
-    try {
-      jj_consume_token(45);
-      Literal();
-      jj_consume_token(39);
-    } catch (Throwable jjte000) {
-    if (jjtc000) {
-      jjtree.clearNodeScope(jjtn000);
-      jjtc000 = false;
-    } else {
-      jjtree.popNode();
-    }
-    if (jjte000 instanceof RuntimeException) {
-      {if (true) throw (RuntimeException)jjte000;}
-    }
-    if (jjte000 instanceof ParseException) {
-      {if (true) throw (ParseException)jjte000;}
-    }
-    {if (true) throw (Error)jjte000;}
-    } finally {
-    if (jjtc000) {
-      jjtree.closeNodeScope(jjtn000,  1);
-      jjtn000.jjtSetLastToken(getToken(0));
-    }
-    }
-  }
-
   final public void SHA256() throws ParseException {
  /*@bgen(jjtree) #SHA256( 2) */
   ASTSHA256 jjtn000 = new ASTSHA256(JJTSHA256);
@@ -1646,7 +1613,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(46);
+      jj_consume_token(45);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -1679,7 +1646,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(47);
+      jj_consume_token(46);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -1712,7 +1679,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(48);
+      jj_consume_token(47);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -1745,7 +1712,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(49);
+      jj_consume_token(48);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -1778,7 +1745,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(50);
+      jj_consume_token(49);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -1811,7 +1778,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(51);
+      jj_consume_token(50);
       Literal();
       BooleanLiteral();
       Literal();
@@ -1847,7 +1814,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(52);
+      jj_consume_token(51);
       Literal();
       BooleanLiteral();
       Literal();
@@ -1883,7 +1850,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(53);
+      jj_consume_token(52);
       Literal();
       BooleanLiteral();
       Literal();
@@ -1919,7 +1886,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(54);
+      jj_consume_token(53);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -1953,7 +1920,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(55);
+      jj_consume_token(54);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -1986,7 +1953,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(56);
+      jj_consume_token(55);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2022,7 +1989,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(57);
+      jj_consume_token(56);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2058,7 +2025,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(58);
+      jj_consume_token(57);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2094,7 +2061,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(59);
+      jj_consume_token(58);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -2128,7 +2095,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(60);
+      jj_consume_token(59);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -2161,7 +2128,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(61);
+      jj_consume_token(60);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2197,7 +2164,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(62);
+      jj_consume_token(61);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2233,7 +2200,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(63);
+      jj_consume_token(62);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2269,7 +2236,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(64);
+      jj_consume_token(63);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -2303,7 +2270,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(65);
+      jj_consume_token(64);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -2336,7 +2303,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(66);
+      jj_consume_token(65);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2372,7 +2339,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(67);
+      jj_consume_token(66);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2408,7 +2375,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(68);
+      jj_consume_token(67);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2444,7 +2411,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(69);
+      jj_consume_token(68);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -2478,7 +2445,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(70);
+      jj_consume_token(69);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -2511,7 +2478,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(71);
+      jj_consume_token(70);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2547,7 +2514,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(72);
+      jj_consume_token(71);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2583,7 +2550,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(73);
+      jj_consume_token(72);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2619,7 +2586,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(74);
+      jj_consume_token(73);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -2653,7 +2620,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(75);
+      jj_consume_token(74);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -2686,7 +2653,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(76);
+      jj_consume_token(75);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2722,7 +2689,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(77);
+      jj_consume_token(76);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2758,7 +2725,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(78);
+      jj_consume_token(77);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2794,7 +2761,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(79);
+      jj_consume_token(78);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -2828,7 +2795,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(80);
+      jj_consume_token(79);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -2861,7 +2828,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(81);
+      jj_consume_token(80);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2897,7 +2864,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(82);
+      jj_consume_token(81);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2933,7 +2900,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(83);
+      jj_consume_token(82);
       Literal();
       BooleanLiteral();
       Literal();
@@ -2969,7 +2936,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(84);
+      jj_consume_token(83);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -3003,7 +2970,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(85);
+      jj_consume_token(84);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -3036,7 +3003,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(86);
+      jj_consume_token(85);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3072,7 +3039,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(87);
+      jj_consume_token(86);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3108,7 +3075,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(88);
+      jj_consume_token(87);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3144,7 +3111,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(89);
+      jj_consume_token(88);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -3178,7 +3145,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(90);
+      jj_consume_token(89);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -3211,7 +3178,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(91);
+      jj_consume_token(90);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3247,7 +3214,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(92);
+      jj_consume_token(91);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3283,7 +3250,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(93);
+      jj_consume_token(92);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3319,7 +3286,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(94);
+      jj_consume_token(93);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -3353,7 +3320,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(95);
+      jj_consume_token(94);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -3386,7 +3353,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(96);
+      jj_consume_token(95);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3422,7 +3389,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(97);
+      jj_consume_token(96);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3458,7 +3425,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(98);
+      jj_consume_token(97);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3494,7 +3461,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(99);
+      jj_consume_token(98);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -3528,7 +3495,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(100);
+      jj_consume_token(99);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -3561,7 +3528,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(101);
+      jj_consume_token(100);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3597,7 +3564,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(102);
+      jj_consume_token(101);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3633,7 +3600,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(103);
+      jj_consume_token(102);
       Literal();
       BooleanLiteral();
       Literal();
@@ -3669,7 +3636,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(104);
+      jj_consume_token(103);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -3703,7 +3670,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(105);
+      jj_consume_token(104);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -3736,7 +3703,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(106);
+      jj_consume_token(105);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -3769,7 +3736,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(107);
+      jj_consume_token(106);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -3802,7 +3769,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(108);
+      jj_consume_token(107);
       ConditionalOrExpression();
       jj_consume_token(39);
     } catch (Throwable jjte000) {
@@ -4263,13 +4230,13 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       jj_la1_0 = new int[] {0x0,0x80000040,0x100,0x200,0x400,0x800,0x1000,0x6000,0x6000,0x78000,0x78000,0x180000,0x180000,0x7fe00000,0x7fe00000,0x80000040,0x40,0x0,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0xffffd588,0xb,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xb,0xa,0x60,0xffffd588,0xffffd588,0x800,};
+      jj_la1_1 = new int[] {0xfffff588,0xb,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xb,0xa,0x60,0xfffff588,0xfffff588,0x800,};
    }
    private static void jj_la1_init_2() {
       jj_la1_2 = new int[] {0xffffffff,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xffffffff,0xffffffff,0x0,};
    }
    private static void jj_la1_init_3() {
-      jj_la1_3 = new int[] {0xfff,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xfff,0xfff,0x0,};
+      jj_la1_3 = new int[] {0x7ff,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x7ff,0x7ff,0x0,};
    }
   final private JJCalls[] jj_2_rtns = new JJCalls[1];
   private boolean jj_rescan = false;
@@ -4458,7 +4425,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   /** Generate ParseException. */
   public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[114];
+    boolean[] la1tokens = new boolean[113];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -4481,7 +4448,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         }
       }
     }
-    for (int i = 0; i < 114; i++) {
+    for (int i = 0; i < 113; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;

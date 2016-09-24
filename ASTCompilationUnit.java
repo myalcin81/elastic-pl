@@ -37,7 +37,9 @@ import java.util.Random;
 
 /* JJT: 0.2.2 */
 
+
 public class ASTCompilationUnit extends SimpleNode {
+	public static final int input_entropy_ints = 12;
 
 	static long seed = System.currentTimeMillis();
 	private int[] inputInts;
@@ -122,30 +124,17 @@ public class ASTCompilationUnit extends SimpleNode {
 		// input specification and the last one is BY
 		// GRAMMAR DEFINITION the bounty hook function
 		int i, k = jjtGetNumChildren();
-		for (i = 1; i < k - 1; i++) {
+		for (i = 0; i < k - 1; i++) {
 			jjtGetChild(i).interpret();
 		}
 
 	}
 
-	public int getRandomIntNumber() {
-		int ret = 3; // fallback value is 3, but this should never happen to
-						// fallback
-
-		// The verify statement MUST be the first one
-		jjtGetChild(0).interpret();
-		try {
-			Integer symtab_result = (Integer) symtab.get("inputs");
-			ret = symtab_result.intValue();
-		} catch (Exception e) {
-		}
-
-		return ret;
-	}
+	
 
 	public void fillRandomIntNumber() {
-		inputInts = new int[getRandomIntNumber()];
-		for (int i = 0; i < getRandomIntNumber(); ++i) {
+		inputInts = new int[input_entropy_ints];
+		for (int i = 0; i < input_entropy_ints; ++i) {
 			Integer val = new Integer(rn.nextInt());
 			symtab.put("m[" + String.valueOf(i) + "]", val);
 			inputInts[i] = val.intValue();
@@ -153,8 +142,10 @@ public class ASTCompilationUnit extends SimpleNode {
 	}
 	
 	public void fillGivenIntNumber(int[] inputIntsOuter) {
-		inputInts = new int[inputIntsOuter.length];
-		for (int i = 0; i < getRandomIntNumber(); ++i) {
+		if(inputIntsOuter.length!=input_entropy_ints)
+			return;
+		inputInts = new int[input_entropy_ints];
+		for (int i = 0; i < input_entropy_ints; ++i) {
 			Integer val = inputIntsOuter[i];
 			symtab.put("m[" + String.valueOf(i) + "]", val);
 			inputInts[i] = val.intValue();

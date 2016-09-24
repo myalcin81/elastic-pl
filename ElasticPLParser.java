@@ -34,6 +34,56 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         case 55:
         case 56:
         case 57:
+        case 58:
+        case 59:
+        case 60:
+        case 61:
+        case 62:
+        case 63:
+        case 64:
+        case 65:
+        case 66:
+        case 67:
+        case 68:
+        case 69:
+        case 70:
+        case 71:
+        case 72:
+        case 73:
+        case 74:
+        case 75:
+        case 76:
+        case 77:
+        case 78:
+        case 79:
+        case 80:
+        case 81:
+        case 82:
+        case 83:
+        case 84:
+        case 85:
+        case 86:
+        case 87:
+        case 88:
+        case 89:
+        case 90:
+        case 91:
+        case 92:
+        case 93:
+        case 94:
+        case 95:
+        case 96:
+        case 97:
+        case 98:
+        case 99:
+        case 100:
+        case 101:
+        case 102:
+        case 103:
+        case 104:
+        case 105:
+        case 106:
+        case 107:
           ;
           break;
         default:
@@ -1153,35 +1203,185 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     case 49:
       MD5();
       break;
-    case 56:
+    case 106:
       RIPEMD160();
       break;
-    case 57:
+    case 107:
       RIPEMD128();
       break;
     case 47:
       SHA512();
       break;
-    case 55:
+    case 105:
       Tiger();
       break;
     case 48:
       Whirlpool();
       break;
     case 50:
-      SECP256K1PrivToPub();
+      SECP192K1PrivToPub();
       break;
     case 51:
-      SECP256K1PointAdd();
+      SECP192K1PointAdd();
       break;
     case 52:
-      SECP256K1PointSub();
+      SECP192K1PointSub();
       break;
     case 53:
-      SECP256K1PointScalarMult();
+      SECP192K1PointScalarMult();
       break;
     case 54:
+      SECP192K1PointNegate();
+      break;
+    case 55:
+      SECP192R1PrivToPub();
+      break;
+    case 56:
+      SECP192R1PointAdd();
+      break;
+    case 57:
+      SECP192R1PointSub();
+      break;
+    case 58:
+      SECP192R1PointScalarMult();
+      break;
+    case 59:
+      SECP192R1PointNegate();
+      break;
+    case 60:
+      SECP224K1PrivToPub();
+      break;
+    case 61:
+      SECP224K1PointAdd();
+      break;
+    case 62:
+      SECP224K1PointSub();
+      break;
+    case 63:
+      SECP224K1PointScalarMult();
+      break;
+    case 64:
+      SECP224K1PointNegate();
+      break;
+    case 65:
+      SECP224R1PrivToPub();
+      break;
+    case 66:
+      SECP224R1PointAdd();
+      break;
+    case 67:
+      SECP224R1PointSub();
+      break;
+    case 68:
+      SECP224R1PointScalarMult();
+      break;
+    case 69:
+      SECP224R1PointNegate();
+      break;
+    case 70:
+      SECP256K1PrivToPub();
+      break;
+    case 71:
+      SECP256K1PointAdd();
+      break;
+    case 72:
+      SECP256K1PointSub();
+      break;
+    case 73:
+      SECP256K1PointScalarMult();
+      break;
+    case 74:
       SECP256K1PointNegate();
+      break;
+    case 75:
+      SECP256R1PrivToPub();
+      break;
+    case 76:
+      SECP256R1PointAdd();
+      break;
+    case 77:
+      SECP256R1PointSub();
+      break;
+    case 78:
+      SECP256R1PointScalarMult();
+      break;
+    case 79:
+      SECP256R1PointNegate();
+      break;
+    case 80:
+      SECP384R1PrivToPub();
+      break;
+    case 81:
+      SECP384R1PointAdd();
+      break;
+    case 82:
+      SECP384R1PointSub();
+      break;
+    case 83:
+      SECP384R1PointScalarMult();
+      break;
+    case 84:
+      SECP384R1PointNegate();
+      break;
+    case 85:
+      PRIME192V1PrivToPub();
+      break;
+    case 86:
+      PRIME192V1PointAdd();
+      break;
+    case 87:
+      PRIME192V1PointSub();
+      break;
+    case 88:
+      PRIME192V1PointScalarMult();
+      break;
+    case 89:
+      PRIME192V1PointNegate();
+      break;
+    case 90:
+      PRIME192V2PrivToPub();
+      break;
+    case 91:
+      PRIME192V2PointAdd();
+      break;
+    case 92:
+      PRIME192V2PointSub();
+      break;
+    case 93:
+      PRIME192V2PointScalarMult();
+      break;
+    case 94:
+      PRIME192V2PointNegate();
+      break;
+    case 95:
+      PRIME192V3PrivToPub();
+      break;
+    case 96:
+      PRIME192V3PointAdd();
+      break;
+    case 97:
+      PRIME192V3PointSub();
+      break;
+    case 98:
+      PRIME192V3PointScalarMult();
+      break;
+    case 99:
+      PRIME192V3PointNegate();
+      break;
+    case 100:
+      PRIME256V1PrivToPub();
+      break;
+    case 101:
+      PRIME256V1PointAdd();
+      break;
+    case 102:
+      PRIME256V1PointSub();
+      break;
+    case 103:
+      PRIME256V1PointScalarMult();
+      break;
+    case 104:
+      PRIME256V1PointNegate();
       break;
     default:
       jj_la1[18] = jj_gen;
@@ -1218,6 +1418,56 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         case 55:
         case 56:
         case 57:
+        case 58:
+        case 59:
+        case 60:
+        case 61:
+        case 62:
+        case 63:
+        case 64:
+        case 65:
+        case 66:
+        case 67:
+        case 68:
+        case 69:
+        case 70:
+        case 71:
+        case 72:
+        case 73:
+        case 74:
+        case 75:
+        case 76:
+        case 77:
+        case 78:
+        case 79:
+        case 80:
+        case 81:
+        case 82:
+        case 83:
+        case 84:
+        case 85:
+        case 86:
+        case 87:
+        case 88:
+        case 89:
+        case 90:
+        case 91:
+        case 92:
+        case 93:
+        case 94:
+        case 95:
+        case 96:
+        case 97:
+        case 98:
+        case 99:
+        case 100:
+        case 101:
+        case 102:
+        case 103:
+        case 104:
+        case 105:
+        case 106:
+        case 107:
           ;
           break;
         default:
@@ -1521,6 +1771,706 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     }
   }
 
+  final public void SECP192K1PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #SECP192K1PrivToPub( 2) */
+  ASTSECP192K1PrivToPub jjtn000 = new ASTSECP192K1PrivToPub(JJTSECP192K1PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(50);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP192K1PointAdd() throws ParseException {
+ /*@bgen(jjtree) #SECP192K1PointAdd( 5) */
+  ASTSECP192K1PointAdd jjtn000 = new ASTSECP192K1PointAdd(JJTSECP192K1POINTADD);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(51);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP192K1PointSub() throws ParseException {
+ /*@bgen(jjtree) #SECP192K1PointSub( 5) */
+  ASTSECP192K1PointSub jjtn000 = new ASTSECP192K1PointSub(JJTSECP192K1POINTSUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(52);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP192K1PointScalarMult() throws ParseException {
+ /*@bgen(jjtree) #SECP192K1PointScalarMult( 5) */
+  ASTSECP192K1PointScalarMult jjtn000 = new ASTSECP192K1PointScalarMult(JJTSECP192K1POINTSCALARMULT);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(53);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP192K1PointNegate() throws ParseException {
+ /*@bgen(jjtree) #SECP192K1PointNegate( 3) */
+  ASTSECP192K1PointNegate jjtn000 = new ASTSECP192K1PointNegate(JJTSECP192K1POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(54);
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP192R1PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #SECP192R1PrivToPub( 2) */
+  ASTSECP192R1PrivToPub jjtn000 = new ASTSECP192R1PrivToPub(JJTSECP192R1PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(55);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP192R1PointAdd() throws ParseException {
+ /*@bgen(jjtree) #SECP192R1PointAdd( 5) */
+  ASTSECP192R1PointAdd jjtn000 = new ASTSECP192R1PointAdd(JJTSECP192R1POINTADD);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(56);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP192R1PointSub() throws ParseException {
+ /*@bgen(jjtree) #SECP192R1PointSub( 5) */
+  ASTSECP192R1PointSub jjtn000 = new ASTSECP192R1PointSub(JJTSECP192R1POINTSUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(57);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP192R1PointScalarMult() throws ParseException {
+ /*@bgen(jjtree) #SECP192R1PointScalarMult( 5) */
+  ASTSECP192R1PointScalarMult jjtn000 = new ASTSECP192R1PointScalarMult(JJTSECP192R1POINTSCALARMULT);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(58);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP192R1PointNegate() throws ParseException {
+ /*@bgen(jjtree) #SECP192R1PointNegate( 3) */
+  ASTSECP192R1PointNegate jjtn000 = new ASTSECP192R1PointNegate(JJTSECP192R1POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(59);
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP224K1PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #SECP224K1PrivToPub( 2) */
+  ASTSECP224K1PrivToPub jjtn000 = new ASTSECP224K1PrivToPub(JJTSECP224K1PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(60);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP224K1PointAdd() throws ParseException {
+ /*@bgen(jjtree) #SECP224K1PointAdd( 5) */
+  ASTSECP224K1PointAdd jjtn000 = new ASTSECP224K1PointAdd(JJTSECP224K1POINTADD);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(61);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP224K1PointSub() throws ParseException {
+ /*@bgen(jjtree) #SECP224K1PointSub( 5) */
+  ASTSECP224K1PointSub jjtn000 = new ASTSECP224K1PointSub(JJTSECP224K1POINTSUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(62);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP224K1PointScalarMult() throws ParseException {
+ /*@bgen(jjtree) #SECP224K1PointScalarMult( 5) */
+  ASTSECP224K1PointScalarMult jjtn000 = new ASTSECP224K1PointScalarMult(JJTSECP224K1POINTSCALARMULT);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(63);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP224K1PointNegate() throws ParseException {
+ /*@bgen(jjtree) #SECP224K1PointNegate( 3) */
+  ASTSECP224K1PointNegate jjtn000 = new ASTSECP224K1PointNegate(JJTSECP224K1POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(64);
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP224R1PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #SECP224R1PrivToPub( 2) */
+  ASTSECP224R1PrivToPub jjtn000 = new ASTSECP224R1PrivToPub(JJTSECP224R1PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(65);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP224R1PointAdd() throws ParseException {
+ /*@bgen(jjtree) #SECP224R1PointAdd( 5) */
+  ASTSECP224R1PointAdd jjtn000 = new ASTSECP224R1PointAdd(JJTSECP224R1POINTADD);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(66);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP224R1PointSub() throws ParseException {
+ /*@bgen(jjtree) #SECP224R1PointSub( 5) */
+  ASTSECP224R1PointSub jjtn000 = new ASTSECP224R1PointSub(JJTSECP224R1POINTSUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(67);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP224R1PointScalarMult() throws ParseException {
+ /*@bgen(jjtree) #SECP224R1PointScalarMult( 5) */
+  ASTSECP224R1PointScalarMult jjtn000 = new ASTSECP224R1PointScalarMult(JJTSECP224R1POINTSCALARMULT);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(68);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP224R1PointNegate() throws ParseException {
+ /*@bgen(jjtree) #SECP224R1PointNegate( 3) */
+  ASTSECP224R1PointNegate jjtn000 = new ASTSECP224R1PointNegate(JJTSECP224R1POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(69);
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
   final public void SECP256K1PrivToPub() throws ParseException {
  /*@bgen(jjtree) #SECP256K1PrivToPub( 2) */
   ASTSECP256K1PrivToPub jjtn000 = new ASTSECP256K1PrivToPub(JJTSECP256K1PRIVTOPUB);
@@ -1528,7 +2478,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(50);
+      jj_consume_token(70);
       Literal();
       BooleanLiteral();
       jj_consume_token(39);
@@ -1561,7 +2511,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(51);
+      jj_consume_token(71);
       Literal();
       BooleanLiteral();
       Literal();
@@ -1597,7 +2547,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(52);
+      jj_consume_token(72);
       Literal();
       BooleanLiteral();
       Literal();
@@ -1633,7 +2583,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(53);
+      jj_consume_token(73);
       Literal();
       BooleanLiteral();
       Literal();
@@ -1669,7 +2619,1057 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(54);
+      jj_consume_token(74);
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP256R1PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #SECP256R1PrivToPub( 2) */
+  ASTSECP256R1PrivToPub jjtn000 = new ASTSECP256R1PrivToPub(JJTSECP256R1PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(75);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP256R1PointAdd() throws ParseException {
+ /*@bgen(jjtree) #SECP256R1PointAdd( 5) */
+  ASTSECP256R1PointAdd jjtn000 = new ASTSECP256R1PointAdd(JJTSECP256R1POINTADD);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(76);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP256R1PointSub() throws ParseException {
+ /*@bgen(jjtree) #SECP256R1PointSub( 5) */
+  ASTSECP256R1PointSub jjtn000 = new ASTSECP256R1PointSub(JJTSECP256R1POINTSUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(77);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP256R1PointScalarMult() throws ParseException {
+ /*@bgen(jjtree) #SECP256R1PointScalarMult( 5) */
+  ASTSECP256R1PointScalarMult jjtn000 = new ASTSECP256R1PointScalarMult(JJTSECP256R1POINTSCALARMULT);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(78);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP256R1PointNegate() throws ParseException {
+ /*@bgen(jjtree) #SECP256R1PointNegate( 3) */
+  ASTSECP256R1PointNegate jjtn000 = new ASTSECP256R1PointNegate(JJTSECP256R1POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(79);
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP384R1PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #SECP384R1PrivToPub( 2) */
+  ASTSECP384R1PrivToPub jjtn000 = new ASTSECP384R1PrivToPub(JJTSECP384R1PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(80);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP384R1PointAdd() throws ParseException {
+ /*@bgen(jjtree) #SECP384R1PointAdd( 5) */
+  ASTSECP384R1PointAdd jjtn000 = new ASTSECP384R1PointAdd(JJTSECP384R1POINTADD);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(81);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP384R1PointSub() throws ParseException {
+ /*@bgen(jjtree) #SECP384R1PointSub( 5) */
+  ASTSECP384R1PointSub jjtn000 = new ASTSECP384R1PointSub(JJTSECP384R1POINTSUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(82);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP384R1PointScalarMult() throws ParseException {
+ /*@bgen(jjtree) #SECP384R1PointScalarMult( 5) */
+  ASTSECP384R1PointScalarMult jjtn000 = new ASTSECP384R1PointScalarMult(JJTSECP384R1POINTSCALARMULT);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(83);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void SECP384R1PointNegate() throws ParseException {
+ /*@bgen(jjtree) #SECP384R1PointNegate( 3) */
+  ASTSECP384R1PointNegate jjtn000 = new ASTSECP384R1PointNegate(JJTSECP384R1POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(84);
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V1PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V1PrivToPub( 2) */
+  ASTPRIME192V1PrivToPub jjtn000 = new ASTPRIME192V1PrivToPub(JJTPRIME192V1PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(85);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V1PointAdd() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V1PointAdd( 5) */
+  ASTPRIME192V1PointAdd jjtn000 = new ASTPRIME192V1PointAdd(JJTPRIME192V1POINTADD);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(86);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V1PointSub() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V1PointSub( 5) */
+  ASTPRIME192V1PointSub jjtn000 = new ASTPRIME192V1PointSub(JJTPRIME192V1POINTSUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(87);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V1PointScalarMult() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V1PointScalarMult( 5) */
+  ASTPRIME192V1PointScalarMult jjtn000 = new ASTPRIME192V1PointScalarMult(JJTPRIME192V1POINTSCALARMULT);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(88);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V1PointNegate() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V1PointNegate( 3) */
+  ASTPRIME192V1PointNegate jjtn000 = new ASTPRIME192V1PointNegate(JJTPRIME192V1POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(89);
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V2PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V2PrivToPub( 2) */
+  ASTPRIME192V2PrivToPub jjtn000 = new ASTPRIME192V2PrivToPub(JJTPRIME192V2PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(90);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V2PointAdd() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V2PointAdd( 5) */
+  ASTPRIME192V2PointAdd jjtn000 = new ASTPRIME192V2PointAdd(JJTPRIME192V2POINTADD);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(91);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V2PointSub() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V2PointSub( 5) */
+  ASTPRIME192V2PointSub jjtn000 = new ASTPRIME192V2PointSub(JJTPRIME192V2POINTSUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(92);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V2PointScalarMult() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V2PointScalarMult( 5) */
+  ASTPRIME192V2PointScalarMult jjtn000 = new ASTPRIME192V2PointScalarMult(JJTPRIME192V2POINTSCALARMULT);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(93);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V2PointNegate() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V2PointNegate( 3) */
+  ASTPRIME192V2PointNegate jjtn000 = new ASTPRIME192V2PointNegate(JJTPRIME192V2POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(94);
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V3PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V3PrivToPub( 2) */
+  ASTPRIME192V3PrivToPub jjtn000 = new ASTPRIME192V3PrivToPub(JJTPRIME192V3PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(95);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V3PointAdd() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V3PointAdd( 5) */
+  ASTPRIME192V3PointAdd jjtn000 = new ASTPRIME192V3PointAdd(JJTPRIME192V3POINTADD);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(96);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V3PointSub() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V3PointSub( 5) */
+  ASTPRIME192V3PointSub jjtn000 = new ASTPRIME192V3PointSub(JJTPRIME192V3POINTSUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(97);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V3PointScalarMult() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V3PointScalarMult( 5) */
+  ASTPRIME192V3PointScalarMult jjtn000 = new ASTPRIME192V3PointScalarMult(JJTPRIME192V3POINTSCALARMULT);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(98);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME192V3PointNegate() throws ParseException {
+ /*@bgen(jjtree) #PRIME192V3PointNegate( 3) */
+  ASTPRIME192V3PointNegate jjtn000 = new ASTPRIME192V3PointNegate(JJTPRIME192V3POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(99);
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  3);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME256V1PrivToPub() throws ParseException {
+ /*@bgen(jjtree) #PRIME256V1PrivToPub( 2) */
+  ASTPRIME256V1PrivToPub jjtn000 = new ASTPRIME256V1PrivToPub(JJTPRIME256V1PRIVTOPUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(100);
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  2);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME256V1PointAdd() throws ParseException {
+ /*@bgen(jjtree) #PRIME256V1PointAdd( 5) */
+  ASTPRIME256V1PointAdd jjtn000 = new ASTPRIME256V1PointAdd(JJTPRIME256V1POINTADD);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(101);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME256V1PointSub() throws ParseException {
+ /*@bgen(jjtree) #PRIME256V1PointSub( 5) */
+  ASTPRIME256V1PointSub jjtn000 = new ASTPRIME256V1PointSub(JJTPRIME256V1POINTSUB);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(102);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      BooleanLiteral();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME256V1PointScalarMult() throws ParseException {
+ /*@bgen(jjtree) #PRIME256V1PointScalarMult( 5) */
+  ASTPRIME256V1PointScalarMult jjtn000 = new ASTPRIME256V1PointScalarMult(JJTPRIME256V1POINTSCALARMULT);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(103);
+      Literal();
+      BooleanLiteral();
+      Literal();
+      Literal();
+      BooleanLiteral();
+      jj_consume_token(39);
+    } catch (Throwable jjte000) {
+    if (jjtc000) {
+      jjtree.clearNodeScope(jjtn000);
+      jjtc000 = false;
+    } else {
+      jjtree.popNode();
+    }
+    if (jjte000 instanceof RuntimeException) {
+      {if (true) throw (RuntimeException)jjte000;}
+    }
+    if (jjte000 instanceof ParseException) {
+      {if (true) throw (ParseException)jjte000;}
+    }
+    {if (true) throw (Error)jjte000;}
+    } finally {
+    if (jjtc000) {
+      jjtree.closeNodeScope(jjtn000,  5);
+      jjtn000.jjtSetLastToken(getToken(0));
+    }
+    }
+  }
+
+  final public void PRIME256V1PointNegate() throws ParseException {
+ /*@bgen(jjtree) #PRIME256V1PointNegate( 3) */
+  ASTPRIME256V1PointNegate jjtn000 = new ASTPRIME256V1PointNegate(JJTPRIME256V1POINTNEGATE);
+  boolean jjtc000 = true;
+  jjtree.openNodeScope(jjtn000);
+  jjtn000.jjtSetFirstToken(getToken(1));
+    try {
+      jj_consume_token(104);
       Literal();
       BooleanLiteral();
       BooleanLiteral();
@@ -1703,7 +3703,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(55);
+      jj_consume_token(105);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -1736,7 +3736,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(56);
+      jj_consume_token(106);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -1769,7 +3769,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(57);
+      jj_consume_token(107);
       Literal();
       Literal();
       jj_consume_token(39);
@@ -1802,7 +3802,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   jjtree.openNodeScope(jjtn000);
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
-      jj_consume_token(58);
+      jj_consume_token(108);
       ConditionalOrExpression();
       jj_consume_token(39);
     } catch (Throwable jjte000) {
@@ -2251,15 +4251,25 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   final private int[] jj_la1 = new int[21];
   static private int[] jj_la1_0;
   static private int[] jj_la1_1;
+  static private int[] jj_la1_2;
+  static private int[] jj_la1_3;
   static {
       jj_la1_init_0();
       jj_la1_init_1();
+      jj_la1_init_2();
+      jj_la1_init_3();
    }
    private static void jj_la1_init_0() {
       jj_la1_0 = new int[] {0x0,0x80000040,0x100,0x200,0x400,0x800,0x1000,0x6000,0x6000,0x78000,0x78000,0x180000,0x180000,0x7fe00000,0x7fe00000,0x80000040,0x40,0x0,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0x3ffd588,0xb,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xb,0xa,0x60,0x3ffd588,0x3ffd588,0x800,};
+      jj_la1_1 = new int[] {0xffffd588,0xb,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xb,0xa,0x60,0xffffd588,0xffffd588,0x800,};
+   }
+   private static void jj_la1_init_2() {
+      jj_la1_2 = new int[] {0xffffffff,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xffffffff,0xffffffff,0x0,};
+   }
+   private static void jj_la1_init_3() {
+      jj_la1_3 = new int[] {0xfff,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xfff,0xfff,0x0,};
    }
   final private JJCalls[] jj_2_rtns = new JJCalls[1];
   private boolean jj_rescan = false;
@@ -2448,7 +4458,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   /** Generate ParseException. */
   public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[64];
+    boolean[] la1tokens = new boolean[114];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -2462,10 +4472,16 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
           if ((jj_la1_1[i] & (1<<j)) != 0) {
             la1tokens[32+j] = true;
           }
+          if ((jj_la1_2[i] & (1<<j)) != 0) {
+            la1tokens[64+j] = true;
+          }
+          if ((jj_la1_3[i] & (1<<j)) != 0) {
+            la1tokens[96+j] = true;
+          }
         }
       }
     }
-    for (int i = 0; i < 64; i++) {
+    for (int i = 0; i < 114; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;

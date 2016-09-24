@@ -186,14 +186,14 @@ for i in curves:
 for i in curves:
     print (inr.replace("SECP256K1",i.upper()))
 
-for i in curves.length():
+for i in range(len(curves)):
     curve = curves[i]
     cval=cvals[i]
-    privsize = cval/8
-    comp = privsize+1
-    uncomp = (privsize*2)+1
-    quickwrite("AST" + curve.upper() + "PointAdd.java",add,privsize,comp,uncomp)
-    quickwrite("AST" + curve.upper() + "PointSub.java",sub,privsize,comp,uncomp)
-    quickwrite("AST" + curve.upper() + "PointScalarMult.java",scalar,privsize,comp,uncomp)
-    quickwrite("AST" + curve.upper() + "PointPrivToPub.java",priv,privsize,comp,uncomp)
-    quickwrite("AST" + curve.upper() + "PointNegate.java",negate,privsize,comp,uncomp)
+    privsize = int(cval/8)
+    comp = int(privsize+1)
+    uncomp = int((privsize*2)+1)
+    quickwrite("AST" + curve.upper() + "PointAdd.java",add,curve,privsize,comp,uncomp)
+    quickwrite("AST" + curve.upper() + "PointSub.java",sub,curve,privsize,comp,uncomp)
+    quickwrite("AST" + curve.upper() + "PointScalarMult.java",scalar,curve,privsize,comp,uncomp)
+    quickwrite("AST" + curve.upper() + "PrivToPub.java",priv,curve,privsize,comp,uncomp)
+    quickwrite("AST" + curve.upper() + "PointNegate.java",negate,curve,privsize,comp,uncomp)

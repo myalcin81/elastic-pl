@@ -39,15 +39,65 @@ public interface ElasticPLParserTreeConstants
   public int JJTSHA512 = 35;
   public int JJTWHIRLPOOL = 36;
   public int JJTMD5 = 37;
-  public int JJTSECP256K1PRIVTOPUB = 38;
-  public int JJTSECP256K1POINTADD = 39;
-  public int JJTSECP256K1POINTSUB = 40;
-  public int JJTSECP256K1POINTSCALARMULT = 41;
-  public int JJTSECP256K1POINTNEGATE = 42;
-  public int JJTTIGER = 43;
-  public int JJTRIPEMD160 = 44;
-  public int JJTRIPEMD128 = 45;
-  public int JJTVERIFYSTATEMENT = 46;
+  public int JJTSECP192K1PRIVTOPUB = 38;
+  public int JJTSECP192K1POINTADD = 39;
+  public int JJTSECP192K1POINTSUB = 40;
+  public int JJTSECP192K1POINTSCALARMULT = 41;
+  public int JJTSECP192K1POINTNEGATE = 42;
+  public int JJTSECP192R1PRIVTOPUB = 43;
+  public int JJTSECP192R1POINTADD = 44;
+  public int JJTSECP192R1POINTSUB = 45;
+  public int JJTSECP192R1POINTSCALARMULT = 46;
+  public int JJTSECP192R1POINTNEGATE = 47;
+  public int JJTSECP224K1PRIVTOPUB = 48;
+  public int JJTSECP224K1POINTADD = 49;
+  public int JJTSECP224K1POINTSUB = 50;
+  public int JJTSECP224K1POINTSCALARMULT = 51;
+  public int JJTSECP224K1POINTNEGATE = 52;
+  public int JJTSECP224R1PRIVTOPUB = 53;
+  public int JJTSECP224R1POINTADD = 54;
+  public int JJTSECP224R1POINTSUB = 55;
+  public int JJTSECP224R1POINTSCALARMULT = 56;
+  public int JJTSECP224R1POINTNEGATE = 57;
+  public int JJTSECP256K1PRIVTOPUB = 58;
+  public int JJTSECP256K1POINTADD = 59;
+  public int JJTSECP256K1POINTSUB = 60;
+  public int JJTSECP256K1POINTSCALARMULT = 61;
+  public int JJTSECP256K1POINTNEGATE = 62;
+  public int JJTSECP256R1PRIVTOPUB = 63;
+  public int JJTSECP256R1POINTADD = 64;
+  public int JJTSECP256R1POINTSUB = 65;
+  public int JJTSECP256R1POINTSCALARMULT = 66;
+  public int JJTSECP256R1POINTNEGATE = 67;
+  public int JJTSECP384R1PRIVTOPUB = 68;
+  public int JJTSECP384R1POINTADD = 69;
+  public int JJTSECP384R1POINTSUB = 70;
+  public int JJTSECP384R1POINTSCALARMULT = 71;
+  public int JJTSECP384R1POINTNEGATE = 72;
+  public int JJTPRIME192V1PRIVTOPUB = 73;
+  public int JJTPRIME192V1POINTADD = 74;
+  public int JJTPRIME192V1POINTSUB = 75;
+  public int JJTPRIME192V1POINTSCALARMULT = 76;
+  public int JJTPRIME192V1POINTNEGATE = 77;
+  public int JJTPRIME192V2PRIVTOPUB = 78;
+  public int JJTPRIME192V2POINTADD = 79;
+  public int JJTPRIME192V2POINTSUB = 80;
+  public int JJTPRIME192V2POINTSCALARMULT = 81;
+  public int JJTPRIME192V2POINTNEGATE = 82;
+  public int JJTPRIME192V3PRIVTOPUB = 83;
+  public int JJTPRIME192V3POINTADD = 84;
+  public int JJTPRIME192V3POINTSUB = 85;
+  public int JJTPRIME192V3POINTSCALARMULT = 86;
+  public int JJTPRIME192V3POINTNEGATE = 87;
+  public int JJTPRIME256V1PRIVTOPUB = 88;
+  public int JJTPRIME256V1POINTADD = 89;
+  public int JJTPRIME256V1POINTSUB = 90;
+  public int JJTPRIME256V1POINTSCALARMULT = 91;
+  public int JJTPRIME256V1POINTNEGATE = 92;
+  public int JJTTIGER = 93;
+  public int JJTRIPEMD160 = 94;
+  public int JJTRIPEMD128 = 95;
+  public int JJTVERIFYSTATEMENT = 96;
 
 
   public String[] jjtNodeName = {
@@ -89,15 +139,65 @@ public interface ElasticPLParserTreeConstants
     "SHA512",
     "Whirlpool",
     "MD5",
+    "SECP192K1PrivToPub",
+    "SECP192K1PointAdd",
+    "SECP192K1PointSub",
+    "SECP192K1PointScalarMult",
+    "SECP192K1PointNegate",
+    "SECP192R1PrivToPub",
+    "SECP192R1PointAdd",
+    "SECP192R1PointSub",
+    "SECP192R1PointScalarMult",
+    "SECP192R1PointNegate",
+    "SECP224K1PrivToPub",
+    "SECP224K1PointAdd",
+    "SECP224K1PointSub",
+    "SECP224K1PointScalarMult",
+    "SECP224K1PointNegate",
+    "SECP224R1PrivToPub",
+    "SECP224R1PointAdd",
+    "SECP224R1PointSub",
+    "SECP224R1PointScalarMult",
+    "SECP224R1PointNegate",
     "SECP256K1PrivToPub",
     "SECP256K1PointAdd",
     "SECP256K1PointSub",
     "SECP256K1PointScalarMult",
     "SECP256K1PointNegate",
+    "SECP256R1PrivToPub",
+    "SECP256R1PointAdd",
+    "SECP256R1PointSub",
+    "SECP256R1PointScalarMult",
+    "SECP256R1PointNegate",
+    "SECP384R1PrivToPub",
+    "SECP384R1PointAdd",
+    "SECP384R1PointSub",
+    "SECP384R1PointScalarMult",
+    "SECP384R1PointNegate",
+    "PRIME192V1PrivToPub",
+    "PRIME192V1PointAdd",
+    "PRIME192V1PointSub",
+    "PRIME192V1PointScalarMult",
+    "PRIME192V1PointNegate",
+    "PRIME192V2PrivToPub",
+    "PRIME192V2PointAdd",
+    "PRIME192V2PointSub",
+    "PRIME192V2PointScalarMult",
+    "PRIME192V2PointNegate",
+    "PRIME192V3PrivToPub",
+    "PRIME192V3PointAdd",
+    "PRIME192V3PointSub",
+    "PRIME192V3PointScalarMult",
+    "PRIME192V3PointNegate",
+    "PRIME256V1PrivToPub",
+    "PRIME256V1PointAdd",
+    "PRIME256V1PointSub",
+    "PRIME256V1PointScalarMult",
+    "PRIME256V1PointNegate",
     "Tiger",
     "RIPEMD160",
     "RIPEMD128",
     "VerifyStatement",
   };
 }
-/* JavaCC - OriginalChecksum=10e8601d32678a0994950c727213e0e1 (do not edit this line) */
+/* JavaCC - OriginalChecksum=486183afd5bc7905305cb6260f421c91 (do not edit this line) */

@@ -243,6 +243,46 @@ void Statement() #void :
 | 
   Whirlpool()
 |
+  SECP192K1PrivToPub()
+|
+  SECP192K1PointAdd()
+|
+  SECP192K1PointSub()
+|
+  SECP192K1PointScalarMult()
+|
+  SECP192K1PointNegate()
+|
+  SECP192R1PrivToPub()
+|
+  SECP192R1PointAdd()
+|
+  SECP192R1PointSub()
+|
+  SECP192R1PointScalarMult()
+|
+  SECP192R1PointNegate()
+|
+  SECP224K1PrivToPub()
+|
+  SECP224K1PointAdd()
+|
+  SECP224K1PointSub()
+|
+  SECP224K1PointScalarMult()
+|
+  SECP224K1PointNegate()
+|
+  SECP224R1PrivToPub()
+|
+  SECP224R1PointAdd()
+|
+  SECP224R1PointSub()
+|
+  SECP224R1PointScalarMult()
+|
+  SECP224R1PointNegate()
+|
   SECP256K1PrivToPub()
 |
   SECP256K1PointAdd()
@@ -250,8 +290,68 @@ void Statement() #void :
   SECP256K1PointSub()
 |
   SECP256K1PointScalarMult()
-| 
+|
   SECP256K1PointNegate()
+|
+  SECP256R1PrivToPub()
+|
+  SECP256R1PointAdd()
+|
+  SECP256R1PointSub()
+|
+  SECP256R1PointScalarMult()
+|
+  SECP256R1PointNegate()
+|
+  SECP384R1PrivToPub()
+|
+  SECP384R1PointAdd()
+|
+  SECP384R1PointSub()
+|
+  SECP384R1PointScalarMult()
+|
+  SECP384R1PointNegate()
+|
+  PRIME192V1PrivToPub()
+|
+  PRIME192V1PointAdd()
+|
+  PRIME192V1PointSub()
+|
+  PRIME192V1PointScalarMult()
+|
+  PRIME192V1PointNegate()
+|
+  PRIME192V2PrivToPub()
+|
+  PRIME192V2PointAdd()
+|
+  PRIME192V2PointSub()
+|
+  PRIME192V2PointScalarMult()
+|
+  PRIME192V2PointNegate()
+|
+  PRIME192V3PrivToPub()
+|
+  PRIME192V3PointAdd()
+|
+  PRIME192V3PointSub()
+|
+  PRIME192V3PointScalarMult()
+|
+  PRIME192V3PointNegate()
+|
+  PRIME256V1PrivToPub()
+|
+  PRIME256V1PointAdd()
+|
+  PRIME256V1PointSub()
+|
+  PRIME256V1PointScalarMult()
+|
+  PRIME256V1PointNegate()
 }
 
 
@@ -306,6 +406,134 @@ void MD5() #MD5(2):
   "MD5" Literal() Literal() ";"
 }
 
+void SECP192K1PrivToPub() #SECP192K1PrivToPub(2):
+{}
+{
+  "SECP192K1PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void SECP192K1PointAdd() #SECP192K1PointAdd(5):
+{}
+{
+  "SECP192K1PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void SECP192K1PointSub() #SECP192K1PointSub(5):
+{}
+{
+  "SECP192K1PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+void SECP192K1PointScalarMult() #SECP192K1PointScalarMult(5):
+{}
+{
+  "SECP192K1PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
+}
+
+void SECP192K1PointNegate() #SECP192K1PointNegate(3):
+{}
+{
+  "SECP192K1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+
+
+
+void SECP192R1PrivToPub() #SECP192R1PrivToPub(2):
+{}
+{
+  "SECP192R1PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void SECP192R1PointAdd() #SECP192R1PointAdd(5):
+{}
+{
+  "SECP192R1PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void SECP192R1PointSub() #SECP192R1PointSub(5):
+{}
+{
+  "SECP192R1PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+void SECP192R1PointScalarMult() #SECP192R1PointScalarMult(5):
+{}
+{
+  "SECP192R1PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
+}
+
+void SECP192R1PointNegate() #SECP192R1PointNegate(3):
+{}
+{
+  "SECP192R1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+
+
+
+void SECP224K1PrivToPub() #SECP224K1PrivToPub(2):
+{}
+{
+  "SECP224K1PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void SECP224K1PointAdd() #SECP224K1PointAdd(5):
+{}
+{
+  "SECP224K1PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void SECP224K1PointSub() #SECP224K1PointSub(5):
+{}
+{
+  "SECP224K1PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+void SECP224K1PointScalarMult() #SECP224K1PointScalarMult(5):
+{}
+{
+  "SECP224K1PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
+}
+
+void SECP224K1PointNegate() #SECP224K1PointNegate(3):
+{}
+{
+  "SECP224K1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+
+
+
+void SECP224R1PrivToPub() #SECP224R1PrivToPub(2):
+{}
+{
+  "SECP224R1PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void SECP224R1PointAdd() #SECP224R1PointAdd(5):
+{}
+{
+  "SECP224R1PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void SECP224R1PointSub() #SECP224R1PointSub(5):
+{}
+{
+  "SECP224R1PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+void SECP224R1PointScalarMult() #SECP224R1PointScalarMult(5):
+{}
+{
+  "SECP224R1PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
+}
+
+void SECP224R1PointNegate() #SECP224R1PointNegate(3):
+{}
+{
+  "SECP224R1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+
+
+
 void SECP256K1PrivToPub() #SECP256K1PrivToPub(2):
 {}
 {
@@ -333,6 +561,198 @@ void SECP256K1PointNegate() #SECP256K1PointNegate(3):
 {}
 {
   "SECP256K1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+
+
+
+void SECP256R1PrivToPub() #SECP256R1PrivToPub(2):
+{}
+{
+  "SECP256R1PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void SECP256R1PointAdd() #SECP256R1PointAdd(5):
+{}
+{
+  "SECP256R1PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void SECP256R1PointSub() #SECP256R1PointSub(5):
+{}
+{
+  "SECP256R1PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+void SECP256R1PointScalarMult() #SECP256R1PointScalarMult(5):
+{}
+{
+  "SECP256R1PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
+}
+
+void SECP256R1PointNegate() #SECP256R1PointNegate(3):
+{}
+{
+  "SECP256R1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+
+
+
+void SECP384R1PrivToPub() #SECP384R1PrivToPub(2):
+{}
+{
+  "SECP384R1PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void SECP384R1PointAdd() #SECP384R1PointAdd(5):
+{}
+{
+  "SECP384R1PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void SECP384R1PointSub() #SECP384R1PointSub(5):
+{}
+{
+  "SECP384R1PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+void SECP384R1PointScalarMult() #SECP384R1PointScalarMult(5):
+{}
+{
+  "SECP384R1PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
+}
+
+void SECP384R1PointNegate() #SECP384R1PointNegate(3):
+{}
+{
+  "SECP384R1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+
+
+
+void PRIME192V1PrivToPub() #PRIME192V1PrivToPub(2):
+{}
+{
+  "PRIME192V1PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void PRIME192V1PointAdd() #PRIME192V1PointAdd(5):
+{}
+{
+  "PRIME192V1PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void PRIME192V1PointSub() #PRIME192V1PointSub(5):
+{}
+{
+  "PRIME192V1PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+void PRIME192V1PointScalarMult() #PRIME192V1PointScalarMult(5):
+{}
+{
+  "PRIME192V1PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
+}
+
+void PRIME192V1PointNegate() #PRIME192V1PointNegate(3):
+{}
+{
+  "PRIME192V1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+
+
+
+void PRIME192V2PrivToPub() #PRIME192V2PrivToPub(2):
+{}
+{
+  "PRIME192V2PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void PRIME192V2PointAdd() #PRIME192V2PointAdd(5):
+{}
+{
+  "PRIME192V2PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void PRIME192V2PointSub() #PRIME192V2PointSub(5):
+{}
+{
+  "PRIME192V2PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+void PRIME192V2PointScalarMult() #PRIME192V2PointScalarMult(5):
+{}
+{
+  "PRIME192V2PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
+}
+
+void PRIME192V2PointNegate() #PRIME192V2PointNegate(3):
+{}
+{
+  "PRIME192V2PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+
+
+
+void PRIME192V3PrivToPub() #PRIME192V3PrivToPub(2):
+{}
+{
+  "PRIME192V3PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void PRIME192V3PointAdd() #PRIME192V3PointAdd(5):
+{}
+{
+  "PRIME192V3PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void PRIME192V3PointSub() #PRIME192V3PointSub(5):
+{}
+{
+  "PRIME192V3PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+void PRIME192V3PointScalarMult() #PRIME192V3PointScalarMult(5):
+{}
+{
+  "PRIME192V3PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
+}
+
+void PRIME192V3PointNegate() #PRIME192V3PointNegate(3):
+{}
+{
+  "PRIME192V3PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+
+
+
+void PRIME256V1PrivToPub() #PRIME256V1PrivToPub(2):
+{}
+{
+  "PRIME256V1PrivToPub" Literal() BooleanLiteral() ";"
+}
+
+void PRIME256V1PointAdd() #PRIME256V1PointAdd(5):
+{}
+{
+  "PRIME256V1PointAdd" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+
+void PRIME256V1PointSub() #PRIME256V1PointSub(5):
+{}
+{
+  "PRIME256V1PointSub" Literal() BooleanLiteral() Literal() BooleanLiteral() BooleanLiteral() ";"
+}
+void PRIME256V1PointScalarMult() #PRIME256V1PointScalarMult(5):
+{}
+{
+  "PRIME256V1PointScalarMult" Literal() BooleanLiteral() Literal() Literal() BooleanLiteral() ";"
+}
+
+void PRIME256V1PointNegate() #PRIME256V1PointNegate(3):
+{}
+{
+  "PRIME256V1PointNegate" Literal() BooleanLiteral() BooleanLiteral() ";"
 }
 
 void Tiger() #Tiger(2):

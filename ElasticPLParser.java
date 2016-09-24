@@ -1584,7 +1584,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       jj_consume_token(33);
       Literal();
       jj_consume_token(34);
-      Statement();
+      Block();
     } catch (Throwable jjte000) {
     if (jjtc000) {
       jjtree.clearNodeScope(jjtn000);

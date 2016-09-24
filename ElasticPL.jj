@@ -1331,7 +1331,7 @@ void RepeatStatement()                    :
 {/*@bgen(jjtree) #RepeatStatement( 2) */
   try {
 /*@egen*/
-  "repeat" "(" Literal() ")" Statement()/*@bgen(jjtree)*/
+  "repeat" "(" Literal() ")" Block()/*@bgen(jjtree)*/
   } catch (Throwable jjte000) {
     if (jjtc000) {
       jjtree.clearNodeScope(jjtn000);

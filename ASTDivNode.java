@@ -55,7 +55,10 @@ public class ASTDivNode extends SimpleNode {
      else if(stack[top+1] instanceof Boolean)
       int2 = (((Boolean)stack[top+1]) == true) ? 1 : 0;
 
-     stack[top] = new Integer(int1 / int2);
+     if(int2 != 0)
+      stack[top] = new Integer(int1 / int2);
+     else
+      stack[top] = new Integer(0);
   }
 
 }

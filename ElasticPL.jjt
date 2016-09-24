@@ -376,7 +376,7 @@ void IfStatement() :
 void RepeatStatement() #RepeatStatement(2):
 {}
 {
-  "repeat" "(" Literal() ")" Statement()
+  "repeat" "(" Literal() ")" Block()
 }
 
 void InputSpecificationStatement() #InputSpecificationStatement(1):

@@ -1296,7 +1296,7 @@ void IfStatement() :
 {/*@bgen(jjtree) IfStatement */
   try {
 /*@egen*/
-  "if" "(" Expression() ")" Statement() [ LOOKAHEAD(1) "else" Statement() ]/*@bgen(jjtree)*/
+  "if" "(" Expression() ")" Block() [ LOOKAHEAD(1) "else" Block() ]/*@bgen(jjtree)*/
   } catch (Throwable jjte000) {
     if (jjtc000) {
       jjtree.clearNodeScope(jjtn000);

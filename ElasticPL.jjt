@@ -369,7 +369,7 @@ void StatementExpression() :
 void IfStatement() :
 {}
 {
-  "if" "(" Expression() ")" Statement() [ LOOKAHEAD(1) "else" Statement() ]
+  "if" "(" Expression() ")" Block() [ LOOKAHEAD(1) "else" Block() ]
 }
 
 void RepeatStatement() #RepeatStatement(2):

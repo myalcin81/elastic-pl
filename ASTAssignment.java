@@ -54,6 +54,6 @@ public class ASTAssignment extends SimpleNode {
   
   // Assignment costs 1 credit
   public long weight(){
-    return 1L;
+    return 3L;
   }
 }

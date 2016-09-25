@@ -117,7 +117,7 @@ public static String bytesToHex(byte[] bytes) {
   }
 
   public long weight(){
-    return 0L;
+    return 1L;
   }
 
   public boolean ignore(){

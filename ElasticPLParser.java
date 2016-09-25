@@ -1540,11 +1540,11 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       jj_consume_token(33);
       Expression();
       jj_consume_token(34);
-      Statement();
+      Block();
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
       case 43:
         jj_consume_token(43);
-        Statement();
+        Block();
         break;
       default:
         jj_la1[20] = jj_gen;

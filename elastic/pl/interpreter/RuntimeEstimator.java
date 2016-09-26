@@ -54,7 +54,6 @@ public static long maximumStackUsage(SimpleNode node){
         for(int i=0;i<x.children.length;++i){
             SimpleNode sn = (SimpleNode)x.children[i];
             _stack.push(new Pair<SimpleNode, Long>(sn,depth+total_children_stack));
-            System.out.println("CUMUL: " + sn.getClass() + " " + depth+total_children_stack);
         }
       }
     }

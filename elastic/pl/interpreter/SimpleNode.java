@@ -39,12 +39,13 @@ class SimpleNode extends MyNode implements Node {
   public void jjtAddChild(Node n, int i) {
     
     // Stop building AST tree if depth is exceeded + Threshold e
+    this.setDepth(Math.max(n.getDepth()+1, this.getDepth()));
     if(this.getDepth()>512 + /*epsilon*/64){
       return;
     }
 
 
-    this.setDepth(n.getDepth()+1);
+    
 
     if (children == null) {
       children = new Node[i + 1];

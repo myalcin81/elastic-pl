@@ -33,28 +33,8 @@ public class RuntimeEstimator {
 	 
 
 public static boolean exceedsStackUsage(SimpleNode r){
-    int depth = 0;
-    Stack<SimpleNode> wq = new Stack<SimpleNode>();
-    Stack<SimpleNode> path = new Stack<SimpleNode>();
-
-    wq.push (r);
-    while (!wq.empty()) {
-        r = wq.peek();
-        if (!path.empty() && r == path.peek()) {
-            if (path.size() > depth)
-                depth = path.size();
-            path.pop();
-            wq.pop();
-        } else {
-            path.push(r);
-            if(r != null && r.children != null)
-              for(int i=0;i<r.children.length;++i){
-                SimpleNode sn = (SimpleNode)r.children[i];
-                wq.push(sn);
-              }
-        }
-    }
-    return depth>512;
+    
+    return r.getDepth()>512;
 }
 
 

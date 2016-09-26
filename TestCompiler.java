@@ -39,6 +39,7 @@ public class TestCompiler {
 			if(tooMuchStackUsage){
 				System.out.println("[!] aborted execution");
 			}else{
+				System.out.println("[!] AST depth: " + ((ASTCompilationUnit) parser.rootNode()).getDepth());
 				long WCET = RuntimeEstimator.worstWeight((SimpleNode) parser.rootNode());
 				System.out.println("[!] Worst case execution time: " + WCET);
 				parser.rootNode().interpret();

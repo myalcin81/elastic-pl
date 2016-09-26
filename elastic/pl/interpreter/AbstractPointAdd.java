@@ -91,7 +91,7 @@ public abstract class AbstractPointAdd extends SimpleNode {
     	return 1000L;
   	}
 public long getConsumedStackUsage(){
-      return 5L;
+      return 0L;
     }
 }
 /*

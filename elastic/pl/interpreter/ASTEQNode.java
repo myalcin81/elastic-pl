@@ -59,6 +59,6 @@ public class ASTEQNode extends SimpleNode {
      stack[top] = new Boolean(int1 == int2);
   }
   public long getConsumedStackUsage(){
-      return 2L;
+      return 0L;
   }
 }

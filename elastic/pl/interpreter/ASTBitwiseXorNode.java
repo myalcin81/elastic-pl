@@ -70,6 +70,6 @@ public class ASTBitwiseXorNode extends SimpleNode {
 
   }
   public long getConsumedStackUsage(){
-      return 2L;
+      return 0L;
   }
 }

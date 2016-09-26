@@ -59,6 +59,6 @@ public class ASTMulNode extends SimpleNode {
      stack[top] = new Integer(int1 * int2);
   }
   public long getConsumedStackUsage(){
-      return 2L;
+      return 0L;
     }
 }

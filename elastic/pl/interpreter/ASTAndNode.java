@@ -59,6 +59,6 @@ public class ASTAndNode extends SimpleNode {
      stack[top] = new Boolean((int1>0) && (int2>0));
   }
   public long getConsumedStackUsage(){
-    return 2L;
+    return 0L;
   }
 }

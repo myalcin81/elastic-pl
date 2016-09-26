@@ -59,6 +59,6 @@ public class ASTRRotNode extends SimpleNode {
      stack[top] = Integer.rotateRight(int1 , int2);
   }
   public long getConsumedStackUsage(){
-      return 2L;
+      return 0L;
     }
 }

@@ -54,7 +54,7 @@ public class ASTAssignment extends SimpleNode {
   }
 
   public long getConsumedStackUsage(){
-    return 2L;
+    return 0L;
   }
   
   // Assignment costs 1 credit

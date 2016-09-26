@@ -59,7 +59,7 @@ public class ASTWhirlpool extends SimpleNode {
     	return 150L;
   	}
   public long getConsumedStackUsage(){
-      return 2L;
+      return 0L;
     }
 }
 /*

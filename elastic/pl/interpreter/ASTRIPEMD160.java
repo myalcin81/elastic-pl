@@ -58,7 +58,7 @@ public class ASTRIPEMD160 extends SimpleNode {
     	return 120L;
   	}
   public long getConsumedStackUsage(){
-      return 2L;
+      return 0L;
     }
 }
 /*

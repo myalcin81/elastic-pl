@@ -133,7 +133,7 @@ public class ASTMD5 extends SimpleNode {
     	return 80L;
   	}
   	  public long getConsumedStackUsage(){
-      return 2L;
+      return 0L;
     }
 }
 /*

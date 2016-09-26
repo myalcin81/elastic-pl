@@ -67,6 +67,6 @@ public class ASTBitwiseComplNode extends SimpleNode {
      
   }
   public long getConsumedStackUsage(){
-      return 1L;
+      return 0L;
   }
 }

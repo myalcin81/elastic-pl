@@ -40,6 +40,14 @@ import java.util.Random;
 
 
 public class ASTCompilationUnit extends SimpleNode {
+
+	public enum POW_CHECK_RESULT
+	{
+		OK,
+		SOFT_UNBLOCKED,
+		ERROR
+	};
+
 	public static final int input_entropy_ints = 12;
 
 	static long seed = System.currentTimeMillis();
@@ -173,8 +181,8 @@ public class ASTCompilationUnit extends SimpleNode {
 		return ret;
 	}
 
-	public boolean verifyPOW(BigInteger target) {
-		boolean ret = false;
+	public POW_CHECK_RESULT verifyPOW(BigInteger target, BigInteger soft_unblock) {
+		POW_CHECK_RESULT ret = POW_CHECK_RESULT.ERROR;
 
 		int in[] = getRandomIntArray();
 		int out[] = getOutState();
@@ -182,10 +190,19 @@ public class ASTCompilationUnit extends SimpleNode {
 		try {
 			byte[] bsh = byteHash(in, out);
 			BigInteger val = byteHashToLong(bsh);
-	
-			if (val.compareTo(target)==-1)
-				return true;
+
+			if (val.compareTo(target)==-1){
+				return POW_CHECK_RESULT.OK;
+			}
+			else if (val.compareTo(soft_unblock)==-1)
+				return POW_CHECK_RESULT.SOFT_UNBLOCKED;
+			else
+			{
+				
+			}
+			
 		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
 		}
 
 		return ret;

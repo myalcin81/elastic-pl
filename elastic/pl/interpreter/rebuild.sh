@@ -9,10 +9,11 @@ elif [[ ! -d $dir ]]; then
 fi
 
 ../../../bin/jjtree ElasticPL.jjt; ../../../bin/javacc ElasticPL.jj
-javac -cp "../../../lib/*" -d ../../../ *.java ../../../TestCompiler.java
+javac -cp "../../../lib/*" -d "../../../" *.java ../../../TestCompiler.java
 
 cd ../../../dist
-jar cvfm ElasticPL.jar ../Manifest elastic/pl/interpreter/*.class ../TestCompiler.class
+pwd
+jar cvfm ElasticPL.jar ../Manifest ../elastic/pl/interpreter/*.class ../TestCompiler.class
 cd ..
 cp dist/ElasticPL.jar .
 

@@ -66,6 +66,7 @@ public interface Node {
   /** Get consumed stack usage */
   public long getConsumedStackUsage();
 
+
   /************************* Added by Sreeni. *******************/
 
   /** Interpret method */

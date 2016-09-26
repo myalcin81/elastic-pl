@@ -31,10 +31,11 @@ public class TestCompiler {
 			((ASTCompilationUnit) parser.rootNode()).reset();
 			((ASTCompilationUnit) parser.rootNode()).fillRandomIntNumber();
 			long WCET = RuntimeEstimator.worstWeight((SimpleNode) parser.rootNode());
-			long stackusage = RuntimeEstimator.maximumStackUsage((SimpleNode) parser.rootNode());
+
+			boolean tooMuchStackUsage = RuntimeEstimator.exceedsStackUsage((SimpleNode) parser.rootNode());
 
 			System.out.println("[!] Worst case execution time: " + WCET);
-			System.out.println("[!] Worst stack usage: " + stackusage);
+			System.out.println("[!] Stack usage exceeded: " + tooMuchStackUsage);
 			parser.rootNode().interpret();
 		} catch (ParseException e) {
 			System.out

@@ -32,35 +32,31 @@ class Pair<F, S> {
 public class RuntimeEstimator {
 	 
 
-public static long maximumStackUsage(SimpleNode node){
-   Stack<Pair<SimpleNode, Long>> _stack = new Stack<Pair<SimpleNode, Long>>();
-    _stack.add(new Pair<SimpleNode, Long>(node,0L));
-    long max_stack = 0L;
-    while (_stack.size() > 0) {
-      Pair<SimpleNode, Long> p = _stack.pop();
+public static boolean exceedsStackUsage(SimpleNode r){
+   int depth = 0;
+    Stack<SimpleNode> wq = new Stack<SimpleNode>();
+    Stack<SimpleNode> path = new Stack<SimpleNode>();
 
-      SimpleNode x = p.getFirst();
-      long depth = p.getSecond();
-
-      if(depth > max_stack)
-        max_stack = depth;
-
-      long total_children_stack = 0;
-      if(x.children!=null){
-        for(int i=0;i<x.children.length;++i){
-            SimpleNode sn = (SimpleNode)x.children[i];
-            total_children_stack += sn.getConsumedStackUsage();
+    wq.push (r);
+    while (!wq.empty()) {
+        r = wq.peek();
+        if (!path.empty() && r == path.peek()) {
+            if (path.size() > depth)
+                depth = path.size();
+            path.pop();
+            wq.pop();
+        } else {
+            path.push(r);
+            if(r.children != null)
+              for(int i=0;i<r.children.length;++i){
+                SimpleNode sn = (SimpleNode)r.children[i];
+                wq.push(sn);
+              }
         }
-        for(int i=0;i<x.children.length;++i){
-            SimpleNode sn = (SimpleNode)x.children[i];
-            _stack.push(new Pair<SimpleNode, Long>(sn,depth+total_children_stack));
-        }
-      }
     }
-    
-    return max_stack;
-  }
 
+    return depth>512;
+  }
 
 
   public static long worstWeight(SimpleNode node){

@@ -33,7 +33,7 @@ public class RuntimeEstimator {
 	 
 
 public static boolean exceedsStackUsage(SimpleNode r){
-   int depth = 0;
+    int depth = 0;
     Stack<SimpleNode> wq = new Stack<SimpleNode>();
     Stack<SimpleNode> path = new Stack<SimpleNode>();
 
@@ -54,9 +54,8 @@ public static boolean exceedsStackUsage(SimpleNode r){
               }
         }
     }
-
     return depth>512;
-  }
+}
 
 
   public static long worstWeight(SimpleNode node){

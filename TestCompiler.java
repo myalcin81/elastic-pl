@@ -4,6 +4,7 @@ import elastic.pl.interpreter.ElasticPLParser;
 import elastic.pl.interpreter.ParseException;
 import elastic.pl.interpreter.RuntimeEstimator;
 import elastic.pl.interpreter.SimpleNode;
+import elastic.pl.interpreter.MyNode;
 
 public class TestCompiler {
 
@@ -30,7 +31,7 @@ public class TestCompiler {
 			((ASTCompilationUnit) parser.rootNode()).reset();
 			((ASTCompilationUnit) parser.rootNode()).fillRandomIntNumber();
 			long WCET = RuntimeEstimator.worstWeight((SimpleNode) parser.rootNode());
-			int stackusage = RuntimeEstimator.maximumStackUsage((SimpleNode) parser.rootNode());
+			long stackusage = RuntimeEstimator.maximumStackUsage((SimpleNode) parser.rootNode());
 
 			System.out.println("[!] Worst case execution time: " + WCET);
 			System.out.println("[!] Worst stack usage: " + stackusage);
@@ -46,7 +47,7 @@ public class TestCompiler {
 		}
 
 		((ASTCompilationUnit) parser.rootNode()).debugDumpState();
-
+		System.out.println("[!] Exit Stack Pointer: " + MyNode.top);
 		boolean bountyFound = ((ASTCompilationUnit) parser.rootNode()).verifyBounty();
 		System.out.println("[!] Bounty requirement met: " + bountyFound);
 	}

@@ -30,13 +30,21 @@ public class TestCompiler {
 			parser.CompilationUnit();
 			((ASTCompilationUnit) parser.rootNode()).reset();
 			((ASTCompilationUnit) parser.rootNode()).fillRandomIntNumber();
-			long WCET = RuntimeEstimator.worstWeight((SimpleNode) parser.rootNode());
 
 			boolean tooMuchStackUsage = RuntimeEstimator.exceedsStackUsage((SimpleNode) parser.rootNode());
 
-			System.out.println("[!] Worst case execution time: " + WCET);
+			
+
 			System.out.println("[!] Stack usage exceeded: " + tooMuchStackUsage);
-			parser.rootNode().interpret();
+			if(tooMuchStackUsage){
+				System.out.println("[!] aborted execution");
+			}else{
+				long WCET = RuntimeEstimator.worstWeight((SimpleNode) parser.rootNode());
+				System.out.println("[!] Worst case execution time: " + WCET);
+				parser.rootNode().interpret();
+			}
+
+			
 		} catch (ParseException e) {
 			System.out
 					.println("Elastic Programming Language Interpreter Version 0.1:  Encountered errors during parse.");

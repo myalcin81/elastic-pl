@@ -47,7 +47,7 @@ public static boolean exceedsStackUsage(SimpleNode r){
             wq.pop();
         } else {
             path.push(r);
-            if(r.children != null)
+            if(r != null && r.children != null)
               for(int i=0;i<r.children.length;++i){
                 SimpleNode sn = (SimpleNode)r.children[i];
                 wq.push(sn);

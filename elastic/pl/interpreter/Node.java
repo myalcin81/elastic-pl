@@ -66,6 +66,8 @@ public interface Node {
   /** Get consumed stack usage */
   public long getConsumedStackUsage();
 
+  public void setDepth(int depth);
+  public int getDepth();
 
   /************************* Added by Sreeni. *******************/
 

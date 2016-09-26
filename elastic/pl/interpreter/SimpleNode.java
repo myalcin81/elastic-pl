@@ -11,14 +11,20 @@ class SimpleNode extends MyNode implements Node {
   protected ElasticPLParser parser;
   protected Token firstToken;
   protected Token lastToken;
+  private int depth;
+
+  public void setDepth(int _depth){ this.depth = _depth;}
+  public int getDepth(){return depth;}
 
   public SimpleNode(int i) {
     id = i;
+    this.depth = 0;
   }
 
   public SimpleNode(ElasticPLParser p, int i) {
     this(i);
     parser = p;
+    this.depth = 0;
   }
 
   public void jjtOpen() {
@@ -31,6 +37,15 @@ class SimpleNode extends MyNode implements Node {
   public Node jjtGetParent() { return parent; }
 
   public void jjtAddChild(Node n, int i) {
+    
+    // Stop building AST tree if depth is exceeded + Threshold e
+    if(this.getDepth()>512 + /*epsilon*/64){
+      return;
+    }
+
+
+    this.setDepth(n.getDepth()+1);
+
     if (children == null) {
       children = new Node[i + 1];
     } else if (i >= children.length) {

@@ -11,6 +11,7 @@ class SimpleNode extends MyNode implements Node {
   protected ElasticPLParser parser;
   protected Token firstToken;
   protected Token lastToken;
+  public long stack_usage_below = 0;
 
   public SimpleNode(int i) {
     id = i;

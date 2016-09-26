@@ -38,17 +38,24 @@ public static long maximumStackUsage(SimpleNode node){
     long max_stack = 0L;
     while (_stack.size() > 0) {
       Pair<SimpleNode, Long> p = _stack.pop();
+
       SimpleNode x = p.getFirst();
       long depth = p.getSecond();
-      if(x.children!=null)
+
+      if(depth > max_stack)
+        max_stack = depth;
+
+      long total_children_stack = 0;
+      if(x.children!=null){
         for(int i=0;i<x.children.length;++i){
             SimpleNode sn = (SimpleNode)x.children[i];
-            if(sn.ignore()==false){
-               _stack.push(new Pair<SimpleNode, Long>(sn,depth+sn.getConsumedStackUsage()));
-               if(depth+sn.getConsumedStackUsage()>max_stack)
-                max_stack = depth+sn.getConsumedStackUsage();
-             }
+            total_children_stack += sn.getConsumedStackUsage();
         }
+        for(int i=0;i<x.children.length;++i){
+            SimpleNode sn = (SimpleNode)x.children[i];
+            _stack.push(new Pair<SimpleNode, Long>(sn,depth+total_children_stack));
+        }
+      }
     }
     
     return max_stack;

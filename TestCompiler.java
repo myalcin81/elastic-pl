@@ -30,7 +30,10 @@ public class TestCompiler {
 			((ASTCompilationUnit) parser.rootNode()).reset();
 			((ASTCompilationUnit) parser.rootNode()).fillRandomIntNumber();
 			long WCET = RuntimeEstimator.worstWeight((SimpleNode) parser.rootNode());
+			int stackusage = RuntimeEstimator.maximumStackUsage((SimpleNode) parser.rootNode());
+
 			System.out.println("[!] Worst case execution time: " + WCET);
+			System.out.println("[!] Worst stack usage: " + stackusage);
 			parser.rootNode().interpret();
 		} catch (ParseException e) {
 			System.out

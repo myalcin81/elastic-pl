@@ -19,6 +19,8 @@ class MarkerNode extends SimpleNode implements Node {
   }
 
   private int int_marker_indicator = 0;
-
+  public long getConsumedStackUsage(){
+      return 0L;
+    }
 }
 

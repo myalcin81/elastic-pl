@@ -91,7 +91,9 @@ public abstract class AbstractPointSub extends SimpleNode {
 	public long weight(){
     	return 1000L;
   	}
-
+public long getConsumedStackUsage(){
+      return 5L;
+    }
 }
 /*
  * JavaCC - OriginalChecksum=834e6b392c29bdde9f97d7660804c8fb (do not edit this

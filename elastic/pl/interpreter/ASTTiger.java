@@ -57,7 +57,9 @@ public class ASTTiger extends SimpleNode {
 	public long weight(){
     	return 100L;
   	}
-
+  public long getConsumedStackUsage(){
+      return 2L;
+    }
 }
 /*
  * JavaCC - OriginalChecksum=834e6b392c29bdde9f97d7660804c8fb (do not edit this

@@ -43,5 +43,7 @@ public class ASTStatementExpression extends SimpleNode {
      jjtGetChild(0).interpret();
      top--; //just throw away the value.
   }
-
+  public long getConsumedStackUsage(){
+      return 0L;
+    }
 }

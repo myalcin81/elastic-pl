@@ -67,4 +67,7 @@ public class ASTBitwiseOrNode extends SimpleNode {
      else
        stack[top] = new Integer(result);
   }
+   public long getConsumedStackUsage(){
+      return 2L;
+    }
 }

@@ -64,5 +64,7 @@ public class ASTRepeatStatement extends SimpleNode {
   public long weight(){
       return 1L*get_repeat_times();
   }
-
+  public long getConsumedStackUsage(){
+      return 0L;
+    }
 }

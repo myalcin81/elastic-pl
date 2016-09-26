@@ -217,6 +217,8 @@ public class ASTCompilationUnit extends SimpleNode {
 		}
 		return outstate;
 	}
-
+ 	public long getConsumedStackUsage(){
+      return 0L;
+    }
 
 }

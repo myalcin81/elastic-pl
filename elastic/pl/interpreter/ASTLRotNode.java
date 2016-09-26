@@ -59,5 +59,7 @@ public class ASTLRotNode extends SimpleNode {
      stack[top] = Integer.rotateLeft(int1 , int2);
   
   }
-
+  public long getConsumedStackUsage(){
+      return 2L;
+    }
 }

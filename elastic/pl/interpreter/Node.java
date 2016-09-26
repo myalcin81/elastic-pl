@@ -63,6 +63,9 @@ public interface Node {
   /** Get weigth of the node (without subnodes) */
   public long weight();
 
+  /** Get consumed stack usage */
+  public long getConsumedStackUsage();
+
   /************************* Added by Sreeni. *******************/
 
   /** Interpret method */

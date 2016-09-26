@@ -56,5 +56,7 @@ public class ASTVerifyStatement extends SimpleNode {
        if (boolResult)
     	   symtab.put("verify", new Boolean(true));
   }
-
+  public long getConsumedStackUsage(){
+      return 1L;
+    }
 }

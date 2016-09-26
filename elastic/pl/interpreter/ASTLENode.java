@@ -58,5 +58,7 @@ public class ASTLENode extends SimpleNode {
 
      stack[top] = new Boolean(int1 <= int2);
   }
-
+  public long getConsumedStackUsage(){
+      return 2L;
+  }
 }

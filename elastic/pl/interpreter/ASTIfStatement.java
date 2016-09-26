@@ -56,5 +56,7 @@ public class ASTIfStatement extends SimpleNode {
   public boolean conditional(){
     return true;
   }
-
+  public long getConsumedStackUsage(){
+      return 1L;
+    }
 }

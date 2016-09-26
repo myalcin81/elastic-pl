@@ -16,7 +16,6 @@ public class ASTSHA256 extends SimpleNode {
 
 	private static final int BLOCK_SIZE = 64; // inner block size in bytes
 	private static final int[] w = new int[64];
-	private static Boolean valid;
 	private int h0, h1, h2, h3, h4, h5, h6, h7;
 	private long count = 0;
 	private byte[] buffer = new byte[BLOCK_SIZE];
@@ -224,7 +223,9 @@ public class ASTSHA256 extends SimpleNode {
 	public long weight(){
     	return 100L;
   	}
-
+  public long getConsumedStackUsage(){
+      return 2L;
+    }
 }
 /*
  * JavaCC - OriginalChecksum=834e6b392c29bdde9f97d7660804c8fb (do not edit this

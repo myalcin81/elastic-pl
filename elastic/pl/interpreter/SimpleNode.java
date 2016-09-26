@@ -80,6 +80,9 @@ class SimpleNode extends MyNode implements Node {
       }
     }
   }
+    public long getConsumedStackUsage(){
+      return 0L;
+    }
 }
 
 /* JavaCC - OriginalChecksum=9f0af5b3e5d66e1366012f228aa5235b (do not edit this line) */

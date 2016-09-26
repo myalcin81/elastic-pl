@@ -61,9 +61,12 @@ public class ASTBitwiseComplNode extends SimpleNode {
      else
        stack[top] = new Integer(~(int1).intValue());
 
-
+   
 
 
      
+  }
+  public long getConsumedStackUsage(){
+      return 1L;
   }
 }

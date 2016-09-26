@@ -30,7 +30,31 @@ class Pair<F, S> {
 }
 
 public class RuntimeEstimator {
-	
+	 
+
+public static int maximumStackUsage(SimpleNode node){
+   Stack<Pair<SimpleNode, Integer>> _stack = new Stack<Pair<SimpleNode, Integer>>();
+    _stack.add(new Pair<SimpleNode, Integer>(node,0));
+    int max_stack = 0;
+    while (_stack.size() > 0) {
+      Pair<SimpleNode, Integer> p = _stack.pop();
+      SimpleNode x = p.getFirst();
+      int depth = p.getSecond();
+      if(x.children!=null)
+        for(int i=0;i<x.children.length;++i){
+            SimpleNode sn = (SimpleNode)x.children[i];
+            if(sn.ignore()==false){
+               _stack.push(new Pair<SimpleNode, Integer>(sn,depth+sn.getConsumedStackUsage()));
+               if(depth+sn.getConsumedStackUsage()>max_stack)
+                max_stack = depth+sn.getConsumedStackUsage();
+             }
+        }
+    }
+    
+    return max_stack;
+  }
+
+
 
   public static long worstWeight(SimpleNode node){
     Stack<SimpleNode> _stack = new Stack<SimpleNode>();

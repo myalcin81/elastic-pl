@@ -45,5 +45,7 @@ public class ASTTrueNode extends SimpleNode {
   {
      stack[++top] = new Boolean(true);
   }
-
+  public long getConsumedStackUsage(){
+      return 1L;
+    }
 }

@@ -52,6 +52,10 @@ public class ASTAssignment extends SimpleNode {
      String varName = (String)stack[top-1];
      symtab.put(varName , put);
   }
+
+  public long getConsumedStackUsage(){
+    return 2L;
+  }
   
   // Assignment costs 1 credit
   public long weight(){

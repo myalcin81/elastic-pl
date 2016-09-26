@@ -71,5 +71,7 @@ public class ASTId extends SimpleNode {
   public boolean ignore(){
     return true;
   }
-
+  public long getConsumedStackUsage(){
+      return 1L;
+    }
 }

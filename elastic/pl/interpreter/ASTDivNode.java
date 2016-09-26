@@ -61,5 +61,7 @@ public class ASTDivNode extends SimpleNode {
      else
       stack[top] = new Integer(0);
   }
-
+  public long getConsumedStackUsage(){
+      return 2L;
+    }
 }

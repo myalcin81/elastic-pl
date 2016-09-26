@@ -10,6 +10,8 @@ class ASTFinalBountyCheckExpression extends SimpleNode {
   public ASTFinalBountyCheckExpression(ElasticPLParser p, int id) {
     super(p, id);
   }
-
+ 	public long getConsumedStackUsage(){
+      return 0L;
+    }
 }
 /* JavaCC - OriginalChecksum=5a3f8ce40b1d2512d6a73aca1219d57e (do not edit this line) */

@@ -46,5 +46,7 @@ public class ASTBlock extends SimpleNode {
         jjtGetChild(i).interpret();
 
   }
-
+  public long getConsumedStackUsage(){
+      return 0L;
+  }
 }

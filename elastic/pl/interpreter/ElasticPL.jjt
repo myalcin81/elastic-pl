@@ -11,12 +11,9 @@ PARSER_BEGIN(ElasticPLParser)
 package elastic.pl.interpreter;
 
 public class ElasticPLParser {
-
-
   public Node rootNode() {
     return jjtree.rootNode();
   }  
-
 }
 
 PARSER_END(ElasticPLParser)
@@ -54,9 +51,7 @@ void CompilationUnit() :
 void Expression() #void:
 {}
 {
-  LOOKAHEAD( Id() "=" )
-  Assignment()
-|
+
   ConditionalOrExpression()
 }
 

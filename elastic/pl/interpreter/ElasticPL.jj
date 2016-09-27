@@ -15,12 +15,9 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   protected JJTElasticPLParserState jjtree = new JJTElasticPLParserState();
 
 /*@egen*/
-
-
   public Node rootNode() {
     return jjtree.rootNode();
   }  
-
 }
 
 PARSER_END(ElasticPLParser)
@@ -86,9 +83,7 @@ void CompilationUnit() :
 void Expression()      :
 {}
 {
-  LOOKAHEAD( Id() "=" )
-  Assignment()
-|
+
   ConditionalOrExpression()
 }
 

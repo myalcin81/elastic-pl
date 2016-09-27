@@ -50,6 +50,7 @@ public class ASTAssignment extends SimpleNode {
      else if(stack[top] instanceof Boolean)
       put = ((Boolean)stack[top] == true)?1:0;
      String varName = (String)stack[top-1];
+   
      symtab.put(varName , put);
   }
 

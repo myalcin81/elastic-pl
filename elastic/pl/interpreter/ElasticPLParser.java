@@ -2,9 +2,7 @@
 package elastic.pl.interpreter;
 
 public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConstants, ElasticPLParserConstants {/*@bgen(jjtree)*/
-  protected JJTElasticPLParserState jjtree = new JJTElasticPLParserState();
-
-  public Node rootNode() {
+  protected JJTElasticPLParserState jjtree = new JJTElasticPLParserState();public Node rootNode() {
     return jjtree.rootNode();
   }
 
@@ -118,23 +116,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   }
 
   final public void Expression() throws ParseException {
-    if (jj_2_1(2147483647)) {
-      Assignment();
-    } else {
-      switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-      case INTEGER_LITERAL:
-      case 31:
-      case 32:
-      case 33:
-      case 35:
-        ConditionalOrExpression();
-        break;
-      default:
-        jj_la1[1] = jj_gen;
-        jj_consume_token(-1);
-        throw new ParseException();
-      }
-    }
+    ConditionalOrExpression();
   }
 
   final public void Assignment() throws ParseException {
@@ -178,7 +160,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         ;
         break;
       default:
-        jj_la1[2] = jj_gen;
+        jj_la1[1] = jj_gen;
         break label_2;
       }
       jj_consume_token(8);
@@ -220,7 +202,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         ;
         break;
       default:
-        jj_la1[3] = jj_gen;
+        jj_la1[2] = jj_gen;
         break label_3;
       }
       jj_consume_token(9);
@@ -262,7 +244,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         ;
         break;
       default:
-        jj_la1[4] = jj_gen;
+        jj_la1[3] = jj_gen;
         break label_4;
       }
       jj_consume_token(10);
@@ -304,7 +286,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         ;
         break;
       default:
-        jj_la1[5] = jj_gen;
+        jj_la1[4] = jj_gen;
         break label_5;
       }
       jj_consume_token(11);
@@ -346,7 +328,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         ;
         break;
       default:
-        jj_la1[6] = jj_gen;
+        jj_la1[5] = jj_gen;
         break label_6;
       }
       jj_consume_token(12);
@@ -389,7 +371,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         ;
         break;
       default:
-        jj_la1[7] = jj_gen;
+        jj_la1[6] = jj_gen;
         break label_7;
       }
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
@@ -452,7 +434,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         }
         break;
       default:
-        jj_la1[8] = jj_gen;
+        jj_la1[7] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
@@ -471,7 +453,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         ;
         break;
       default:
-        jj_la1[9] = jj_gen;
+        jj_la1[8] = jj_gen;
         break label_8;
       }
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
@@ -592,7 +574,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         }
         break;
       default:
-        jj_la1[10] = jj_gen;
+        jj_la1[9] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
@@ -609,7 +591,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         ;
         break;
       default:
-        jj_la1[11] = jj_gen;
+        jj_la1[10] = jj_gen;
         break label_9;
       }
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
@@ -672,7 +654,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         }
         break;
       default:
-        jj_la1[12] = jj_gen;
+        jj_la1[11] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
@@ -697,7 +679,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         ;
         break;
       default:
-        jj_la1[13] = jj_gen;
+        jj_la1[12] = jj_gen;
         break label_10;
       }
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
@@ -992,7 +974,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         }
         break;
       default:
-        jj_la1[14] = jj_gen;
+        jj_la1[13] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
@@ -1065,7 +1047,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       PrimaryExpression();
       break;
     default:
-      jj_la1[15] = jj_gen;
+      jj_la1[14] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -1086,7 +1068,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       jj_consume_token(34);
       break;
     default:
-      jj_la1[16] = jj_gen;
+      jj_la1[15] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -1175,7 +1157,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       }
       break;
     default:
-      jj_la1[17] = jj_gen;
+      jj_la1[16] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -1385,7 +1367,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       PRIME256V1PointNegate();
       break;
     default:
-      jj_la1[18] = jj_gen;
+      jj_la1[17] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -1472,7 +1454,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
           ;
           break;
         default:
-          jj_la1[19] = jj_gen;
+          jj_la1[18] = jj_gen;
           break label_11;
         }
         Statement();
@@ -1549,7 +1531,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         Block();
         break;
       default:
-        jj_la1[20] = jj_gen;
+        jj_la1[19] = jj_gen;
         ;
       }
     } catch (Throwable jjte000) {
@@ -3796,416 +3778,6 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     }
   }
 
-  private boolean jj_2_1(int xla) {
-    jj_la = xla; jj_lastpos = jj_scanpos = token;
-    try { return !jj_3_1(); }
-    catch(LookaheadSuccess ls) { return true; }
-    finally { jj_save(0, xla); }
-  }
-
-  private boolean jj_3R_48() {
-    if (jj_scan_token(10)) return true;
-    if (jj_3R_47()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_33() {
-    Token xsp;
-    xsp = jj_scanpos;
-    if (jj_3R_34()) {
-    jj_scanpos = xsp;
-    if (jj_3R_35()) {
-    jj_scanpos = xsp;
-    if (jj_3R_36()) return true;
-    }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_34() {
-    if (jj_3R_37()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_45() {
-    if (jj_3R_47()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_48()) { jj_scanpos = xsp; break; }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_46() {
-    if (jj_scan_token(9)) return true;
-    if (jj_3R_45()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_22() {
-    if (jj_3R_33()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_43() {
-    if (jj_3R_45()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_46()) { jj_scanpos = xsp; break; }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_21() {
-    if (jj_scan_token(32)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_20() {
-    if (jj_scan_token(31)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_16() {
-    Token xsp;
-    xsp = jj_scanpos;
-    if (jj_3R_20()) {
-    jj_scanpos = xsp;
-    if (jj_3R_21()) {
-    jj_scanpos = xsp;
-    if (jj_3R_22()) return true;
-    }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_44() {
-    if (jj_scan_token(8)) return true;
-    if (jj_3R_43()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_42() {
-    if (jj_3R_43()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_44()) { jj_scanpos = xsp; break; }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_32() {
-    if (jj_scan_token(30)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_31() {
-    if (jj_scan_token(29)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_41() {
-    if (jj_3R_12()) return true;
-    if (jj_scan_token(7)) return true;
-    if (jj_3R_13()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_30() {
-    if (jj_scan_token(28)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3_1() {
-    if (jj_3R_12()) return true;
-    if (jj_scan_token(7)) return true;
-    return false;
-  }
-
-  private boolean jj_3R_29() {
-    if (jj_scan_token(27)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_28() {
-    if (jj_scan_token(26)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_27() {
-    if (jj_scan_token(25)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_26() {
-    if (jj_scan_token(24)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_40() {
-    if (jj_3R_42()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_25() {
-    if (jj_scan_token(23)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_38() {
-    Token xsp;
-    xsp = jj_scanpos;
-    if (jj_3R_39()) {
-    jj_scanpos = xsp;
-    if (jj_3R_40()) return true;
-    }
-    return false;
-  }
-
-  private boolean jj_3R_39() {
-    if (jj_3R_41()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_24() {
-    if (jj_scan_token(22)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_23() {
-    if (jj_scan_token(21)) return true;
-    if (jj_3R_16()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_17() {
-    Token xsp;
-    xsp = jj_scanpos;
-    if (jj_3R_23()) {
-    jj_scanpos = xsp;
-    if (jj_3R_24()) {
-    jj_scanpos = xsp;
-    if (jj_3R_25()) {
-    jj_scanpos = xsp;
-    if (jj_3R_26()) {
-    jj_scanpos = xsp;
-    if (jj_3R_27()) {
-    jj_scanpos = xsp;
-    if (jj_3R_28()) {
-    jj_scanpos = xsp;
-    if (jj_3R_29()) {
-    jj_scanpos = xsp;
-    if (jj_3R_30()) {
-    jj_scanpos = xsp;
-    if (jj_3R_31()) {
-    jj_scanpos = xsp;
-    if (jj_3R_32()) return true;
-    }
-    }
-    }
-    }
-    }
-    }
-    }
-    }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_14() {
-    if (jj_3R_16()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_17()) { jj_scanpos = xsp; break; }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_19() {
-    if (jj_scan_token(20)) return true;
-    if (jj_3R_14()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_15() {
-    Token xsp;
-    xsp = jj_scanpos;
-    if (jj_3R_18()) {
-    jj_scanpos = xsp;
-    if (jj_3R_19()) return true;
-    }
-    return false;
-  }
-
-  private boolean jj_3R_18() {
-    if (jj_scan_token(19)) return true;
-    if (jj_3R_14()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_13() {
-    if (jj_3R_14()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_15()) { jj_scanpos = xsp; break; }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_61() {
-    if (jj_scan_token(18)) return true;
-    if (jj_3R_13()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_60() {
-    if (jj_scan_token(17)) return true;
-    if (jj_3R_13()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_59() {
-    if (jj_scan_token(16)) return true;
-    if (jj_3R_13()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_58() {
-    if (jj_scan_token(15)) return true;
-    if (jj_3R_13()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_55() {
-    Token xsp;
-    xsp = jj_scanpos;
-    if (jj_3R_58()) {
-    jj_scanpos = xsp;
-    if (jj_3R_59()) {
-    jj_scanpos = xsp;
-    if (jj_3R_60()) {
-    jj_scanpos = xsp;
-    if (jj_3R_61()) return true;
-    }
-    }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_53() {
-    if (jj_3R_13()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_55()) { jj_scanpos = xsp; break; }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_57() {
-    if (jj_scan_token(14)) return true;
-    if (jj_3R_53()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_56() {
-    if (jj_scan_token(13)) return true;
-    if (jj_3R_53()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_54() {
-    Token xsp;
-    xsp = jj_scanpos;
-    if (jj_3R_56()) {
-    jj_scanpos = xsp;
-    if (jj_3R_57()) return true;
-    }
-    return false;
-  }
-
-  private boolean jj_3R_51() {
-    if (jj_3R_53()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_54()) { jj_scanpos = xsp; break; }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_37() {
-    if (jj_scan_token(INTEGER_LITERAL)) return true;
-    return false;
-  }
-
-  private boolean jj_3R_52() {
-    if (jj_scan_token(12)) return true;
-    if (jj_3R_51()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_49() {
-    if (jj_3R_51()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_52()) { jj_scanpos = xsp; break; }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_12() {
-    if (jj_scan_token(35)) return true;
-    if (jj_3R_13()) return true;
-    if (jj_scan_token(36)) return true;
-    return false;
-  }
-
-  private boolean jj_3R_50() {
-    if (jj_scan_token(11)) return true;
-    if (jj_3R_49()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_47() {
-    if (jj_3R_49()) return true;
-    Token xsp;
-    while (true) {
-      xsp = jj_scanpos;
-      if (jj_3R_50()) { jj_scanpos = xsp; break; }
-    }
-    return false;
-  }
-
-  private boolean jj_3R_36() {
-    if (jj_scan_token(33)) return true;
-    if (jj_3R_38()) return true;
-    if (jj_scan_token(34)) return true;
-    return false;
-  }
-
-  private boolean jj_3R_35() {
-    if (jj_3R_12()) return true;
-    return false;
-  }
-
   /** Generated Token Manager. */
   public ElasticPLParserTokenManager token_source;
   SimpleCharStream jj_input_stream;
@@ -4214,10 +3786,8 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   /** Next token. */
   public Token jj_nt;
   private int jj_ntk;
-  private Token jj_scanpos, jj_lastpos;
-  private int jj_la;
   private int jj_gen;
-  final private int[] jj_la1 = new int[21];
+  final private int[] jj_la1 = new int[20];
   static private int[] jj_la1_0;
   static private int[] jj_la1_1;
   static private int[] jj_la1_2;
@@ -4229,20 +3799,17 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       jj_la1_init_3();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0x0,0x80000040,0x100,0x200,0x400,0x800,0x1000,0x6000,0x6000,0x78000,0x78000,0x180000,0x180000,0x7fe00000,0x7fe00000,0x80000040,0x40,0x0,0x0,0x0,0x0,};
+      jj_la1_0 = new int[] {0x0,0x100,0x200,0x400,0x800,0x1000,0x6000,0x6000,0x78000,0x78000,0x180000,0x180000,0x7fe00000,0x7fe00000,0x80000040,0x40,0x0,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0xfffff588,0xb,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xb,0xa,0x60,0xfffff588,0xfffff588,0x800,};
+      jj_la1_1 = new int[] {0xfffff588,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xb,0xa,0x60,0xfffff588,0xfffff588,0x800,};
    }
    private static void jj_la1_init_2() {
-      jj_la1_2 = new int[] {0xffffffff,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xffffffff,0xffffffff,0x0,};
+      jj_la1_2 = new int[] {0xffffffff,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xffffffff,0xffffffff,0x0,};
    }
    private static void jj_la1_init_3() {
-      jj_la1_3 = new int[] {0x7ff,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x7ff,0x7ff,0x0,};
+      jj_la1_3 = new int[] {0x7ff,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x7ff,0x7ff,0x0,};
    }
-  final private JJCalls[] jj_2_rtns = new JJCalls[1];
-  private boolean jj_rescan = false;
-  private int jj_gc = 0;
 
   /** Constructor with InputStream. */
   public ElasticPLParser(java.io.InputStream stream) {
@@ -4255,8 +3822,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 21; i++) jj_la1[i] = -1;
-    for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
+    for (int i = 0; i < 20; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -4271,8 +3837,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     jj_ntk = -1;
     jjtree.reset();
     jj_gen = 0;
-    for (int i = 0; i < 21; i++) jj_la1[i] = -1;
-    for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
+    for (int i = 0; i < 20; i++) jj_la1[i] = -1;
   }
 
   /** Constructor. */
@@ -4282,8 +3847,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 21; i++) jj_la1[i] = -1;
-    for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
+    for (int i = 0; i < 20; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -4294,8 +3858,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     jj_ntk = -1;
     jjtree.reset();
     jj_gen = 0;
-    for (int i = 0; i < 21; i++) jj_la1[i] = -1;
-    for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
+    for (int i = 0; i < 20; i++) jj_la1[i] = -1;
   }
 
   /** Constructor with generated Token Manager. */
@@ -4304,8 +3867,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 21; i++) jj_la1[i] = -1;
-    for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
+    for (int i = 0; i < 20; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -4315,8 +3877,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     jj_ntk = -1;
     jjtree.reset();
     jj_gen = 0;
-    for (int i = 0; i < 21; i++) jj_la1[i] = -1;
-    for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
+    for (int i = 0; i < 20; i++) jj_la1[i] = -1;
   }
 
   private Token jj_consume_token(int kind) throws ParseException {
@@ -4326,44 +3887,11 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
     jj_ntk = -1;
     if (token.kind == kind) {
       jj_gen++;
-      if (++jj_gc > 100) {
-        jj_gc = 0;
-        for (int i = 0; i < jj_2_rtns.length; i++) {
-          JJCalls c = jj_2_rtns[i];
-          while (c != null) {
-            if (c.gen < jj_gen) c.first = null;
-            c = c.next;
-          }
-        }
-      }
       return token;
     }
     token = oldToken;
     jj_kind = kind;
     throw generateParseException();
-  }
-
-  static private final class LookaheadSuccess extends java.lang.Error { }
-  final private LookaheadSuccess jj_ls = new LookaheadSuccess();
-  private boolean jj_scan_token(int kind) {
-    if (jj_scanpos == jj_lastpos) {
-      jj_la--;
-      if (jj_scanpos.next == null) {
-        jj_lastpos = jj_scanpos = jj_scanpos.next = token_source.getNextToken();
-      } else {
-        jj_lastpos = jj_scanpos = jj_scanpos.next;
-      }
-    } else {
-      jj_scanpos = jj_scanpos.next;
-    }
-    if (jj_rescan) {
-      int i = 0; Token tok = token;
-      while (tok != null && tok != jj_scanpos) { i++; tok = tok.next; }
-      if (tok != null) jj_add_error_token(kind, i);
-    }
-    if (jj_scanpos.kind != kind) return true;
-    if (jj_la == 0 && jj_scanpos == jj_lastpos) throw jj_ls;
-    return false;
   }
 
 
@@ -4396,33 +3924,6 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
   private java.util.List<int[]> jj_expentries = new java.util.ArrayList<int[]>();
   private int[] jj_expentry;
   private int jj_kind = -1;
-  private int[] jj_lasttokens = new int[100];
-  private int jj_endpos;
-
-  private void jj_add_error_token(int kind, int pos) {
-    if (pos >= 100) return;
-    if (pos == jj_endpos + 1) {
-      jj_lasttokens[jj_endpos++] = kind;
-    } else if (jj_endpos != 0) {
-      jj_expentry = new int[jj_endpos];
-      for (int i = 0; i < jj_endpos; i++) {
-        jj_expentry[i] = jj_lasttokens[i];
-      }
-      jj_entries_loop: for (java.util.Iterator<?> it = jj_expentries.iterator(); it.hasNext();) {
-        int[] oldentry = (int[])(it.next());
-        if (oldentry.length == jj_expentry.length) {
-          for (int i = 0; i < jj_expentry.length; i++) {
-            if (oldentry[i] != jj_expentry[i]) {
-              continue jj_entries_loop;
-            }
-          }
-          jj_expentries.add(jj_expentry);
-          break jj_entries_loop;
-        }
-      }
-      if (pos != 0) jj_lasttokens[(jj_endpos = pos) - 1] = kind;
-    }
-  }
 
   /** Generate ParseException. */
   public ParseException generateParseException() {
@@ -4432,7 +3933,7 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
       la1tokens[jj_kind] = true;
       jj_kind = -1;
     }
-    for (int i = 0; i < 21; i++) {
+    for (int i = 0; i < 20; i++) {
       if (jj_la1[i] == jj_gen) {
         for (int j = 0; j < 32; j++) {
           if ((jj_la1_0[i] & (1<<j)) != 0) {
@@ -4457,9 +3958,6 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
         jj_expentries.add(jj_expentry);
       }
     }
-    jj_endpos = 0;
-    jj_rescan_token();
-    jj_add_error_token(0, 0);
     int[][] exptokseq = new int[jj_expentries.size()][];
     for (int i = 0; i < jj_expentries.size(); i++) {
       exptokseq[i] = jj_expentries.get(i);
@@ -4473,41 +3971,6 @@ public class ElasticPLParser/*@bgen(jjtree)*/implements ElasticPLParserTreeConst
 
   /** Disable tracing. */
   final public void disable_tracing() {
-  }
-
-  private void jj_rescan_token() {
-    jj_rescan = true;
-    for (int i = 0; i < 1; i++) {
-    try {
-      JJCalls p = jj_2_rtns[i];
-      do {
-        if (p.gen > jj_gen) {
-          jj_la = p.arg; jj_lastpos = jj_scanpos = p.first;
-          switch (i) {
-            case 0: jj_3_1(); break;
-          }
-        }
-        p = p.next;
-      } while (p != null);
-      } catch(LookaheadSuccess ls) { }
-    }
-    jj_rescan = false;
-  }
-
-  private void jj_save(int index, int xla) {
-    JJCalls p = jj_2_rtns[index];
-    while (p.gen > jj_gen) {
-      if (p.next == null) { p = p.next = new JJCalls(); break; }
-      p = p.next;
-    }
-    p.gen = jj_gen + xla - jj_la; p.first = token; p.arg = xla;
-  }
-
-  static final class JJCalls {
-    int gen;
-    Token first;
-    int arg;
-    JJCalls next;
   }
 
 }

@@ -5,6 +5,7 @@ options {
     STATIC=false;
                           
                       
+    FORCE_LA_CHECK=true;
 }
 
 PARSER_BEGIN(ElasticPLParser)

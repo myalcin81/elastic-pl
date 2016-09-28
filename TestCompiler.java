@@ -49,11 +49,11 @@ public class TestCompiler {
 		} catch (ParseException e) {
 			System.out
 					.println("Elastic Programming Language Interpreter Version 0.1:  Encountered errors during parse.");
-			e.printStackTrace();
+			System.exit(1);
 		} catch (Exception e1) {
 			System.out.println(
 					"Elastic Programming Language Interpreter Version 0.1:  Encountered errors during interpretation/tree building.");
-			e1.printStackTrace();
+			System.exit(1);
 		}
 
 		((ASTCompilationUnit) parser.rootNode()).debugDumpState();

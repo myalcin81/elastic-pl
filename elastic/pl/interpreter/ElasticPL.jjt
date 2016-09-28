@@ -4,6 +4,7 @@ options {
     STATIC=false;
     NODE_EXTENDS="MyNode";
     TRACK_TOKENS=true;
+    FORCE_LA_CHECK=true;
 }
 
 PARSER_BEGIN(ElasticPLParser)

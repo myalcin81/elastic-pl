@@ -7,7 +7,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Random;
-
+import java.util.LinkedHashMap;
 /* Copyright (c) 2006, Sun Microsystems, Inc.
  * All rights reserved.
  *
@@ -107,6 +107,23 @@ public class ASTCompilationUnit extends SimpleNode {
 		
 
 	}
+
+	public LinkedHashMap<String, Integer> getNotNullDumpState() {
+		String name;
+		LinkedHashMap<String, Integer> cache = new LinkedHashMap<String, Integer>();
+
+		int j;
+		for (j = 0; j < 64000; ++j) {
+			name = "m[" + String.valueOf(j) + "]";
+			if(symtab.get(name) != null && Integer.valueOf(symtab.get(name).toString())!=0)
+				if(symtab.get(name) instanceof Integer)
+				 cache.put(name,(Integer)symtab.get(name));
+				else if(symtab.get(name) instanceof Boolean)
+ 				 cache.put(name,((Boolean)symtab.get(name)) == true ? 1 : 0);
+		}
+		return cache;
+	}
+
 
 	public void reset() {
 		// Initialize the internal state of all 256 internal integers with plain

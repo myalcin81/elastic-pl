@@ -1177,7 +1177,7 @@ ASTIntConstNode jjtn001 = new ASTIntConstNode(JJTINTCONSTNODE);
 jjtree.closeNodeScope(jjtn001, true);
       jjtc001 = false;
       jjtn001.jjtSetLastToken(getToken(0));
-jjtn001.val = Integer.parseInt(t.image);
+jjtn001.val = SafeInteger.parseInt(t.image);
     } finally {
 if (jjtc001) {
      jjtree.closeNodeScope(jjtn001, true);

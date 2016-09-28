@@ -201,7 +201,7 @@ void Literal() #void :
  (
   t=<INTEGER_LITERAL>
     {
-       jjtThis.val = Integer.parseInt(t.image);
+       jjtThis.val = SafeInteger.parseInt(t.image);
     }
  )#IntConstNode
 }

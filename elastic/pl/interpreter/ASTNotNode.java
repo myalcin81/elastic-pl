@@ -66,5 +66,5 @@ public class ASTNotNode extends SimpleNode {
   }
   public long getConsumedStackUsage(){
       return 0L;
-    }
+  }
 }

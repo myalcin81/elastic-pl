@@ -1057,7 +1057,7 @@ void Literal()       :
     }
 /*@egen*/
     {
-       jjtn001.val = Integer.parseInt(t.image);
+       jjtn001.val = SafeInteger.parseInt(t.image);
     }
  )/*@bgen(jjtree)*/
  } finally {

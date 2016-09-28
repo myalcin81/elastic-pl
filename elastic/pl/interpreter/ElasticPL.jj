@@ -955,6 +955,37 @@ void UnaryExpression()       :
       }
 /*@egen*/            
 |
+  "-"/*@bgen(jjtree) #NegationNode( 1) */
+      {
+        ASTNegationNode jjtn003 = new ASTNegationNode(JJTNEGATIONNODE);
+        boolean jjtc003 = true;
+        jjtree.openNodeScope(jjtn003);
+        jjtn003.jjtSetFirstToken(getToken(1));
+      }
+      try {
+/*@egen*/ UnaryExpression()/*@bgen(jjtree)*/
+      } catch (Throwable jjte003) {
+        if (jjtc003) {
+          jjtree.clearNodeScope(jjtn003);
+          jjtc003 = false;
+        } else {
+          jjtree.popNode();
+        }
+        if (jjte003 instanceof RuntimeException) {
+          throw (RuntimeException)jjte003;
+        }
+        if (jjte003 instanceof ParseException) {
+          throw (ParseException)jjte003;
+        }
+        throw (Error)jjte003;
+      } finally {
+        if (jjtc003) {
+          jjtree.closeNodeScope(jjtn003,  1);
+          jjtn003.jjtSetLastToken(getToken(0));
+        }
+      }
+/*@egen*/                 
+|
   PrimaryExpression()
 }
 

@@ -1070,6 +1070,36 @@ if (jjtc002) {
       }
       break;
       }
+    case 20:{
+      jj_consume_token(20);
+ASTNegationNode jjtn003 = new ASTNegationNode(JJTNEGATIONNODE);
+        boolean jjtc003 = true;
+        jjtree.openNodeScope(jjtn003);
+        jjtn003.jjtSetFirstToken(getToken(1));
+      try {
+        UnaryExpression();
+      } catch (Throwable jjte003) {
+if (jjtc003) {
+          jjtree.clearNodeScope(jjtn003);
+          jjtc003 = false;
+        } else {
+          jjtree.popNode();
+        }
+        if (jjte003 instanceof RuntimeException) {
+          {if (true) throw (RuntimeException)jjte003;}
+        }
+        if (jjte003 instanceof ParseException) {
+          {if (true) throw (ParseException)jjte003;}
+        }
+        {if (true) throw (Error)jjte003;}
+      } finally {
+if (jjtc003) {
+          jjtree.closeNodeScope(jjtn003,  1);
+          jjtn003.jjtSetLastToken(getToken(0));
+        }
+      }
+      break;
+      }
     case INTEGER_LITERAL:
     case 33:
     case 35:{
@@ -3833,7 +3863,7 @@ if (jjtc000) {
       jj_la1_init_3();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0x0,0x100,0x200,0x400,0x800,0x1000,0x6000,0x6000,0x78000,0x78000,0x180000,0x180000,0x7fe00000,0x7fe00000,0x80000040,0x40,0x0,0x0,0x0,0x0,};
+      jj_la1_0 = new int[] {0x0,0x100,0x200,0x400,0x800,0x1000,0x6000,0x6000,0x78000,0x78000,0x180000,0x180000,0x7fe00000,0x7fe00000,0x80100040,0x40,0x0,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_1() {
       jj_la1_1 = new int[] {0xfffff588,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xb,0xa,0x60,0xfffff588,0xfffff588,0x800,};

@@ -170,6 +170,8 @@ void UnaryExpression() #void :
 |
   "!" UnaryExpression() #NotNode(1)
 |
+  "-" UnaryExpression() #NegationNode(1)
+|
   PrimaryExpression()
 }
 

@@ -47,9 +47,9 @@ public class ASTId extends SimpleNode {
        topint = (Integer)stack[top];
      else if(stack[top] instanceof Boolean)
        topint = ((Boolean)stack[top] == true)?1:0;
-
-     String name = "m[" + topint + "]";
-     stack[top] = symtab.get(name);
+     if(topint<0 || topint>64000)
+      topint = 0;
+     stack[top] = symtab[topint];
   }
 
   public void interpret_only_inner()
@@ -63,8 +63,7 @@ public class ASTId extends SimpleNode {
 
      if(topint<0 || topint>64000)
       topint = 0;
-     String name = "m[" + topint + "]";
-     stack[--top] = name;
+     stack[--top] = topint;
   }
 
 

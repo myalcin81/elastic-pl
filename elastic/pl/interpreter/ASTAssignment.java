@@ -49,9 +49,15 @@ public class ASTAssignment extends SimpleNode {
       put = (Integer)stack[top];
      else if(stack[top] instanceof Boolean)
       put = ((Boolean)stack[top] == true)?1:0;
-     String varName = (String)stack[top-1];
+
+     int varName = 0;
+     if (stack[top-1] instanceof Integer){
+      varName = (Integer)stack[top-1];
+    }
+    
+
    
-     symtab.put(varName , put);
+     symtab[varName] = put;
   }
 
   public long getConsumedStackUsage(){

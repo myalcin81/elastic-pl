@@ -44,7 +44,6 @@ public class ASTVerifyStatement extends SimpleNode {
   public void interpret()
   {
 	   // Result will be stored in symtab
-	  symtab.put("verify", new Boolean(false));
        jjtGetChild(0).interpret();
        Boolean boolResult = false;
        int nT = top;
@@ -54,7 +53,10 @@ public class ASTVerifyStatement extends SimpleNode {
          boolResult = ((((Integer)stack[nT]).intValue()) != 0);
 
        if (boolResult)
-    	   symtab.put("verify", new Boolean(true));
+    	   symtab[64000] = 1;
+       else
+         symtab[64000] = 0;
+
   }
   public long getConsumedStackUsage(){
       return 0L;

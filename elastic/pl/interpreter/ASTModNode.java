@@ -59,7 +59,7 @@ public class ASTModNode extends SimpleNode {
      if(int2 != 0)
       stack[top] = new Integer(int1 % int2);
      else 
-      stack[top] = new Integer(int1 % int2);
+      stack[top] = new Integer(0);
   }
   public long getConsumedStackUsage(){
       return 0L;

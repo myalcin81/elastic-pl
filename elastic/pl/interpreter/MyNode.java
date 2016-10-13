@@ -44,7 +44,7 @@ public class MyNode
   }
 
   /** Symbol table */
-  protected static java.util.Hashtable symtab = new java.util.Hashtable();
+  protected static int[] symtab = new int[64001];
 
   /** Stack for calculations. */
   public static Object[] stack = new Object[1024];
@@ -70,7 +70,7 @@ public static String bytesToHex(byte[] bytes) {
     for (int i = 0; i < numbytes; ++i) {
       int num_int = starting_value + i / 4;
       int nth = 3 - (i % 4);
-      int rawval = (int) symtab.get("m[" + num_int + "]");
+      int rawval = (int) symtab[num_int];
       byte rel = (byte) ((rawval >> (nth * 8)) & 0xff);
       bytes[i] = rel;
     }
@@ -89,7 +89,7 @@ public static String bytesToHex(byte[] bytes) {
     for (int i = 0; i < size; ++i) {
       int int_converted = ((safeGet(barr, i * 4) & 0Xff) << 24) | ((safeGet(barr, (i * 4) + 1) & 0Xff) << 16)
           | ((safeGet(barr, (i * 4) + 2) & 0Xff) << 8) | ((safeGet(barr, (i * 4) + 3) & 0Xff));
-      symtab.put("m[" + String.valueOf(starting_value + i) + "]", int_converted);
+      symtab[starting_value + i] = int_converted;
     }
   }
 

@@ -60,7 +60,6 @@ public class ASTCompilationUnit extends SimpleNode {
 		} catch (NoSuchAlgorithmException e) {
 			throw new RuntimeException(e.getMessage(), e);
 		}
-
 	}
 
 	public static byte[] byteHash(int randomInput[], int output[]) throws NoSuchAlgorithmException {
@@ -99,9 +98,8 @@ public class ASTCompilationUnit extends SimpleNode {
 		int j;
 
 		for (j = 0; j < 64000; ++j) {
-			name = "m[" + String.valueOf(j) + "]";
-			if(symtab.get(name) != null && Integer.valueOf(symtab.get(name).toString())!=0)
-				System.out.println(name + ": " + symtab.get(name) );
+			if(symtab[j]!=0)
+				System.out.println("m[" + String.valueOf(j) + "]" + ": " + symtab[j] );
 		}
 
 		
@@ -114,33 +112,15 @@ public class ASTCompilationUnit extends SimpleNode {
 
 		int j;
 		for (j = 0; j < 64000; ++j) {
-			name = "m[" + String.valueOf(j) + "]";
-			if(symtab.get(name) != null && Integer.valueOf(symtab.get(name).toString())!=0)
-				if(symtab.get(name) instanceof Integer)
-				 cache.put(name,(Integer)symtab.get(name));
-				else if(symtab.get(name) instanceof Boolean)
- 				 cache.put(name,((Boolean)symtab.get(name)) == true ? 1 : 0);
+			if(symtab[j]!=0)
+ 				 cache.put("m[" + String.valueOf(j) + "]",symtab[j]);
 		}
 		return cache;
 	}
 
 
 	public void reset() {
-		// Initialize the internal state of all 256 internal integers with plain
-		// 0
-		String name;
-		int j;
-		for (j = 0; j < 64000; ++j) {
-			name = "m[" + String.valueOf(j) + "]";
-			symtab.put(name, new Integer(0));
-		}
-		
-
-		// Also remove input and verify from symtab
-		symtab.remove("verify");
-		symtab.remove("input");
-
-		// Reset Stack Pointer
+		symtab = new int[64001];
 		top = 0;
 	}
 
@@ -162,7 +142,7 @@ public class ASTCompilationUnit extends SimpleNode {
 		inputInts = new int[input_entropy_ints];
 		for (int i = 0; i < input_entropy_ints; ++i) {
 			Integer val = new Integer(rn.nextInt());
-			symtab.put("m[" + String.valueOf(i) + "]", val);
+			symtab[i] = val;
 			inputInts[i] = val.intValue();
 		}
 	}
@@ -173,7 +153,7 @@ public class ASTCompilationUnit extends SimpleNode {
 		inputInts = new int[input_entropy_ints];
 		for (int i = 0; i < input_entropy_ints; ++i) {
 			Integer val = inputIntsOuter[i];
-			symtab.put("m[" + String.valueOf(i) + "]", val);
+			symtab[i]=val;
 			inputInts[i] = val.intValue();
 		}
 	}
@@ -190,7 +170,7 @@ public class ASTCompilationUnit extends SimpleNode {
 		jjtGetChild(k - 1).interpret();
 
 		try {
-			Boolean symtab_result = (Boolean) symtab.get("verify");
+			Boolean symtab_result = symtab[64000] == 1 ? true : false;
 			ret = symtab_result.booleanValue();
 		} catch (Exception e) {
 		}
@@ -226,13 +206,7 @@ public class ASTCompilationUnit extends SimpleNode {
 	}
 
 	private int[] getOutState() {
-		int outstate[] = new int[64000];
-		for (int j = 0; j < 64000; ++j) {
-			String name = "m[" + String.valueOf(j) + "]";
-			Integer r = (Integer) symtab.get(name);
-			outstate[j] = r.intValue();
-		}
-		return outstate;
+		return Arrays.copyOfRange(symtab, 0, 64000);
 	}
  	public long getConsumedStackUsage(){
       return 0L;

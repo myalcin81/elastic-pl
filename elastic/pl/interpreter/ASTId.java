@@ -42,11 +42,7 @@ public class ASTId extends SimpleNode {
   public void interpret()
   {
      jjtGetChild(0).interpret();
-     Integer topint = 0;
-     if(stack[top] instanceof Integer)
-       topint = (Integer)stack[top];
-     else if(stack[top] instanceof Boolean)
-       topint = ((Boolean)stack[top] == true)?1:0;
+     Integer topint = (Integer)stack[top];
      if(topint<0 || topint>64000)
       topint = 0;
      stack[top] = symtab[topint];
@@ -55,12 +51,7 @@ public class ASTId extends SimpleNode {
   public void interpret_only_inner()
   {
      jjtGetChild(0).interpret();
-     Integer topint = 0;
-     if(stack[top] instanceof Integer)
-       topint = (Integer)stack[top];
-     else if(stack[top] instanceof Boolean)
-       topint = ((Boolean)stack[top] == true)?1:0;
-
+     Integer topint = (Integer)stack[top];
      if(topint<0 || topint>64000)
       topint = 0;
      stack[--top] = topint;

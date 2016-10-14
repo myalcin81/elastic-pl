@@ -50,6 +50,19 @@ public class MyNode
   public static Object[] stack = new Object[1024];
   public static int top = -1;
 
+  public static Long internal_state = 0L;
+  public static Long internal_state2 = 0L;
+
+  public static void mangle_state(int x){
+    if(x%2==0){
+      internal_state = Long.rotateLeft(internal_state,x%64);
+      internal_state = internal_state ^ x;
+    }else{
+      internal_state2 = Long.rotateRight(internal_state2,x%64);
+      internal_state2 = internal_state2 ^ x;
+    }
+  }
+
   private int int_marker_indicator = 0;
   private MarkerType my_marker_type = MarkerType.NO_MARKER;
 

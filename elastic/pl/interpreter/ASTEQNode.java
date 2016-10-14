@@ -45,18 +45,12 @@ public class ASTEQNode extends SimpleNode {
 
      top=top-1;
 
-     Integer int1 = 0;
-     Integer int2 = 0;
-     if(stack[top] instanceof Integer)
-      int1 = ((Integer)stack[top]).intValue();
-     else if(stack[top] instanceof Boolean)
-      int1 = (((Boolean)stack[top]) == true) ? 1 : 0;
-     if(stack[top+1] instanceof Integer)
-      int2 = ((Integer)stack[top+1]).intValue();
-     else if(stack[top+1] instanceof Boolean)
-      int2 = (((Boolean)stack[top+1]) == true) ? 1 : 0;
+     Integer int1 = (Integer)stack[top];
+     Integer int2 = (Integer)stack[top+1];
+     int result = (int1==int2)?1:0;
+     stack[top] = result;
 
-     stack[top] = new Boolean(int1 == int2);
+     mangle_state(result);
   }
   public long getConsumedStackUsage(){
       return 0L;

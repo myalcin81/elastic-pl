@@ -14,25 +14,11 @@ class ASTNegationNode extends SimpleNode {
 
   public void interpret()
   {
-     Boolean first_was_boolean = false;
-
      jjtGetChild(0).interpret();
 
-     if (stack[top] instanceof Boolean)
-        first_was_boolean = true;
-
-
-     Integer int1 = 0;
-     if(stack[top] instanceof Integer)
-      int1 = ((Integer)stack[top]).intValue();
-     else if(stack[top] instanceof Boolean)
-      int1 = (((Boolean)stack[top]) == true) ? 1 : 0;
-      
-
-     if(first_was_boolean)
-       stack[top] = new Boolean((int1 == 1)?false:true);
-     else
-       stack[top] = new Integer(-int1);
+     Integer result = -(Integer)stack[top];
+     stack[top] = result;
+     mangle_state(result);
 
 
 

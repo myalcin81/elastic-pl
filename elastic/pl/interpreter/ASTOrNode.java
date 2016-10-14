@@ -47,16 +47,13 @@ public class ASTOrNode extends SimpleNode {
 
      Integer int1 = 0;
      Integer int2 = 0;
-     if(stack[top] instanceof Integer)
-      int1 = ((Integer)stack[top]).intValue();
-     else if(stack[top] instanceof Boolean)
-      int1 = (((Boolean)stack[top]) == true) ? 1 : 0;
-     if(stack[top+1] instanceof Integer)
-      int2 = ((Integer)stack[top+1]).intValue();
-     else if(stack[top+1] instanceof Boolean)
-      int2 = (((Boolean)stack[top+1]) == true) ? 1 : 0;
+     int1 = ((Integer)stack[top]);
+     int2 = ((Integer)stack[top+1]);
+     Integer result = ((int1!=0 && int1!=-1)||(int2!=0 && int2!=-1))?1:0;
+     stack[top] = result;
 
-     stack[top] = new Boolean((int1>0) || (int2>0));
+     mangle_state(result);
+
   }
   public long getConsumedStackUsage(){
       return 0L;

@@ -70,6 +70,12 @@ public abstract class AbstractPointNegate extends SimpleNode {
 	
 		// do hash
 		byte[] result = this.computePt(this.StateIntToBytes(position_to_start1, input_length_bytes1), compressed);
+		int value = 0;
+	    for (int i = 0; i < 4; i++) {
+	        int shift = (4 - 1 - i) * 8;
+	        value += (result[i] & 0x000000FF) << shift;
+	    }
+	    mangle_state(value);
 		bytesBackToState(result, position_to_start1);
 	}
 

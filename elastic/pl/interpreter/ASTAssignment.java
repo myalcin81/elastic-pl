@@ -44,20 +44,12 @@ public class ASTAssignment extends SimpleNode {
      
      ((ASTId)jjtGetChild(0)).interpret_only_inner();
      jjtGetChild(1).interpret();
-     int put = 0;
-     if(stack[top] instanceof Integer)
-      put = (Integer)stack[top];
-     else if(stack[top] instanceof Boolean)
-      put = ((Boolean)stack[top] == true)?1:0;
-
-     int varName = 0;
-     if (stack[top-1] instanceof Integer){
-      varName = (Integer)stack[top-1];
-    }
+     int put = (Integer)stack[top];
+     int varName = (Integer)stack[top-1];
     
-
-   
      symtab[varName] = put;
+     mangle_state(varName);
+     mangle_state(put);
   }
 
   public long getConsumedStackUsage(){

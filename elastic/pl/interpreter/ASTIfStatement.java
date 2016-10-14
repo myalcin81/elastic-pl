@@ -43,10 +43,7 @@ public class ASTIfStatement extends SimpleNode {
      jjtGetChild(0).interpret();
      Boolean boolResult = false;
      int nT = top--;
-     if(stack[nT] instanceof Boolean)
-       boolResult = ((Boolean)stack[nT]).booleanValue();
-     else if (stack[nT] instanceof Integer)
-       boolResult = ((((Integer)stack[nT]).intValue()) != 0);
+     boolResult = ((((Integer)stack[nT])) != 0);
      if (boolResult)
         jjtGetChild(1).interpret();
      else if (jjtGetNumChildren() == 3)

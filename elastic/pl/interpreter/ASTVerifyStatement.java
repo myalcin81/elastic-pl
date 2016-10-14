@@ -47,15 +47,14 @@ public class ASTVerifyStatement extends SimpleNode {
        jjtGetChild(0).interpret();
        Boolean boolResult = false;
        int nT = top;
-       if(stack[nT] instanceof Boolean)
-         boolResult = ((Boolean)stack[nT]).booleanValue();
-       else if (stack[nT] instanceof Integer)
-         boolResult = ((((Integer)stack[nT]).intValue()) != 0);
+       boolResult = (Integer)stack[nT] != 0 && (Integer)stack[nT] != -1;
 
        if (boolResult)
     	   symtab[64000] = 1;
        else
          symtab[64000] = 0;
+
+       mangle_state(boolResult?1:0);
 
   }
   public long getConsumedStackUsage(){

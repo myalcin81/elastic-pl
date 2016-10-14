@@ -62,19 +62,25 @@ public class ASTCompilationUnit extends SimpleNode {
 		}
 	}
 
-	public static byte[] byteHash(int randomInput[], int output[]) throws NoSuchAlgorithmException {
+	public static byte[] byteHash(int randomInput[], long st1, long st2) throws NoSuchAlgorithmException {
 		MessageDigest m = getMessageDigest("SHA-256");
 		m.reset();
-		ByteBuffer byteBuffer = ByteBuffer.allocate(output.length * 4);
-		IntBuffer intBuffer = byteBuffer.asIntBuffer();
-		intBuffer.put(output);
+
+		byte[] b = new byte[16];
+		for (int i = 0; i < 8; ++i) {
+		  b[i] = (byte) (st1 >> (8 - i - 1 << 3));
+		}
+		for (int i = 0; i < 8; ++i) {
+		  b[i+8] = (byte) (st2 >> (8 - i - 1 << 3));
+		}
+
+
 		ByteBuffer byteBufferIn = ByteBuffer.allocate(randomInput.length * 4);
 		IntBuffer intInBuffer = byteBufferIn.asIntBuffer();
 		intInBuffer.put(randomInput);
 
-		byte[] array = byteBuffer.array();
 		byte[] array2 = byteBufferIn.array();
-		m.update(array);
+		m.update(b);
 		m.update(array2);
 		byte[] digest = m.digest();
 		return digest;
@@ -122,6 +128,8 @@ public class ASTCompilationUnit extends SimpleNode {
 	public void reset() {
 		symtab = new int[64001];
 		top = 0;
+		internal_state = 0L;
+		internal_state2 = 0L;
 	}
 
 	public void interpret() {
@@ -170,7 +178,7 @@ public class ASTCompilationUnit extends SimpleNode {
 		jjtGetChild(k - 1).interpret();
 
 		try {
-			Boolean symtab_result = symtab[64000] == 1 ? true : false;
+			Boolean symtab_result = symtab[64000] != 0 ? true : false;
 			ret = symtab_result.booleanValue();
 		} catch (Exception e) {
 		}
@@ -182,10 +190,9 @@ public class ASTCompilationUnit extends SimpleNode {
 		POW_CHECK_RESULT ret = POW_CHECK_RESULT.ERROR;
 
 		int in[] = getRandomIntArray();
-		int out[] = getOutState();
 
 		try {
-			byte[] bsh = byteHash(in, out);
+			byte[] bsh = byteHash(in, internal_state, internal_state2);
 			BigInteger val = byteHashToLong(bsh);
 
 			if (val.compareTo(target)==-1){
@@ -205,9 +212,7 @@ public class ASTCompilationUnit extends SimpleNode {
 		return ret;
 	}
 
-	private int[] getOutState() {
-		return Arrays.copyOfRange(symtab, 0, 64000);
-	}
+
  	public long getConsumedStackUsage(){
       return 0L;
     }

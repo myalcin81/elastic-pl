@@ -60,7 +60,7 @@ public class ASTIfStatement extends SimpleNode {
       elsezweig=true;
     }
 
-    String res = "if (" + n1 + ") " + n2 + "\n";
+    String res = "if ((" + n1 + ") !=0 ) " + n2 + "\n";
     if(elsezweig){
       res = res + "\nelse " + n3 + "\n";
     }

@@ -40,7 +40,7 @@ public class ASTModNode extends SimpleNode {
 
   public void interpret()
   {
-    jjtGetChild(0).interpret();
+     jjtGetChild(0).interpret();
      jjtGetChild(1).interpret();
 
      top=top-1;
@@ -58,6 +58,11 @@ public class ASTModNode extends SimpleNode {
      mangle_state(result);
     
      
+  }
+  public String compile(){
+    String n1 = ((SimpleNode)jjtGetChild(0)).compile();
+    String n2 = ((SimpleNode)jjtGetChild(1)).compile();
+    return "((" + n1 + ") % (" + n2 + "))";
   }
   public long getConsumedStackUsage(){
       return 0L;

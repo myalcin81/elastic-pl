@@ -52,6 +52,12 @@ public class ASTNENode extends SimpleNode {
      int2 = ((Integer)stack[top+1]);
      stack[top] = (int1 != int2)?1:0;
   }
+  public String compile(){
+    String n1 = ((SimpleNode)jjtGetChild(0)).compile();
+    String n2 = ((SimpleNode)jjtGetChild(1)).compile();
+    
+    return "(((" + n1 + ") != (" + n2 + "))?1:0)";
+  }
   public long getConsumedStackUsage(){
       return 0L;
     }

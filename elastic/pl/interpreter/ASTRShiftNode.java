@@ -57,4 +57,9 @@ public class ASTRShiftNode extends SimpleNode {
   public long getConsumedStackUsage(){
       return 0L;
     }
+  public String compile(){
+    String n1 = ((SimpleNode)jjtGetChild(0)).compile();
+    String n2 = ((SimpleNode)jjtGetChild(1)).compile();
+    return "((" + n1 + ") >> (" + n2 + "))";
+  }
 }

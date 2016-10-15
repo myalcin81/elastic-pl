@@ -46,6 +46,17 @@ public class ASTBlock extends SimpleNode {
         jjtGetChild(i).interpret();
 
   }
+  public String compile(){
+
+    String totalCode = "{";
+      int i, k = jjtGetNumChildren();
+    for (i = 0; i < k - 1; i++) {
+      totalCode += ((SimpleNode)jjtGetChild(i)).compile();
+    }
+    totalCode+="}";
+    return totalCode;
+
+    }
   public long getConsumedStackUsage(){
       return 0L;
   }

@@ -49,11 +49,17 @@ public class ASTOrNode extends SimpleNode {
      Integer int2 = 0;
      int1 = ((Integer)stack[top]);
      int2 = ((Integer)stack[top+1]);
-     Integer result = ((int1!=0 && int1!=-1)||(int2!=0 && int2!=-1))?1:0;
+     Integer result = (int1!=0||int2!=0)?1:0;
      stack[top] = result;
 
      mangle_state(result);
 
+  }
+  public String compile(){
+    String n1 = ((SimpleNode)jjtGetChild(0)).compile();
+    String n2 = ((SimpleNode)jjtGetChild(1)).compile();
+    
+    return "(((" + n1 + ")!=0 || (" + n2 + ")!=0)?1:0)";
   }
   public long getConsumedStackUsage(){
       return 0L;

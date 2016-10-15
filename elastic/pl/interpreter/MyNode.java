@@ -113,6 +113,11 @@ public static String bytesToHex(byte[] bytes) {
      throw new UnsupportedOperationException(); // It better not come here.
   }
 
+  public String compile(){
+    throw new UnsupportedOperationException();
+  }
+
+
   protected static Writer out = new PrintWriter(System.out);
   protected static Reader in = new InputStreamReader(System.in);
 

@@ -50,6 +50,23 @@ public class ASTIfStatement extends SimpleNode {
         jjtGetChild(2).interpret();
   }
 
+  public String compile(){
+    String n1 = ((SimpleNode)jjtGetChild(0)).compile();
+    String n2 = ((SimpleNode)jjtGetChild(1)).compile();
+    String n3 = "";
+    boolean elsezweig = false;
+    if (jjtGetNumChildren() == 3){
+      n3 = ((SimpleNode)jjtGetChild(2)).compile();
+      elsezweig=true;
+    }
+
+    String res = "if (" + n1 + ") " + n2;
+    if(elsezweig){
+      res = res + "\nelse " + n3;
+    }
+    return res;
+  }
+
   public boolean conditional(){
     return true;
   }

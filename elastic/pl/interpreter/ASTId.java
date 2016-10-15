@@ -56,6 +56,11 @@ public class ASTId extends SimpleNode {
       topint = 0;
      stack[--top] = topint;
   }
+  public String compile(){
+    String n1 = ((SimpleNode)jjtGetChild(0)).compile();
+    
+    return "m[" + n1 + "]";
+  }
 
 
   public boolean ignore(){

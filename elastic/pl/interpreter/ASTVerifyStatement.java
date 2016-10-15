@@ -57,6 +57,10 @@ public class ASTVerifyStatement extends SimpleNode {
        mangle_state(boolResult?1:0);
 
   }
+  public String compile(){
+    String n1 = ((SimpleNode)jjtGetChild(0)).compile();
+    return "return (" + n1 + ");";
+  }
   public long getConsumedStackUsage(){
       return 0L;
     }

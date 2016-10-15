@@ -45,6 +45,10 @@ public class ASTIntConstNode extends SimpleNode {
   {
      stack[++top] = new Integer(val);
   }
+  public String compile(){
+ 
+    return String.valueOf(val);
+  }
 
   public boolean ignore(){
     return true;

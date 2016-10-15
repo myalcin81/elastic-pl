@@ -34,6 +34,7 @@ package elastic.pl.interpreter;
 
 public class ASTRepeatStatement extends SimpleNode {
 
+  public static int varCounter = 0;
   public ASTRepeatStatement(int id) {
     super(id);
   }
@@ -59,6 +60,15 @@ public class ASTRepeatStatement extends SimpleNode {
           jjtGetChild(1).interpret();
       }
     }  
+  }
+
+  public String compile(){
+    String n1 = ((SimpleNode)jjtGetChild(0)).compile();
+    String n2 = ((SimpleNode)jjtGetChild(1)).compile();
+    varCounter++;
+    String varName="loop" + varCounter;
+
+    return "int " + varName + " = 0;\nfor (; " + varName + " < (" + n2 + "); ++i) " + n2;
   }
 
   public long weight(){

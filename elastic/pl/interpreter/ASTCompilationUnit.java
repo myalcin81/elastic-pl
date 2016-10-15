@@ -144,6 +144,18 @@ public class ASTCompilationUnit extends SimpleNode {
 
 	}
 
+	public String compile(){
+
+		String totalCode = "#include <stdio.h>\n#include <stdint.h>\n\nint32_t m[64000];\n\nint main(){\n\n}\n\nboolean execute(){\n";
+    	int i, k = jjtGetNumChildren();
+		for (i = 0; i < k ; i++) {
+			totalCode += ((SimpleNode)jjtGetChild(i)).compile();
+		}
+		totalCode += "\n}\n";
+		return totalCode;
+
+  	}
+
 	
 
 	public void fillRandomIntNumber() {

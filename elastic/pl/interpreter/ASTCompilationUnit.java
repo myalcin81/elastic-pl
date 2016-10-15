@@ -146,7 +146,7 @@ public class ASTCompilationUnit extends SimpleNode {
 
 	public String compile(){
 
-		String totalCode = "#include <stdio.h>\n#include <stdint.h>\n\nint32_t m[64000];\n\nint main(){\n\n}\n\nboolean execute(){\n";
+		String totalCode = "#include <stdio.h>\n#include <stdint.h>\n#include <time.h>\n\nint32_t m[64000];\n\nint execute();\nint main(){\nclock_t start, end;\nint counter = 0;\nstart = clock();\nwhile(1==1){end = clock(); execute(); counter=counter+1;\nif((double)(end-start)/CLOCKS_PER_SEC >=1) break;\n}\nprintf(\"BENCHMARK: %d evaluations per second.\\n\",counter);\n}\n\nint execute(){\n";
     	int i, k = jjtGetNumChildren();
 		for (i = 0; i < k ; i++) {
 			totalCode += ((SimpleNode)jjtGetChild(i)).compile();

@@ -68,7 +68,7 @@ public class ASTRepeatStatement extends SimpleNode {
     varCounter++;
     String varName="loop" + varCounter;
 
-    return "int " + varName + " = 0;\nfor (; " + varName + " < (" + n2 + "); ++" + varName + ") " + n2;
+    return "int " + varName + " = 0;\nfor (; " + varName + " < (" + n1 + "); ++" + varName + ") " + n2;
   }
 
   public long weight(){

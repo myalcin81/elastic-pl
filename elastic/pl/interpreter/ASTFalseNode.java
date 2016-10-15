@@ -40,7 +40,10 @@ public class ASTFalseNode extends SimpleNode {
 
   public void interpret()
   {
-     stack[++top] = new Boolean(false);
+     stack[++top] = new Integer(0);
+  }
+  public String compile(){
+    return "0";
   }
   public long getConsumedStackUsage(){
       return 1L;

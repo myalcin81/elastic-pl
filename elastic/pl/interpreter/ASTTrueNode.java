@@ -43,11 +43,11 @@ public class ASTTrueNode extends SimpleNode {
 
   public void interpret()
   {
-     stack[++top] = new Boolean(true);
+     stack[++top] = new Integer(1);
   }
   
   public String compile(){
-    return "true";
+    return "1";
   }
 
   public long getConsumedStackUsage(){

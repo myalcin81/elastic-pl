@@ -44,7 +44,9 @@ public class ASTNotNode extends SimpleNode {
 
      jjtGetChild(0).interpret();
 
-     Integer result = (Integer)stack[top]^0xFFFFFFFF;
+     Integer result = (Integer)stack[top];
+     if(result!=0) result = 0;
+     else result = 1;
      stack[top] = result;
      mangle_state(result);
 
@@ -53,7 +55,7 @@ public class ASTNotNode extends SimpleNode {
   }
   public String compile(){
     String n1 = ((SimpleNode)jjtGetChild(0)).compile();
-    return "((" + n1 + ")^0xFFFFFFFF)";
+    return "(((" + n1 + ")!=0)?0:1)";
   }
 
   public long getConsumedStackUsage(){

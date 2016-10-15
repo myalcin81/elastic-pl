@@ -50,7 +50,7 @@ public class ASTBlock extends SimpleNode {
 
     String totalCode = "{";
       int i, k = jjtGetNumChildren();
-    for (i = 0; i < k - 1; i++) {
+    for (i = 0; i < k; i++) {
       totalCode += ((SimpleNode)jjtGetChild(i)).compile();
     }
     totalCode+="}";

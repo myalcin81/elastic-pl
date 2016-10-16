@@ -43,12 +43,13 @@ public class ASTAssignment extends SimpleNode {
      
      
      ((ASTId)jjtGetChild(0)).interpret_only_inner();
+     int varName = (Integer)stack[top];
+     mangle_state(varName);
+
      jjtGetChild(1).interpret();
      int put = (Integer)stack[top];
-     int varName = (Integer)stack[top-1];
-    
+     
      symtab[varName] = put;
-     mangle_state(varName);
      mangle_state(put);
   }
   public String compile(){

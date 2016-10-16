@@ -166,13 +166,13 @@ public class ASTCompilationUnit extends SimpleNode {
         "  n &= mask;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n"+
         "  return (x>>n) | (x<<( (-n)&mask ));\n"+
         "}\n"+
-        "uint64_t rotl32 (uint32_t x, unsigned int n)\n"+
+        "uint32_t rotl32 (uint32_t x, unsigned int n)\n"+
         "{\n"+
         "  const unsigned int mask = (CHAR_BIT*sizeof(x)-1);\n"+
         "  n &= mask;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n"+
         "  return (x<<n) | (x>>( (-n)&mask ));\n"+
         "}\n"+
-        "uint64_t rotr32 (uint32_t x, unsigned int n)\n"+
+        "uint32_t rotr32 (uint32_t x, unsigned int n)\n"+
         "{\n"+
         "  const unsigned int mask = (CHAR_BIT*sizeof(x)-1);\n"+
         "  n &= mask;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n"+

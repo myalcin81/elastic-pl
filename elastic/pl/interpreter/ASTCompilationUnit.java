@@ -152,8 +152,8 @@ public class ASTCompilationUnit extends SimpleNode {
         "#include <limits.h>\n"+
         "#include <time.h>\n\n"+
         "int32_t mem[64000];\n"+
-        "long long vm_state1 = 0;\n"+
-        "long long vm_state2 = 0;\n\n"+
+        "uint64_t vm_state1 = 0;\n"+
+        "uint64_t vm_state2 = 0;\n\n"+
         "uint64_t rotl64 (uint64_t x, unsigned int n)\n"+
         "{\n"+
         "  const unsigned int mask = (CHAR_BIT*sizeof(x)-1);\n"+
@@ -179,7 +179,6 @@ public class ASTCompilationUnit extends SimpleNode {
         "  return (x>>n) | (x<<( (-n)&mask ));\n"+
         "}\n"+
         "int m(int x) {\n"+
-        "   printf(\"Mangle State: %d\\n\",x);\n"+
         "   int mod = x % 64;\n"+
         "   if (x % 2 == 0) {\n"+
         "       vm_state1 = rotl64(vm_state1, mod);\n"+
@@ -189,12 +188,12 @@ public class ASTCompilationUnit extends SimpleNode {
         "       vm_state2 = rotr64(vm_state2, mod);\n"+
         "       vm_state2 = vm_state2 ^ x;\n"+
         "   }\n"+
-        "   printf(\"MANGLE STATE: %d %lld %lld.\\n\",mod,vm_state1,vm_state2);\n"+
         "    return x;\n"+
         "}\n\n"+
         "int execute();\n"+
         "int main(){\n"+
         "  execute();\n"+
+        "  printf(\"MANGLE STATE: %lld %lld.\\n\",vm_state1,vm_state2);\n"+
         "}\n\n"+
         "int execute(){\n"+
         "vm_state1=0;\n"+

@@ -25,7 +25,7 @@ class ASTNegationNode extends SimpleNode {
   }
   public String compile(){
     String n1 = ((SimpleNode)jjtGetChild(0)).compile();
-    return "(-1*(" + n1 + "))";
+    return "m(-1*(" + n1 + "))";
   }
   public long getConsumedStackUsage(){
       return 0L;

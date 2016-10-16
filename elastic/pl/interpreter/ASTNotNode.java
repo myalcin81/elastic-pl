@@ -55,7 +55,7 @@ public class ASTNotNode extends SimpleNode {
   }
   public String compile(){
     String n1 = ((SimpleNode)jjtGetChild(0)).compile();
-    return "(((" + n1 + ")!=0)?0:1)";
+    return "m(((" + n1 + ")!=0)?0:1)";
   }
 
   public long getConsumedStackUsage(){

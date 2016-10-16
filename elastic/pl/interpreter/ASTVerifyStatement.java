@@ -47,7 +47,7 @@ public class ASTVerifyStatement extends SimpleNode {
        jjtGetChild(0).interpret();
        Boolean boolResult = false;
        int nT = top;
-       boolResult = (Integer)stack[nT] != 0 && (Integer)stack[nT] != -1;
+       boolResult = (Integer)stack[nT] != 0;
 
        if (boolResult)
     	   symtab[64000] = 1;
@@ -59,7 +59,7 @@ public class ASTVerifyStatement extends SimpleNode {
   }
   public String compile(){
     String n1 = ((SimpleNode)jjtGetChild(0)).compile();
-    return "return (" + n1 + ");";
+    return "return m((" + n1 + ")!=0?1:0);";
   }
   public long getConsumedStackUsage(){
       return 0L;

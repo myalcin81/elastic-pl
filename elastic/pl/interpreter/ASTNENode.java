@@ -46,10 +46,10 @@ public class ASTNENode extends SimpleNode {
 
      top=top-1;
 
-     Integer int1 = 0;
-     Integer int2 = 0;
-     int1 = ((Integer)stack[top]);
-     int2 = ((Integer)stack[top+1]);
+     int int1 = 0;
+     int int2 = 0;
+     int1 = ((int)stack[top]);
+     int2 = ((int)stack[top+1]);
      stack[top] = (int1 != int2)?1:0;
   }
   public String compile(){

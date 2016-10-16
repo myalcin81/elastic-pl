@@ -49,7 +49,7 @@ public class ASTLRotNode extends SimpleNode {
      Integer int2 = 0;
      int1 = ((Integer)stack[top]);
      int2 = ((Integer)stack[top+1]);
-     Integer result = (((int1) >> (32 - (int2%32))) | ((int1) << (int2%32)));
+     Integer result = Integer.rotateLeft(int1,int2%32);
      stack[top] = result;
 
      mangle_state(result);
@@ -58,7 +58,7 @@ public class ASTLRotNode extends SimpleNode {
     String n1 = ((SimpleNode)jjtGetChild(0)).compile();
     String n2 = ((SimpleNode)jjtGetChild(1)).compile();
 
-    return "(((" + n1 + ") >> (32 - ((" + n2 + "))%32))) | ((" + n1 + ") << ((" + n2 + "))%32)))";
+    return "m(((" + n1 + ") >> (32 - ((" + n2 + "))%32))) | ((" + n1 + ") << ((" + n2 + "))%32)))";
   }
   public long getConsumedStackUsage(){
       return 0L;

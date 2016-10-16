@@ -59,7 +59,7 @@ public class ASTOrNode extends SimpleNode {
     String n1 = ((SimpleNode)jjtGetChild(0)).compile();
     String n2 = ((SimpleNode)jjtGetChild(1)).compile();
     
-    return "(((" + n1 + ")!=0 || (" + n2 + ")!=0)?1:0)";
+    return "m(((" + n1 + ")!=0 || (" + n2 + ")!=0)?1:0)";
   }
   public long getConsumedStackUsage(){
       return 0L;

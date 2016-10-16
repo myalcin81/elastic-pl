@@ -59,7 +59,7 @@ public class ASTId extends SimpleNode {
   public String compile(){
     String n1 = ((SimpleNode)jjtGetChild(0)).compile();
     
-    return "m[" + n1 + "]";
+    return "mem[" + n1 + "]";
   }
 
 

@@ -29,7 +29,7 @@ public class TestCompiler {
 		try {
 			parser.CompilationUnit();
 			((ASTCompilationUnit) parser.rootNode()).reset();
-			((ASTCompilationUnit) parser.rootNode()).fillRandomIntNumber();
+			//((ASTCompilationUnit) parser.rootNode()).fillRandomIntNumber();
 
 			boolean tooMuchStackUsage = RuntimeEstimator.exceedsStackUsage((SimpleNode) parser.rootNode());
 
@@ -60,6 +60,7 @@ public class TestCompiler {
 		((ASTCompilationUnit) parser.rootNode()).debugDumpState();
 		System.out.println("[!] Exit Stack Pointer: " + MyNode.top);
 		boolean bountyFound = ((ASTCompilationUnit) parser.rootNode()).verifyBounty();
+
 		System.out.println("[!] Bounty requirement met: " + bountyFound);
 	}
 }

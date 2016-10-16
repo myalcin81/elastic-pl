@@ -146,7 +146,7 @@ public class ASTCompilationUnit extends SimpleNode {
 
 	public String compile(){
 
-		String totalCode = "#include <stdio.h>\n#include <stdint.h>\n#include <time.h>\n\nint32_t m[64000];\n\nint execute();\nint main(){\nclock_t start, end;\nint counter = 0;\nstart = clock();\nwhile(1==1){end = clock(); execute(); counter=counter+1;\nif((double)(end-start)/CLOCKS_PER_SEC >=3) break;\n}\nprintf(\"BENCHMARK: %d evaluations per second.\\n\",counter/3);\n}\n\nint execute(){\n";
+		String totalCode = "#include <stdio.h>\n#include <stdint.h>\n#include <time.h>\n\nint32_t mem[64000];\nlong long vm_state1 = 0;\nlong long vm_state2 = 0;\n\nint m(int x) {\n	printf(\"Mangle State: %d\\n\",x);\nint mod = x % 64;\n	if (x % 2 == 0) {\n		vm_state1 = (vm_state1 << mod) | (vm_state1 >> (64 - mod));\n		vm_state1 = vm_state1 ^ x;\n	}\n	else {\n		vm_state2 = ((vm_state2) << (64 - mod)) | ((vm_state2) >> mod);\n		vm_state2 = vm_state2 ^ x;\n	}\nprintf(\"MANGLE STATE: %d %lld %lld.\\n\",mod,vm_state1,vm_state2);\nreturn x;\n}\n\nint execute();\nint main(){\nexecute();\n}\n\nint execute(){\nvm_state1=0;\nvm_state2=0;\n";
     	int i, k = jjtGetNumChildren();
 		for (i = 0; i < k ; i++) {
 			totalCode += ((SimpleNode)jjtGetChild(i)).compile();

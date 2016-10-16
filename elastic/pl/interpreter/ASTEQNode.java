@@ -45,9 +45,10 @@ public class ASTEQNode extends SimpleNode {
 
      top=top-1;
 
-     Integer int1 = (Integer)stack[top];
-     Integer int2 = (Integer)stack[top+1];
+     int int1 = (int)stack[top];
+     int int2 = (int)stack[top+1];
      int result = (int1==int2)?1:0;
+
      stack[top] = result;
 
      mangle_state(result);
@@ -56,7 +57,7 @@ public class ASTEQNode extends SimpleNode {
     String n1 = ((SimpleNode)jjtGetChild(0)).compile();
     String n2 = ((SimpleNode)jjtGetChild(1)).compile();
     
-    return "(((" + n1 + ") == (" + n2 + "))?1:0)";
+    return "m(((" + n1 + ") == (" + n2 + "))?1:0)";
   }
   public long getConsumedStackUsage(){
       return 0L;

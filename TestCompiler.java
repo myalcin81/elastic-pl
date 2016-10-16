@@ -60,7 +60,7 @@ public class TestCompiler {
 		((ASTCompilationUnit) parser.rootNode()).debugDumpState();
 		System.out.println("[!] Exit Stack Pointer: " + MyNode.top);
 		boolean bountyFound = ((ASTCompilationUnit) parser.rootNode()).verifyBounty();
-
+		System.out.println("[!] Mangle State: " + MyNode.internal_state + " " + MyNode.internal_state2);
 		System.out.println("[!] Bounty requirement met: " + bountyFound);
 	}
 }

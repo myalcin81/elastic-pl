@@ -179,6 +179,8 @@ public class ASTCompilationUnit extends SimpleNode {
         "  return (x>>n) | (x<<( (-n)&mask ));\n"+
         "}\n"+
         "int m(int x) {\n"+
+        "  printf(\"MANGLE %d\\n\",x);\n"+
+
         "   int mod = x % 64;\n"+
         "   if (x % 2 == 0) {\n"+
         "       vm_state1 = rotl64(vm_state1, mod);\n"+

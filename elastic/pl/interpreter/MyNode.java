@@ -54,6 +54,7 @@ public class MyNode
   public static Long internal_state2 = 0L;
 
   public static void mangle_state(int x){
+    System.out.println("MANGLE: " + x );
     if(x%2==0){
       internal_state = Long.rotateLeft(internal_state,x%64);
       internal_state = internal_state ^ x;

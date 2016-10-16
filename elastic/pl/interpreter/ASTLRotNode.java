@@ -58,7 +58,7 @@ public class ASTLRotNode extends SimpleNode {
     String n1 = ((SimpleNode)jjtGetChild(0)).compile();
     String n2 = ((SimpleNode)jjtGetChild(1)).compile();
 
-    return "m(((" + n1 + ") >> (32 - ((" + n2 + "))%32))) | ((" + n1 + ") << ((" + n2 + "))%32)))";
+    return "m(rotl((" + n1 + "),(" + n2 + ")%32))";
   }
   public long getConsumedStackUsage(){
       return 0L;

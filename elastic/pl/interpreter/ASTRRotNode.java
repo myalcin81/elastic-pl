@@ -58,7 +58,7 @@ public class ASTRRotNode extends SimpleNode {
     String n1 = ((SimpleNode)jjtGetChild(0)).compile();
     String n2 = ((SimpleNode)jjtGetChild(1)).compile();
 
-    return "m(rotr((" + n1 + "),(" + n2 + ")%32))";
+    return "m(rotr32((" + n1 + "),(" + n2 + ")%32))";
   }
   public long getConsumedStackUsage(){
       return 0L;

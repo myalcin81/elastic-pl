@@ -49,7 +49,7 @@ public class ASTRShiftNode extends SimpleNode {
      Integer int2 = 0;
      int1 = ((Integer)stack[top]);
      int2 = ((Integer)stack[top+1]);
-     Integer result = int1 >> int2;
+     Integer result = int1>>int2;
      stack[top] = result;
 
      mangle_state(result);

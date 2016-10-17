@@ -56,6 +56,7 @@ public class MyNode
   public static int internal_state4 = 0;
 
   public static void mangle_state(int x){
+    //System.out.println("Mangling " + x);
     int mod = x%32;
     int f = mod%4;
     if(f==0){

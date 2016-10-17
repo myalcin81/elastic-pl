@@ -178,17 +178,17 @@ public class ASTCompilationUnit extends SimpleNode {
 "#define FREE_ALIGNED_BUFFER(_buffer) free(_buffer)\n" +
 "#endif\n" +
 "static const unsigned int mask32 = (CHAR_BIT*sizeof(uint32_t)-1);\n" +
-"static inline uint32_t rotl32 (uint32_t x, unsigned int n)\n" +
+"static uint32_t rotl32 (uint32_t x, unsigned int n)\n" +
 "{\n" +
 "  n &= mask32;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n" +
 "  return (x<<n) | (x>>( (-n)&mask32 ));\n" +
 "}\n" +
-"static inline uint32_t rotr32 (uint32_t x, unsigned int n)\n" +
+"static uint32_t rotr32 (uint32_t x, unsigned int n)\n" +
 "{\n" +
 "  n &= mask32;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n" +
 "  return (x>>n) | (x<<( (-n)&mask32 ));\n" +
 "}\n" +
-"static int m(int x) {\n" +
+"static int m(int x) {/*printf(\"Mangling %d\\n\",x);*/\n" +
 "   int mod = x % 32;\n" +
 "   int leaf = mod % 4;\n" +
 "   if (leaf == 0) {\n" +
@@ -204,7 +204,7 @@ public class ASTCompilationUnit extends SimpleNode {
 "       vm_state3 = vm_state3 ^ x;\n" +
 "   }\n" +
 "   else {\n" +
-"       vm_state4 = rotr32(vm_state4, mod);\n" +
+"       vm_state4 = rotl32(vm_state4, mod);\n" +
 "       vm_state4 = vm_state4 ^ x;\n" +
 "   }\n" +
 "    return x;\n" +

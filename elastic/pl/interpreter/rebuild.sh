@@ -21,4 +21,8 @@ cd ..
 cp dist/ElasticPL.jar .
 cp dist/ElasticToCCompiler.jar .
 
-java -jar ElasticPL.jar fuck.spl 
+java -jar ElasticPL.jar example.spl 
+java -jar ElasticToCCompiler.jar example.spl > example.c
+gcc -Wall test_wrapper.c example.c -o example
+./example
+

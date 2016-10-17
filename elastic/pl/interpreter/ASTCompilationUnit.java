@@ -132,7 +132,7 @@ public class ASTCompilationUnit extends SimpleNode {
 
 
     public void reset() {
-        symtab = new int[64001];
+        symtab[64000] = 0;
         top = 0;
         internal_state = 0;
         internal_state2 = 0;

@@ -50,17 +50,26 @@ public class MyNode
   public static Object[] stack = new Object[1024];
   public static int top = -1;
 
-  public static Long internal_state = 0L;
-  public static Long internal_state2 = 0L;
+  public static int internal_state = 0;
+  public static int internal_state2 = 0;
+  public static int internal_state3 = 0;
+  public static int internal_state4 = 0;
 
   public static void mangle_state(int x){
-    System.out.println("MANGLE: " + x );
-    if(x%2==0){
-      internal_state = Long.rotateLeft(internal_state,x%64);
+    int mod = x%32;
+    int f = mod%4;
+    if(f==0){
+      internal_state = Integer.rotateLeft(internal_state,mod);
       internal_state = internal_state ^ x;
-    }else{
-      internal_state2 = Long.rotateRight(internal_state2,x%64);
+    }else if(f==1){
+      internal_state2 = Integer.rotateLeft(internal_state2,mod);
       internal_state2 = internal_state2 ^ x;
+    }else if(f==2){
+      internal_state3 = Integer.rotateLeft(internal_state3,mod);
+      internal_state3 = internal_state3 ^ x;
+    }else{
+      internal_state4 = Integer.rotateLeft(internal_state4,mod);
+      internal_state4 = internal_state4 ^ x;
     }
   }
 

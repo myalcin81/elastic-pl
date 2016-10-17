@@ -62,16 +62,22 @@ public class ASTCompilationUnit extends SimpleNode {
         }
     }
 
-    public static byte[] byteHash(int randomInput[], long st1, long st2) throws NoSuchAlgorithmException {
+    public static byte[] byteHash(int randomInput[], int a, int bx, int c, int d) throws NoSuchAlgorithmException {
         MessageDigest m = getMessageDigest("SHA-256");
         m.reset();
 
         byte[] b = new byte[16];
-        for (int i = 0; i < 8; ++i) {
-          b[i] = (byte) (st1 >> (8 - i - 1 << 3));
+        for (int i = 0; i < 4; ++i) {
+          b[i] = (byte) (a >> (4 - i - 1 << 3));
         }
-        for (int i = 0; i < 8; ++i) {
-          b[i+8] = (byte) (st2 >> (8 - i - 1 << 3));
+        for (int i = 0; i < 4; ++i) {
+          b[i+4] = (byte) (bx >> (4 - i - 1 << 3));
+        }
+        for (int i = 0; i < 4; ++i) {
+          b[i+8] = (byte) (c >> (4 - i - 1 << 3));
+        }
+        for (int i = 0; i < 4; ++i) {
+          b[i+12] = (byte) (d >> (4 - i - 1 << 3));
         }
 
 
@@ -128,8 +134,10 @@ public class ASTCompilationUnit extends SimpleNode {
     public void reset() {
         symtab = new int[64001];
         top = 0;
-        internal_state = 0L;
-        internal_state2 = 0L;
+        internal_state = 0;
+        internal_state2 = 0;
+        internal_state3 = 0;
+        internal_state4 = 0;
     }
 
     public void interpret() {
@@ -146,65 +154,81 @@ public class ASTCompilationUnit extends SimpleNode {
 
     public String compile(){
 
-        String totalCode = "#include <stdio.h>\n"+
-        "#include <stdint.h>\n"+
-        "#include <stdlib.h>\n"+
-        "#include <limits.h>\n"+
-        "#include <time.h>\n\n"+
-        "int32_t mem[64000];\n"+
-        "uint64_t vm_state1 = 0;\n"+
-        "uint64_t vm_state2 = 0;\n\n"+
-        "uint64_t rotl64 (uint64_t x, unsigned int n)\n"+
-        "{\n"+
-        "  const unsigned int mask = (CHAR_BIT*sizeof(x)-1);\n"+
-        "  n &= mask;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n"+
-        "  return (x<<n) | (x>>( (-n)&mask ));\n"+
-        "}\n"+
-        "uint64_t rotr64 (uint64_t x, unsigned int n)\n"+
-        "{\n"+
-        "  const unsigned int mask = (CHAR_BIT*sizeof(x)-1);\n"+
-        "  n &= mask;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n"+
-        "  return (x>>n) | (x<<( (-n)&mask ));\n"+
-        "}\n"+
-        "uint32_t rotl32 (uint32_t x, unsigned int n)\n"+
-        "{\n"+
-        "  const unsigned int mask = (CHAR_BIT*sizeof(x)-1);\n"+
-        "  n &= mask;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n"+
-        "  return (x<<n) | (x>>( (-n)&mask ));\n"+
-        "}\n"+
-        "uint32_t rotr32 (uint32_t x, unsigned int n)\n"+
-        "{\n"+
-        "  const unsigned int mask = (CHAR_BIT*sizeof(x)-1);\n"+
-        "  n &= mask;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n"+
-        "  return (x>>n) | (x<<( (-n)&mask ));\n"+
-        "}\n"+
-        "int m(int x) {\n"+
-        "  printf(\"MANGLE %d\\n\",x);\n"+
-
-        "   int mod = x % 64;\n"+
-        "   if (x % 2 == 0) {\n"+
-        "       vm_state1 = rotl64(vm_state1, mod);\n"+
-        "       vm_state1 = vm_state1 ^ x;\n"+
-        "   }\n"+
-        "   else {\n"+
-        "       vm_state2 = rotr64(vm_state2, mod);\n"+
-        "       vm_state2 = vm_state2 ^ x;\n"+
-        "   }\n"+
-        "    return x;\n"+
-        "}\n\n"+
-        "int execute();\n"+
-        "int main(){\n"+
-        "  execute();\n"+
-        "  printf(\"MANGLE STATE: %lld %lld.\\n\",vm_state1,vm_state2);\n"+
-        "}\n\n"+
-        "int execute(){\n"+
-        "vm_state1=0;\n"+
-        "vm_state2=0;\n";
+        String totalCode = "#include <stdio.h>\n" +
+"#include <stdint.h>\n" +
+"#include <stdlib.h>\n" +
+"#include <limits.h>\n" +
+"#include <time.h>\n" +
+"#include <mm_malloc.h>\n" +
+"int32_t* mem = 0;\n" +
+"uint32_t vm_state1 = 0;\n" +
+"uint32_t vm_state2 = 0;\n" +
+"uint32_t vm_state3 = 0;\n" +
+"uint32_t vm_state4 = 0;\n" +
+"#ifdef _WIN32\n" +
+"#define ALLOC_ALIGNED_BUFFER(_numBytes) ((int *)_aligned_malloc (_numBytes, 64))\n" +
+"#define FREE_ALIGNED_BUFFER(_buffer) _aligned_free(_buffer)\n" +
+"#elif __SSE__\n" +
+"// allocate memory aligned to 64-bytes memory boundary\n" +
+"#define ALLOC_ALIGNED_BUFFER(_numBytes) (int *) _mm_malloc(_numBytes, 64)\n" +
+"#define FREE_ALIGNED_BUFFER(_buffer) _mm_free(_buffer)\n" +
+"#else\n" +
+"// NOTE(mhroth): valloc seems to work well, but is deprecated!\n" +
+"#define ALLOC_ALIGNED_BUFFER(_numBytes) (int *) valloc(_numBytes)\n" +
+"#define FREE_ALIGNED_BUFFER(_buffer) free(_buffer)\n" +
+"#endif\n" +
+"static const unsigned int mask32 = (CHAR_BIT*sizeof(uint32_t)-1);\n" +
+"static inline uint32_t rotl32 (uint32_t x, unsigned int n)\n" +
+"{\n" +
+"  n &= mask32;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n" +
+"  return (x<<n) | (x>>( (-n)&mask32 ));\n" +
+"}\n" +
+"static inline uint32_t rotr32 (uint32_t x, unsigned int n)\n" +
+"{\n" +
+"  n &= mask32;  // avoid undef behaviour with NDEBUG.  0 overhead for most types / compilers\n" +
+"  return (x>>n) | (x<<( (-n)&mask32 ));\n" +
+"}\n" +
+"static int m(int x) {\n" +
+"   int mod = x % 32;\n" +
+"   int leaf = mod % 4;\n" +
+"   if (leaf == 0) {\n" +
+"       vm_state1 = rotl32(vm_state1, mod);\n" +
+"       vm_state1 = vm_state1 ^ x;\n" +
+"   }\n" +
+"   else if (leaf == 1) {\n" +
+"       vm_state2 = rotl32(vm_state2, mod);\n" +
+"       vm_state2 = vm_state2 ^ x;\n" +
+"   }\n" +
+"   else if (leaf == 2) {\n" +
+"       vm_state3 = rotl32(vm_state3, mod);\n" +
+"       vm_state3 = vm_state3 ^ x;\n" +
+"   }\n" +
+"   else {\n" +
+"       vm_state4 = rotr32(vm_state4, mod);\n" +
+"       vm_state4 = vm_state4 ^ x;\n" +
+"   }\n" +
+"    return x;\n" +
+"}\n" +
+"int fill_ints(int input[]){\n" +
+"  if(mem==0)\n" +
+"  mem=ALLOC_ALIGNED_BUFFER(64000*sizeof(int));\n" +
+"   for(int i=0;i<12;++i)\n" +
+"    mem[i] = input[i];\n" +
+        "vm_state1=0;\n"+"vm_state2=0;\n"+"vm_state3=0;\n"+
+        "vm_state4=0;\n"+
+"}\n" +
+"int execute(){\n" +
+        "vm_state1=0;\n"+"vm_state2=0;\n"+"vm_state3=0;\n"+
+        "vm_state4=0;\n";
         int i, k = jjtGetNumChildren();
         for (i = 0; i < k ; i++) {
             totalCode += ((SimpleNode)jjtGetChild(i)).compile();
         }
-        totalCode += "\n}\n";
+        totalCode += "}\n" +
+"void free_vm(){\n" +
+"  if(mem!=0)\n" +
+"    FREE_ALIGNED_BUFFER(mem);\n" +
+"}\n";
         return totalCode;
 
     }
@@ -257,7 +281,7 @@ public class ASTCompilationUnit extends SimpleNode {
         int in[] = getRandomIntArray();
 
         try {
-            byte[] bsh = byteHash(in, internal_state, internal_state2);
+            byte[] bsh = byteHash(in, internal_state, internal_state2, internal_state3, internal_state4);
             BigInteger val = byteHashToLong(bsh);
 
             if (val.compareTo(target)==-1){

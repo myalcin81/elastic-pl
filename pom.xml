@@ -8,7 +8,7 @@
   <description>The Elastic PL Interpreter to compile and execute programs</description>
   <url>http://elastic-project.com</url>
   <build>
-    <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>elastic</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>

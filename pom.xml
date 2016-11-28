@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>elastic-pl</groupId>
   <artifactId>elastic-pl</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <packaging>jar</packaging>
   <name>Elastic PL Interpreter</name>
   <description>The Elastic PL Interpreter to compile and execute programs</description>

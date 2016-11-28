@@ -63,7 +63,7 @@ public class ASTCompilationUnit extends SimpleNode {
     }
 
     public static byte[] byteHash(int randomInput[], int a, int bx, int c, int d) throws NoSuchAlgorithmException {
-        MessageDigest m = getMessageDigest("SHA-256");
+        MessageDigest m = getMessageDigest("MD5");
         m.reset();
 
         byte[] b = new byte[16];

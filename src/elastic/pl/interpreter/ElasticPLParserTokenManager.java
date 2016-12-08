@@ -1326,7 +1326,7 @@ public Token getNextToken()
    {
       curChar = input_stream.BeginToken();
    }
-   catch(Exception e)
+   catch(java.io.IOException e)
    {
       jjmatchedKind = 0;
       jjmatchedPos = -1;
@@ -1417,7 +1417,6 @@ private void jjCheckNAddTwoStates(int state1, int state2)
   /** Reinitialise parser. */
   public void ReInit(SimpleCharStream stream)
   {
-	
     jjmatchedPos = jjnewStateCnt = 0;
     curLexState = defaultLexState;
     input_stream = stream;
@@ -1433,10 +1432,9 @@ private void jjCheckNAddTwoStates(int state1, int state2)
   }
 
   /** Reinitialise parser. */
-  public void ReInit( SimpleCharStream stream, int lexState)
+  public void ReInit(SimpleCharStream stream, int lexState)
   {
-  
-    ReInit( stream);
+    ReInit(stream);
     SwitchTo(lexState);
   }
 
@@ -1465,5 +1463,5 @@ static final long[] jjtoSkip = {
     private final int[] jjstateSet = new int[2 * 3];
 
     
-    protected int curChar;
+    protected char curChar;
 }

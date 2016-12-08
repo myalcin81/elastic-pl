@@ -98,6 +98,8 @@ public static String bytesToHex(byte[] bytes) {
       byte rel = (byte) ((rawval >> (nth * 8)) & 0xff);
       bytes[i] = rel;
     }
+
+    //System.out.println("[DEBUG] Took byte array: " + bytesToHex(bytes));
     return bytes;
   }
 
@@ -108,6 +110,8 @@ public static String bytesToHex(byte[] bytes) {
       return 0;
   }
   public void bytesBackToState(byte[] barr, int starting_value) {
+
+    //System.out.println("[DEBUG] Putting bytes back to state: " + bytesToHex(barr));
 
     int size = (barr.length / 4) + ((barr.length % 4 == 0) ? 0 : 1);
     for (int i = 0; i < size; ++i) {

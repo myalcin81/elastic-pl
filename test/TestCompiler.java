@@ -1,10 +1,10 @@
 
-import elastic.pl.interpreter.ASTCompilationUnit;
-import elastic.pl.interpreter.ElasticPLParser;
-import elastic.pl.interpreter.ParseException;
-import elastic.pl.interpreter.RuntimeEstimator;
-import elastic.pl.interpreter.SimpleNode;
-import elastic.pl.interpreter.MyNode;
+import elastic.elastic.pl.interpreter.ASTCompilationUnit;
+import elastic.elastic.pl.interpreter.ElasticPLParser;
+import elastic.elastic.pl.interpreter.ParseException;
+import elastic.elastic.pl.interpreter.RuntimeEstimator;
+import elastic.elastic.pl.interpreter.SimpleNode;
+import elastic.elastic.pl.interpreter.MyNode;
 
 public class TestCompiler {
 
